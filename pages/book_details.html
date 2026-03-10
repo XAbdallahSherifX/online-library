@@ -3,9 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GILDORA - Book Details</title>
 </head>
 <body>
-    
+    <nav>
+      <h2>
+        <a href="../index.html" style="text-decoration: none; color: black">GILDORA</a>
+      </h2>
+
+      <span>
+        <a href="../index.html">Home</a> |
+        <a href="books.html">Browse Books</a> | 
+        <a href="about.html">About</a> |
+        <a href="contact.html">Contact</a> |
+        <a href="support.html">Support</a>
+      </span>
+      <br /><br />
+
+      <details>
+        <summary><strong>User Menu</strong> (Visible to Users)</summary>
+        <ul>
+          <li><a href="profile.html">My Profile</a></li>
+          <li><a href="borrowed_books.html">My Borrowed Books</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary><strong>Admin Menu</strong> (Visible to Admins)</summary>
+        <ul>
+          <li><a href="admin_dashboard.html">Admin Dashboard</a></li>
+        </ul>
+      </details>
+      <br />
+
+      <span>
+        <a href="login.html">Login</a> |
+        <a href="signup.html">Sign Up</a>
+      </span>
+    </nav>
+    <hr />
+
+    <div>
+      <h2>Book Details</h2>
+      
+      <div>
+        <img src="../assets/images/book1.jpg" alt="Around The World in 80 Days" style="width: 250px;" />
+      </div>
+      <br />
+
+      <div>
+        <h1>Around The World in 80 Days</h1>
+        <p><strong>Author:</strong> Jules Verne</p>
+        <p><strong>Category:</strong> Adventure</p>
+        <p><strong>Book ID:</strong> BOK-001</p>
+        <p><strong>Rating:</strong> 4.8/5 ⭐</p>
+        <p><strong>Status:</strong> Available</p>
+        <br />
+        
+        <h3>Description</h3>
+        <p>
+          "Around the World in Eighty Days" is an adventure novel by the French writer Jules Verne. 
+          In the story, Phileas Fogg of London and his newly employed French valet Passepartout attempt 
+          to circumnavigate the late Victorian world in 80 days on a wager set by his friends at the Reform Club.
+        </p>
+        <br />
+
+        <form action="confirm_borrowing.html">
+          <button type="submit">Borrow Book</button>
+        </form>
+        <br />
+
+        <a href="books.html">← Back to Browse Books</a>
+      </div>
+    </div>
+    <br />
+
+    <hr />
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-about">
+          <h3>GILDORA</h3>
+          <p>
+            Your gateway to endless knowledge. Explore, borrow, and read
+            thousands of books from our classic and modern collections.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="books.html">Discover</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="support.html">Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <address>
+            <p>Giza, Egypt</p>
+            <p>Email: info@gildora.edu.eg</p>
+            <p>Phone: +20 123 456 7890</p>
+          </address>
+        </div>
+
+        <div class="footer-social">
+          <ul>
+            <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+            <li>
+              <a href="https://twitter.com" target="_blank">Twitter (X)</a>
+            </li>
+            <li>
+              <a href="https://instagram.com" target="_blank">Instagram</a>
+            </li>
+            <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <p>&copy; 2026 CU Library. All rights reserved.</p>
+    </footer>
 </body>
 </html>
