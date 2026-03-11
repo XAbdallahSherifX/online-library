@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>Edit My Profile</title>
 </head>
 <body>
         <nav>
@@ -43,32 +43,51 @@
       </span>
     </nav>
     <hr />
-    <h1>My Profile</h1>
-    <div class="profile">
-      <img src="../assets/images/portrait_placeholder.png"
-        alt="Profile Picture"
-        class="profile-pic"
-        height="200"/>
-        
-      
-      <div class="profile-info">
-        <h2>Name: Gildora</h2>
-        <p>Email: gildora@gmail.com</p>
-        <p>Telephone: +20 123 456 7890</p>
-        <p>Address: 123 Main Street, Giza, Egypt</p>
-        <a href="edit_profile.html"><button class="edit-profile-btn">Edit Profile</button></a>
-        
-      </div>
-
-      <div class="profile-stats">
-        <h3>Statistics:</h3>
-        <p>Total Borrowed Books:7</p>
-        <p>Member Since: February 2026</p>
-      </div>
-    </div>
+    <h1>Edit My Profile</h1>
     
-
+    <div class="edit-profile-container">
+      <form action="profile.html">
         
+        <div>
+          <img src="../assets/images/portrait_placeholder.png" alt="Profile Picture" height="150" />
+          <br />
+          <label for="profile_pic"><strong>Change Profile Picture:</strong></label>
+          <br />
+          <input type="file" id="profile_pic" name="profile_pic" accept="image/*">
+        </div>
+        <br />
+
+        <div>
+          <label for="fullName"><strong>Full Name:</strong></label><br />
+          <input type="text" id="fullName"  value="Gildora" size="30">
+        </div>
+        <br />
+
+        <div>
+          <label for="email"><strong>Email Address:</strong></label><br />
+          <input type="email" id="email"  value="gildora@gmail.com" size="30">
+        </div>
+        <br />
+
+        <div>
+          <label for="phone"><strong>Telephone:</strong></label><br />
+          <input type="tel" id="phone"  value="+20 123 456 7890" size="30">
+        </div>
+        <br />
+
+        <div>
+          <label for="address"><strong>Address:</strong></label><br />
+          <textarea id="address" name="address" rows="3" cols="32">123 Main Street, Giza, Egypt</textarea>
+        </div>
+        <br />
+
+        <div>
+          <button type="submit" >Save Changes</button>
+          <a href="profile.html"><button type="button" >Cancel</button></a>
+        </div>
+        
+      </form>
+    </div>
      <hr />
 
     <footer>
