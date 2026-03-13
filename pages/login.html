@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-        <nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GILDORA - Log In</title>
+  </head>
+  <body>
+    <nav>
       <h2>
         <a href="../index.html" style="text-decoration: none; color: black"
           >GILDORA</a
@@ -44,31 +44,39 @@
     </nav>
     <hr />
 
-        <h2>Login</h2>
+    <h2>Login</h2>
 
-        <form action="../index.html">
+    <form action="../index.html">
+      <label>Email:</label>
+      <br />
+      <input
+        type="email"
+        name="email"
+        placeholder="Enter your email"
+        required
+      />
+      <br /><br />
 
-            <label>Email:</label>
-            <br>
-            <input type="email" name="email" placeholder="Enter your email" required>
-            <br><br>
+      <label>Password:</label>
+      <br />
+      <input
+        type="password"
+        name="password"
+        placeholder="Enter your password"
+        required
+      />
+      <br /><br />
 
-            <label>Password:</label>
-            <br>
-            <input type="password" name="password" placeholder="Enter your password" required>
-            <br><br>
+      <button type="submit">Login</button>
+    </form>
 
-            <button type="submit">Login</button>
+    <br />
 
-        </form>
-
-        <br>
-
-        <p>
-            Don't have an account?
-            <a href="signup.html">Create Account</a>
-        </p>
-     <hr />
+    <p>
+      Don't have an account?
+      <a href="signup.html">Create Account</a>
+    </p>
+    <hr />
 
     <footer>
       <div class="footer-container">
@@ -114,5 +122,5 @@
       </div>
       <p>&copy; 2026 CU Library. All rights reserved.</p>
     </footer>
-</body>
+  </body>
 </html>
