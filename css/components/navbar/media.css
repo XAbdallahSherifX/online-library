@@ -1,0 +1,88 @@
+/* =========================================
+   NAVBAR BREAKPOINTS
+   ========================================= */
+
+/* Landscape Phones / Small Tablets */
+@media all and (min-width: 576px) {
+  .navbar > div {
+    padding: 14px 28px;
+  }
+  
+  .auth-nav {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* Tablets */
+@media all and (min-width: 768px) {
+  .navbar {
+    padding: 12px 24px;
+  }
+  
+  .logo-link {
+    font-size: 32px; /* Restore desktop logo size */
+  }
+}
+
+/* Desktops - THE MAJOR LAYOUT SWITCH */
+@media all and (min-width: 992px) {
+  .mobile-toggle {
+    display: none; /* Hide the hamburger button */
+  }
+  
+  .nav-menu-container {
+    display: flex !important; /* Force show the menu, overriding JS toggle */
+    width: auto;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none; /* Remove mobile separation line */
+    box-shadow: none;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+    width: auto;
+    margin-bottom: 0;
+    column-gap: 15px;
+  }
+
+  .auth-nav {
+    flex-direction: row;
+    width: auto;
+    column-gap: 15px;
+  }
+  
+  .link-signup, .link-login {
+    width: auto; /* Buttons only take up required space */
+  }
+}
+
+/* Large Desktops */
+@media all and (min-width: 1200px) {
+  .nav-menu-container {
+    column-gap: 30px; /* Give more breathing room between sections */
+  }
+  
+  .navbar-nav {
+    column-gap: 20px;
+  }
+  
+  .auth-nav {
+    column-gap: 20px;
+  }
+}
+
+/* Extra Large Screens */
+@media all and (min-width: 1400px) {
+  .navbar {
+    padding: 16px 32px; /* Widen the outer padding */
+  }
+  
+  .navbar > div {
+    padding: 16px 36px;
+  }
+}

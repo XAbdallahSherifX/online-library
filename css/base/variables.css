@@ -1,0 +1,351 @@
+:root {
+  /* =========================================
+     1️⃣ BACKGROUND COLORS
+     Use for page structure and depth
+     ========================================= */
+
+  /*
+    * PRIMARY BACKGROUND
+   * Use for: <body> background on ALL 10 pages
+   * Why: Vellum White reduces eye strain vs pure white
+   */
+  --color-bg-primary: #fdfbf7; /* Vellum White */
+
+  /*
+    * SECONDARY BACKGROUND
+   * Use for: <nav>, <footer>, <header>, section dividers
+   * Pages: Navbar on all pages, Admin dashboard widgets
+   */
+  --color-bg-secondary: #e6dcc8; /* Aged Pages */
+
+  /*
+    * TERTIARY BACKGROUND
+   * Use for: Cards, Modals, Form inputs, Tables, Dropdowns
+   * Pages: Book cards, Login/Signup forms, Admin tables
+   */
+  --color-bg-tertiary: #ffffff; /* Pure White */
+
+  /*
+    * HOVER BACKGROUND
+   * Use for: Card hover, Table row hover, Button hover bg
+   * Pages: Books.html cards, Admin dashboard rows
+   */
+  --color-bg-hover: #d4c5b0; /* Aged Pages Darkened */
+
+  /* =========================================
+     2️⃣ TYPOGRAPHY COLORS
+     Use for all text content
+     ========================================= */
+
+  /*
+    * PRIMARY TEXT
+   * Use for: <h1>, <h2>, <h3>, <p>, <body>, <li>
+   * Pages: ALL body text, Book titles, Form headings
+   */
+  --color-text-primary: #283845; /* Midnight Ink */
+
+  /*
+    * SECONDARY TEXT
+   * Use for: <h4>, <h5>, <h6>, Labels, Captions, Subtitles
+   * Pages: Form labels, Card metadata, Section headers
+   */
+  --color-text-secondary: #507255; /* Scholar's Green */
+
+  /*
+    * TERTIARY TEXT
+   * Use for: Dates, Authors, Categories, <small>, Links
+   * Pages: Book author names, Publish dates, Nav links
+   */
+  --color-text-tertiary: #800020; /* Royal Burgundy */
+
+  /*
+    * INVERSE TEXT
+   * Use for: Text ON TOP OF colored buttons/dark backgrounds
+   * Pages: Button text, Navbar links, Badge text
+   */
+  --color-text-inverse: #fdfbf7; /* Vellum White */
+
+  /*
+    * DISABLED TEXT
+   * Use for: Disabled buttons, Inactive links, Grayed text
+   * Pages: Disabled form fields, Inactive pagination
+   */
+  --color-text-disabled: #b7b7a4; /* Ash Grey */
+
+  /* =========================================
+     3️⃣ ACTION COLORS (BUTTONS & LINKS)
+     Use for interactive elements
+     ========================================= */
+
+  /*
+    * PRIMARY ACTION
+   * Use for: Main CTA buttons (Submit, Login, Borrow, Save)
+   * Pages: Login submit, Signup submit, Borrow button, Save changes
+   */
+  --color-action-primary: #800020; /* Royal Burgundy */
+  --color-action-primary-hover: #990026;
+  --color-action-primary-active: #590016;
+
+  /*
+    * SECONDARY ACTION
+   * Use for: Alternative actions (Cancel, Filter, Back, Export)
+   * Pages: Cancel buttons, Filter buttons, Secondary CTAs
+   */
+  --color-action-secondary: #507255; /* Scholar's Green */
+  --color-action-secondary-hover: #3d5a41;
+  --color-action-secondary-active: #2f4532;
+
+  /*
+    * ACCENT / HIGHLIGHT
+   * Use for: Icons, Badges, Ratings, Focus Rings, Premium features
+   * ⚠️ WARNING: Do NOT use for body text (fails contrast on light bg)
+   * Pages: Star ratings, Focus outlines, Featured badges
+   */
+  --color-accent-gold: #d4af37; /* Metallic Gold */
+  --color-accent-gold-hover: #b4942e;
+  --color-accent-gold-light: #f2d06b;
+
+  /* =========================================
+     4️⃣ BORDER COLORS
+     Use for structure and interaction states
+     ========================================= */
+
+  /*
+    * DEFAULT BORDER
+   * Use for: Input fields (default), Card edges, Table borders, <hr>
+   * Pages: All form inputs, Book cards, Admin tables
+   */
+  --color-border-default: #e6dcc8; /* Aged Pages */
+
+  /*
+    * HOVER BORDER
+   * Use for: Input hover, Card hover, Button outline hover
+   * Pages: Form input hover, Book card hover
+   */
+  --color-border-hover: #800020; /* Royal Burgundy */
+
+  /*
+    * FOCUS BORDER (ACCESSIBILITY)
+   * Use for: Input :focus, Button :focus-visible, Keyboard nav
+   * Pages: ALL form inputs when focused (Login, Signup, Add Book)
+   */
+  --color-border-focus: #d4af37; /* Metallic Gold */
+
+  /*
+    * ACTIVE BORDER
+   * Use for: Selected tabs, Active nav items, Current page
+   * Pages: Active nav link, Selected filter tab
+   */
+  --color-border-active: #800020; /* Royal Burgundy */
+
+  /* =========================================
+     5️⃣ FORM SPECIFIC COLORS
+     Use for inputs, validation, labels
+     ========================================= */
+
+  /*
+    * FORM INPUT BACKGROUND
+   * Use for: <input>, <textarea>, <select> backgrounds
+   */
+  --color-form-input-bg: #ffffff; /* Pure White */
+
+  /*
+    * FORM INPUT TEXT
+   * Use for: Text typed into inputs
+   */
+  --color-form-input-text: #283845; /* Midnight Ink */
+
+  /*
+    * FORM PLACEHOLDER
+   * Use for: ::placeholder text color
+   */
+  --color-form-placeholder: rgba(80, 114, 85, 0.6); /* Green 60% */
+
+  /*
+    * FORM LABEL
+   * Use for: <label> text above inputs
+   */
+  --color-form-label: #507255; /* Scholar's Green */
+
+  /*
+    * FORM VALIDATION - SUCCESS
+   * Use for: Valid field indicator, Success messages
+   */
+  --color-form-success: #507255; /* Scholar's Green */
+
+  /*
+    * FORM VALIDATION - ERROR
+   * Use for: Invalid field border, Error messages, Required *
+   * Pages: Login errors, Signup validation, Add book errors
+   */
+  --color-form-error: #800020; /* Royal Burgundy */
+
+  /*
+    * FORM VALIDATION - WARNING
+   * Use for: Warning messages, Password strength
+   */
+  --color-form-warning: #d4af37; /* Metallic Gold */
+
+  /* =========================================
+     6️⃣ COMPONENT SPECIFIC COLORS
+     Use for Nav, Cards, Tables, Badges
+     ========================================= */
+
+  /*
+    * NAVIGATION
+   * Use for: <nav> background and links
+   */
+  --color-nav-bg: #e6dcc8; /* Aged Pages */
+  --color-nav-text: #283845; /* Midnight Ink */
+  --color-nav-text-hover: #800020; /* Royal Burgundy */
+  --color-nav-border-active: #d4af37; /* Metallic Gold */
+
+  /*
+    * BOOK CARDS
+   * Use for: Book listing cards
+   */
+  --color-card-bg: #ffffff; /* Pure White */
+  --color-card-border: #e6dcc8; /* Aged Pages */
+  --color-card-border-hover: #800020; /* Royal Burgundy */
+  --color-card-accent: #d4af37; /* Metallic Gold */
+
+  /*
+    * TABLES (Admin, Borrowed Books)
+   * Use for: Data tables
+   */
+  --color-table-header-bg: #e6dcc8; /* Aged Pages */
+  --color-table-row-bg: #ffffff; /* Pure White */
+  --color-table-row-hover: #f5f0e8; /* Vellum Darkened */
+  --color-table-border: #e6dcc8; /* Aged Pages */
+
+  /*
+    * BADGES (Status)
+   * Use for: Available, Borrowed, Premium tags
+   */
+  --color-badge-available-bg: #507255; /* Green */
+  --color-badge-available-text: #fdfbf7; /* Vellum */
+  --color-badge-borrowed-bg: #800020; /* Burgundy */
+  --color-badge-borrowed-text: #fdfbf7; /* Vellum */
+  --color-badge-premium-bg: #d4af37; /* Gold */
+  --color-badge-premium-text: #283845; /* Ink */
+
+  /* =========================================
+     8️⃣ FOOTER COLORS
+     Use for footer text and links
+     ========================================= */
+
+  /*
+     * FOOTER TEXT
+    * Use for: Footer body text, descriptions
+    */
+  --color-footer-text: #507255; /* Scholar's Green */
+
+  /*
+     * FOOTER LINKS
+    * Use for: Footer navigation links, contact links
+    */
+  --color-footer-link: #800020; /* Royal Burgundy */
+  --color-footer-link-hover: #990026;
+
+  /* =========================================
+     7️⃣ STATUS & FEEDBACK COLORS
+     Use for alerts, notifications, states
+     ========================================= */
+
+  /*
+    * SUCCESS STATE
+   * Use for: Confirmation messages, Completed actions
+   */
+  --color-status-success-bg: rgba(80, 114, 85, 0.1);
+  --color-status-success-text: #507255;
+  --color-status-success-border: #507255;
+
+  /*
+    * ERROR STATE
+   * Use for: Validation errors, Failed actions, Delete warnings
+   * Pages: Edit book delete zone, Login errors
+   */
+  --color-status-error-bg: rgba(128, 0, 32, 0.1);
+  --color-status-error-text: #800020;
+  --color-status-error-border: #800020;
+
+  /*
+    * WARNING STATE
+   * Use for: Caution messages, Pending actions
+   */
+  --color-status-warning-bg: rgba(212, 175, 55, 0.1);
+  --color-status-warning-text: #b4942e;
+  --color-status-warning-border: #d4af37;
+
+  /*
+    * INFO STATE
+   * Use for: Informational messages, Tips
+   */
+  --color-status-info-bg: rgba(40, 56, 69, 0.1);
+  --color-status-info-text: #283845;
+  --color-status-info-border: #283845;
+}
+
+/* =========================================
+   🌙 DARK MODE OVERRIDES
+   Applied automatically when [data-theme="dark"]
+   ========================================= */
+[data-theme="dark"] {
+  /* Backgrounds */
+  --color-bg-primary: #1a2630;
+  --color-bg-secondary: #283845;
+  --color-bg-tertiary: #2d3d4a;
+  --color-bg-hover: #3a4a5a;
+
+  /* Text - Improved contrast for WCAG AA compliance */
+  --color-text-primary: #fdfbf7;
+  --color-text-secondary: #d4e4d5; /* Improved from #c8d4c9 for better contrast */
+  --color-text-tertiary: #f5b8b6; /* Improved from #d4a5a3 for better contrast */
+  --color-text-inverse: #1a2630;
+  --color-text-disabled: #8a9aaa; /* Improved from #6a7a8a for better contrast */
+
+  /* Actions */
+  --color-action-primary: #cc0033; /* Improved from #990026 for better contrast */
+  --color-action-primary-hover: #e6003d;
+  --color-action-secondary: #7aa07f; /* Improved from #6a8f6f for better contrast */
+  --color-action-secondary-hover: #8ab88f;
+  --color-accent-gold: #f2d06b;
+  --color-accent-gold-hover: #ffe58f;
+
+  /* Borders */
+  --color-border-default: #3a4a5a; /* Improved from #2d3d4a for better visibility */
+  --color-border-hover: #cc0033;
+  --color-border-focus: #f2d06b;
+  --color-border-active: #cc0033;
+
+  /* Forms */
+  --color-form-input-bg: #2d3d4a;
+  --color-form-input-text: #fdfbf7;
+  --color-form-placeholder: rgba(212, 228, 213, 0.6);
+  --color-form-label: #d4e4d5;
+
+  /* Components */
+  --color-nav-bg: #283845;
+  --color-nav-text: #fdfbf7;
+  --color-nav-text-hover: #f5b8b6; /* Improved for better visibility */
+  --color-card-bg: #2d3d4a;
+  --color-card-border: #3a4a5a;
+  --color-table-header-bg: #283845;
+  --color-table-row-bg: #2d3d4a;
+  --color-table-row-hover: #3a4a5a;
+
+  /* Footer - Improved contrast */
+  --color-footer-text: #d4e4d5; /* Better contrast on dark background */
+  --color-footer-link: #f5b8b6; /* Better contrast for links */
+  --color-footer-link-hover: #ffd6d4;
+
+  /* Status */
+  --color-status-success-bg: rgba(122, 160, 127, 0.2);
+  --color-status-success-text: #8ab88f;
+  --color-status-error-bg: rgba(204, 0, 51, 0.2);
+  --color-status-error-text: #f5b8b6;
+  --color-status-warning-bg: rgba(242, 208, 107, 0.2);
+  --color-status-warning-text: #f2d06b;
+  --color-status-info-bg: rgba(253, 251, 247, 0.1);
+  --color-status-info-text: #d4e4d5;
+}

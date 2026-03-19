@@ -1,96 +1,130 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/components/navbar/style.css" />
+    <link rel="stylesheet" href="../css/components/navbar/media.css" />
+    <link rel="stylesheet" href="../css/pages/signup/style.css" />
+    <link rel="stylesheet" href="../css/pages/signup/media.css" />
     <title>GILDORA - Sign Up</title>
-</head>
-<body>
-        <nav>
-      <h2>
-        <a href="../index.html" style="text-decoration: none; color: black"
-          >GILDORA</a
-        >
-      </h2>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div>
+        <h2 class="navbar-logo">
+          <i class="fa-solid fa-book-open fa-2xl"></i>
+          <a class="logo-link" href="../index.html">GILDORA</a>
+        </h2>
 
-      <span>
-        <a href="../index.html">Home</a> |
-        <a href="books.html">Browse Books</a> | <a href="about.html">About</a> |
-        <a href="contact.html">Contact</a> |
-        <a href="support.html">Support</a>
-      </span>
-      <br /><br />
+        <button class="mobile-toggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
 
-      <details>
-        <summary><strong>User Menu</strong> (Visible to Users)</summary>
-        <ul>
-          <li><a href="profile.html">My Profile</a></li>
-          <li><a href="borrowed_books.html">My Borrowed Books</a></li>
-        </ul>
-      </details>
-
-      <details>
-        <summary><strong>Admin Menu</strong> (Visible to Admins)</summary>
-        <ul>
-          <li><a href="admin_dashboard.html">Admin Dashboard</a></li>
-        </ul>
-      </details>
-      <br />
-
-      <span>
-        <a href="login.html">Login</a> |
-        <a href="signup.html">Sign Up</a>
-      </span>
+        <div class="nav-menu-container">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./books.html">Books</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./support.html">Support</a>
+            </li>
+          </ul>
+          <ul class="auth-nav">
+            <li>
+              <a class="auth-link link-login" href="./login.html">Login</a>
+            </li>
+            <li>
+              <a class="auth-link link-signup" href="./signup.html">Sign Up</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
     <hr />
-<h2>Create New Account</h2>
+    <h2>Create New Account</h2>
 
-<form action="login.html">
+    <form action="login.html">
+      <label>Username:</label>
+      <br />
+      <input
+        type="text"
+        name="username"
+        placeholder="Enter username"
+        required
+      />
+      <br /><br />
 
-    <label>Username:</label>
-    <br>
-    <input type="text" name="username" placeholder="Enter username" required>
-    <br><br>
+      <label>Email:</label>
+      <br />
+      <input type="email" name="email" placeholder="Enter email" required />
+      <br /><br />
 
-    <label>Email:</label>
-    <br>
-    <input type="email" name="email" placeholder="Enter email" required>
-    <br><br>
+      <label>Password:</label>
+      <br />
+      <input
+        type="password"
+        name="password"
+        placeholder="Enter password"
+        required
+      />
+      <br /><br />
 
-    <label>Password:</label>
-    <br>
-    <input type="password" name="password" placeholder="Enter password" required>
-    <br><br>
+      <label>Confirm Password:</label>
+      <br />
+      <input
+        type="password"
+        name="confirm_password"
+        placeholder="Confirm password"
+        required
+      />
+      <br /><br />
 
-    <label>Confirm Password:</label>
-    <br>
-    <input type="password" name="confirm_password" placeholder="Confirm password" required>
-    <br><br>
+      <label>User Type:</label>
+      <br />
 
-    <label>User Type:</label>
-    <br>
+      <input type="radio" name="role" value="student" required />
+      Student
 
-    <input type="radio" name="role" value="student" required>
-    Student
+      <br />
 
-    <br>
+      <input type="radio" name="role" value="admin" />
+      Admin
 
-    <input type="radio" name="role" value="admin">
-    Admin
+      <br /><br />
 
-    <br><br>
+      <button type="submit">Sign Up</button>
+    </form>
 
-    <button type="submit">Sign Up</button>
+    <br />
 
-</form>
-
-<br>
-
-<p>
-    Already have an account?
-    <a href="login.html">Login</a>
-</p>
-     <hr />
+    <p>
+      Already have an account?
+      <a href="login.html">Login</a>
+    </p>
+    <hr />
 
     <footer>
       <div class="footer-container">
@@ -136,5 +170,6 @@
       </div>
       <p>&copy; 2026 CU Library. All rights reserved.</p>
     </footer>
-</body>
+    <script src="../js/components/navbar.js"></script>
+  </body>
 </html>
