@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="../css/components/navbar/media.css" />
     <link rel="stylesheet" href="../css/pages/admin_dashboard/style.css" />
     <link rel="stylesheet" href="../css/pages/admin_dashboard/media.css" />
+    <script src="../js/pages/admin_dashboard.js" defer ></script>
+    
+    
     <title>GILDORA - Admin Dashboard</title>
   </head>
   <body>
@@ -64,9 +67,10 @@
       </div>
     </nav>
     <hr />
-
-    <h2 id="stats">Quick Stats</h2>
-    <table border="1" width="100%">
+    <div id="Admin-Dashboard">
+      <div>
+    <h2>Quick Stats</h2>
+    <table  width="100%" id="stats">
       <thead>
         <tr>
           <th>Total Books</th>
@@ -82,13 +86,14 @@
         <td>800</td>
       </tbody>
     </table>
-    <br /><br /><br />
+    </div>
+    <div>
     <h2>Book Inventory</h2>
     <label for="search">Search:</label>
     <input type="search" name="search" id="search" />
     <a href="BookForm.html"><input type="button" value="Add" /></a>
 
-    <table border="1" width="100%">
+    <table width="100%" id="Book-Inventory">
       <thead>
         <tr>
           <th>ISBN</th>
@@ -99,30 +104,14 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>0031</td>
-          <td>The Great Gatsby</td>
-          <td>F. Scott Fitzgerald</td>
-          <td>Available</td>
-          <td>
-            <a href="BookForm.html"><input type="button" value="Edit" /></a>
-            <a href="#"><input type="button" value="Delete" /></a>
-          </td>
-        </tr>
-        <tr>
-          <td>0024</td>
-          <td>1984</td>
-          <td>George Orwell</td>
-          <td>Issued</td>
-          <td>
-            <a href="BookForm.html"><input type="button" value="Edit" /></a>
-            <a href="#"><input type="button" value="Delete" /></a>
-          </td>
-        </tr>
+        
+        
       </tbody>
     </table>
+    </div>
+    <div>
     <h1>Best Seller</h1>
-    <table border="1" width="100%">
+    <table width="100%" id="Best Seller">
       <thead>
         <tr>
           <th>ISBN</th>
@@ -146,7 +135,8 @@
         </tr>
       </tbody>
     </table>
-
+    </div>
+</div>
     <hr />
     <footer>
       <div class="footer-container">

@@ -1,2 +1,33 @@
 @import url("../../base/variables.css");
 @import url("../../base/reset.css");
+form{
+    margin-top: 100px;
+    margin-left: 2%;
+    margin-right: 2%;
+
+}
+
+form>div {
+  display: flex;
+  flex-wrap:wrap; 
+  gap: 15px ; 
+  margin-bottom: 40px;
+}
+form > div > h1,
+form > div > p,
+form > div > label[for="Description"],
+form > div > textarea
+{
+  width: 100%;
+}
+form > div > label:not([for="Description"]) {
+  width: 15%;
+  text-align: right;
+}
+form > div > input:not([type="submit"]),
+form > div > select {
+  width: 30%;
+  padding: 8px;
+  box-sizing:border-box; 
+}
+

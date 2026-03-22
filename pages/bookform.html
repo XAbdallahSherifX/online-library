@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="../css/components/navbar/media.css" />
     <link rel="stylesheet" href="../css/pages/book_form/style.css" />
     <link rel="stylesheet" href="../css/pages/book_form/media.css" />
+    <script src="../js/pages/Add_Book.js" defer></script>
     <title>GILDORA - Book Form</title>
   </head>
   <body>
@@ -65,28 +66,29 @@
     </nav>
     <hr />
     <form action="admin_dashboard.html" method="post">
+      <div>
       <h1>Add a New Book</h1>
       <p>Please fill out the details below to add a book to the collection.</p>
 
       <label for="Title">Title:</label>
-      <input type="text" name="Title" id="Title" required /><br /><br />
+      <input type="text" name="Title" id="Title" required />
 
       <label for="Author">Author:</label>
-      <input type="text" name="Author" id="Author" required /><br /><br />
+      <input type="text" name="Author" id="Author" required />
 
       <label for="ISBN">ISBN:</label>
-      <input type="number" name="ISBN" id="ISBN" required /><br /><br />
+      <input type="number" name="ISBN" id="ISBN" required />
 
       <label for="Publisher">Publisher:</label>
-      <input type="text" name="Publisher" id="Publisher" required /><br /><br />
+      <input type="text" name="Publisher" id="Publisher" required />
 
-      <label for="Publication Year">Publication Year:</label>
+      <label for="Publication-Year">Publication Year:</label>
       <input
         type="date"
-        name="Publication Year"
-        id="Publication Year"
+        name="Publication-Year"
+        id="Publication-Year"
         required
-      /><br /><br />
+      />
 
       <label for="Language">Language:</label>
       <select name="Language" id="Language" required>
@@ -94,8 +96,8 @@
         <option value="English">English</option>
         <option value="Arabic">Arabic</option>
         <option value="French">French</option></select
-      ><br /><br />
-
+      >
+       <label for="Category">Category:</label>
       <select name="Category" id="Category" required>
         <option value="select">----Select Category----</option>
         <option value="History">History</option>
@@ -108,45 +110,45 @@
         <option value="Horror">Horror</option>
         <option value="Cookbooks/Crafts">Cookbooks/Crafts</option>
         <option value="Science & Tech:">Science & Tech</option></select
-      ><br /><br />
+      >
 
       <label for="Description">Description:</label>
       <textarea name="Description" id="Description" rows="7" cols="50" required>
       </textarea
-      ><br /><br />
-
+      ></div>
+      <div>
       <h1>Physical & Inventory Details</h1>
-      <br /><br />
-      <label for="Call Number">Call Number:</label>
+      <label for="Call-Number">Call Number:</label>
       <input
         type="text"
-        name="Call Number"
-        id="Call Number"
+        name="Call-Number"
+        id="Call-Number"
         minlength="2"
         maxlength="3"
         required
-      /><br /><br />
+      />
 
-      <label for="Total Copies">Total Copies:</label>
+      <label for="Total-Copies">Total Copies:</label>
       <input
         type="number"
-        name="Total Copies"
-        id="Total Copies"
+        name="Total-Copies"
+        id="Total-Copies"
         required
-      /><br /><br />
+      />
 
-      <label for="Cover Image">Cover Image:</label>
+      <label for="Cover-Image">Cover Image:</label>
       <input
         type="file"
-        name="Cover Image"
-        id="Cover Image"
+        name="Cover-Image"
+        id="Cover-Image"
         required
-      /><br /><br />
+      />
 
       <label for="Edition">Edition:</label>
-      <input type="text" name="Edition" id="Edition" required /><br /><br />
+      <input type="text" name="Edition" id="Edition" required />
 
       <input type="submit" value="submit" />
+    </div>
     </form>
     <hr />
     <footer>
