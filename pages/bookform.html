@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="../css/pages/book_form/style.css" />
     <link rel="stylesheet" href="../css/pages/book_form/media.css" />
     <script src="../js/pages/Add_Book.js" defer></script>
+    <script src="../js/pages/Edit_Book.js " defer></script>
     <title>GILDORA - Book Form</title>
   </head>
   <body>
@@ -137,12 +138,14 @@
       />
 
       <label for="Cover-Image">Cover Image:</label>
-      <input
-        type="file"
-        name="Cover-Image"
-        id="Cover-Image"
-        required
-      />
+    <img id="image-preview" src="" alt="Current Cover" style="display:none; width:100px; margin-bottom:10px; border-radius:5px;">
+
+    <input
+     type="file"
+     name="Cover-Image"
+     id="Cover-Image"
+     required
+    />
 
       <label for="Edition">Edition:</label>
       <input type="text" name="Edition" id="Edition" required />
