@@ -22,14 +22,11 @@ if (editISBN) {
             document.getElementById("Edition").value = book.Edition;
             document.getElementById("ISBN").readOnly = true;
 
-            let preview = document.getElementById("image-preview");
             let fileInput = document.getElementById("Cover-Image");
 
-            if (book.Cover_Image) {
-                preview.src = book.Cover_Image;
-                preview.style.display = "block";
+            
                 fileInput.removeAttribute("required"); 
-            }
+            
             document.querySelector("h1").innerText = "Edit Book: " + book.Titel;
         }
 
