@@ -10,6 +10,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="css/components/footer/style.css">
+    <link rel="stylesheet" href="css/components/footer/media.css">
+    <link rel="stylesheet" href="../css/components/footer/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,139 +26,168 @@
     <title>GILDORA - About Us</title>
   </head>
   <body>
+
     <nav class="navbar">
       <div>
         <h2 class="navbar-logo">
           <i class="fa-solid fa-book-open fa-2xl"></i>
           <a class="logo-link" href="../index.html">GILDORA</a>
         </h2>
-
         <button class="mobile-toggle" aria-label="Toggle navigation">
           <i class="fa-solid fa-bars"></i>
         </button>
-
         <div class="nav-menu-container">
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./books.html">Books</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./contact.html">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./support.html">Support</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="./books.html">Books</a></li>
+            <li class="nav-item"><a class="nav-link" href="./about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="./support.html">Support</a></li>
           </ul>
           <ul class="auth-nav">
-            <li>
-              <a class="auth-link link-login" href="./login.html">Login</a>
-            </li>
-            <li>
-              <a class="auth-link link-signup" href="./signup.html">Sign Up</a>
-            </li>
+            <li><a class="auth-link link-login" href="./login.html">Login</a></li>
+            <li><a class="auth-link link-signup" href="./signup.html">Sign Up</a></li>
           </ul>
         </div>
       </div>
     </nav>
-    <hr />
 
-    <div>
-      <h2>About GILDORA Library</h2>
-      <p>
-        Welcome to GILDORA, your premier online library platform. Founded in
-        2026, our goal is to make borrowing and reading books as accessible,
-        seamless, and enjoyable as possible.
-      </p>
-      <br />
-
-      <h3>Our Mission</h3>
-      <p>
-        We believe that knowledge should be available to everyone. Our mission
-        is to digitize the library experience, allowing users to browse a vast
-        collection of classic and modern literature, check availability in
-        real-time, and manage their reading list from the comfort of their
-        homes.
-      </p>
-      <br />
-
-      <h3>What We Offer</h3>
-      <ul>
-        <li>
-          <strong>Extensive Catalog:</strong> Hundreds of books across various
-          genres including Fiction, Adventure, Fantasy, and Academic texts.
-        </li>
-        <li>
-          <strong>Easy Borrowing:</strong> A simple, click-to-borrow system for
-          registered users.
-        </li>
-        <li>
-          <strong>Real-Time Updates:</strong> Know exactly whether a book is
-          currently available or checked out by another reader.
-        </li>
-      </ul>
-      <br />
-
-      <h3>Join Our Community</h3>
-      <p>
-        Whether you are an avid reader looking for your next adventure, or a
-        student doing research, GILDORA is here for you.
-        <a href="signup.html">Sign up today</a> to start borrowing!
-      </p>
-    </div>
-    <br />
-
-    <hr />
-
-    <footer>
-      <div class="footer-container">
-        <div class="footer-about">
-          <h3>GILDORA</h3>
-          <p>
-            Your gateway to endless knowledge. Explore, borrow, and read
-            thousands of books from our classic and modern collections.
+    <main>
+      <div class="about-hero-section">
+        <div class="about-hero-overlay"></div>
+        <div class="about-hero-content">
+        <h1 class="about-page-title">About Us</h1>
+        <div class="about-intro">
+          <p class="about-intro-main">
+            GILDORA was created with a clear purpose: to make every reader's
+            journey comfortable, seamless, and memorable.
+          </p>
+          <p class="about-intro-side">
+            Founded in 2026, our goal is to digitize the library experience —
+            allowing users to browse a vast collection of classic and modern
+            literature, check availability in real-time, and manage their
+            reading list from the comfort of their homes.
           </p>
         </div>
+         </div>
+          </div>
+        
+       <div class="about-wrapper">
 
-        <div class="footer-links">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="books.html">Discover</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="support.html">Support</a></li>
-          </ul>
+        <hr class="about-divider" />
+
+        <div class="about-grid">
+          <div class="about-grid-item">
+            <span class="about-label">What we offer</span>
+            <h3>We provide premium access to knowledge with a personal touch.</h3>
+            <ul class="about-offers">
+              <li><strong>Extensive Catalog:</strong> Hundreds of books across Fiction, Adventure, Fantasy, and Academic genres.</li>
+              <li><strong>Easy Borrowing:</strong> A simple, click-to-borrow system for registered users.</li>
+              <li><strong>Real-Time Updates:</strong> Know exactly whether a book is available or checked out.</li>
+            </ul>
+          </div>
+
+          <div class="about-grid-item has-image">
+            <span class="about-label">Our Mission</span>
+            <p>
+              We believe that knowledge should be available to everyone.
+              Our team is driven by a passion for literature and a deep
+              love for the written word.
+            </p>
+          </div>
+
+          <div class="about-grid-item">
+            <span class="about-label">Accessibility</span>
+            <h3>At GILDORA, inclusivity is at the heart of what we do.</h3>
+            <p>
+              We believe reading should be effortless and enjoyable for everyone.
+              Our platform is designed to be intuitive, fast, and available
+              across all devices — anytime, anywhere.
+            </p>
+          </div>
+
+          <div class="about-grid-item">
+            <span class="about-label">Our Team</span>
+            <p>
+              Our team isn't just there to serve you — they are passionate
+              readers with a deep knowledge of literature across every genre.
+              Whether sharing recommendations or helping you discover hidden
+              gems, they ensure every journey is as enriching as it is seamless.
+            </p>
+          </div>
+
         </div>
 
-        <div class="footer-contact">
-          <h3>Contact Us</h3>
-          <address>
-            <p>Giza, Egypt</p>
-            <p>Email: info@gildora.edu.eg</p>
-            <p>Phone: +20 123 456 7890</p>
-          </address>
+        <div class="about-cta-block">
+          <p>
+            Whether you are an avid reader looking for your next adventure,
+            or a student doing research — GILDORA is here for you.
+            Start your journey today.
+          </p>
+          <a href="./signup.html" class="about-cta-link">Sign Up Now</a>
         </div>
 
-        <div class="footer-social">
-          <ul>
-            <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
-            <li>
-              <a href="https://twitter.com" target="_blank">Twitter (X)</a>
-            </li>
-            <li>
-              <a href="https://instagram.com" target="_blank">Instagram</a>
-            </li>
-            <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
-          </ul>
-        </div>
       </div>
-      <p>&copy; 2026 CU Library. All rights reserved.</p>
-    </footer>
+    </main>
+
+    <footer>
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>GILDORA</h3>
+      <p>
+        Your gateway to endless knowledge. Explore, borrow, and read
+        thousands of books from our classic and modern collections.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="books.html">Discover</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <address>
+        <p>Giza, Egypt</p>
+        <p>Email: info@gildora.edu.eg</p>
+        <p>Phone: +20 123 456 7890</p>
+      </address>
+    </div>
+
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <ul>
+        <li>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-facebook"></i> Facebook
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-instagram"></i> Instagram
+          </a>
+        </li>
+        <li>
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-x-twitter"></i> Twitter(X)
+          </a>
+        </li>
+        <li>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <p>&copy; 2026 CU Library. All rights reserved.</p>
+</footer>
+
     <script src="../js/components/navbar.js"></script>
   </body>
 </html>

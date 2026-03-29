@@ -3,19 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/components/footer/media.css">
+    <link rel="stylesheet" href="css/components/footer/style.css" />
     <link rel="stylesheet" href="css/components/navbar/style.css" />
     <link rel="stylesheet" href="css/components/navbar/media.css" />
     <link rel="stylesheet" href="css/pages/home/style.css" />
@@ -65,23 +60,15 @@
         </div>
       </div>
     </nav>
-    <header>
-      <div>
-        <h1>GILDORA</h1>
-      </div>
-    </header>
-
-    <hr />
-
+    
     <main>
       <section id="main-hero">
         <div class="hero-text">
           <h1>The World's Best Classic Books Ready For You to Read.</h1>
-          <p>
-            For your next adventure in reading, explore our online collection of
-            digitally-restored, rare & academic books at GILDORA.
+          <p class="hero-subtitle">
+           Explore thousands of timeless classics — from ancient philosophy 
+           to golden-age fiction. All in one place.
           </p>
-
           <div class="hero-buttons">
             <a href="pages/signup.html"
               ><button class="btn-primary">SIGN IN</button></a
@@ -92,9 +79,7 @@
           </div>
         </div>
 
-        <div class="hero-image">
-          <img src="" alt="" width="450" />
-        </div>
+        
       </section>
 
       <hr />
@@ -113,11 +98,10 @@
         </div>
       </section>
 
-      <hr />
-
+    <hr>
       <section id="featured-slider">
         <div class="slider-text">
-          <h2>Featured Collections</h2>
+          <h2>Featured Books</h2>
           <p>Discover our rare and classic reprint series.</p>
         </div>
 
@@ -125,41 +109,66 @@
           <button class="slider-btn" id="prev-btn">&lt;</button>
 
           <div class="book-tracks">
-            <div class="book-slide">
+            <a href="pages/book_details.html" class="book-slide">
               <img
                 src="assets/images/book1.jpg"
                 alt="Around The World in 80 Days"
                 width="220"
               />
-            </div>
-            <div class="book-slide">
+              <div class="book-info">
+                <h3 class="book-title">Around The World in 80 Days</h3>
+                <p class="book-author">Jules Verne</p>
+                <span class="book-price">$ 45.00</span>
+               </div>
+            </a>
+            <a href="pages/book_details.html" class="book-slide ">
               <img
                 src="assets/images/book2.jpg"
                 alt="The Happy Prince"
                 width="220"
               />
-            </div>
-            <div class="book-slide">
+              <div class="book-info">
+                <h3 class="book-title">The Happy Prince</h3>
+                <p class="book-author">Oscar Tales</p>
+                <span class="book-price">$ 50.00</span>
+               </div>
+            </a>
+            <a href="pages/book_details.html" class="book-slide">
               <img
                 src="assets/images/book3.jpg"
                 alt="The Adventurer's Companion"
                 width="220"
               />
-            </div>
-            <div class="book-slide">
+              <div class="book-info">
+                <h3 class="book-title">The Adventrure's Companica</h3>
+                <p class="book-author">Ireen Chau</p>
+                <span class="book-price">$ 43.50</span>
+               </div>
+            </a>
+            <a href="pages/book_details.html" class="book-slide">
               <img
                 src="assets/images/book4.jpg"
                 alt="Court of Envy"
                 width="220"
               />
-            </div>
-            <div class="book-slide">
+              <div class="book-info">
+                <h3 class="book-title">Court of Envy</h3>
+                <p class="book-author">Jules Verne</p>
+                <span class="book-price">$ 37.00</span>
+               </div>
+            </a>
+            <a href="pages/book_details.html" class="book-slide">
               <img
                 src="assets/images/book5.jpg"
                 alt="Den of Liars"
                 width="220"
               />
-            </div>
+              <div class="book-info">
+                <h3 class="book-title">Den of Liars</h3>
+                <p class="book-author">Jessica Olson</p>
+                <span class="book-price">$ 55.00</span>
+               </div>
+            </a>
           </div>
 
           <button class="slider-btn" id="next-btn">&gt;</button>
@@ -177,41 +186,66 @@
           <button class="slider-btn" id="prev-btn-bs">&lt;</button>
 
           <div class="book-tracks">
-            <div class="book-slide">
+            <a href="pages/book_details.html" class="book-slide">
               <img
-                src="assets/images/book5.jpg"
+                src="assets/images/book11.jpg"
                 alt="Den of Liars"
                 width="220"
               />
-            </div>
-            <div class="book-slide">
+              <div class="book-info">
+                <h3 class="book-title">The Merchant of Venice</h3>
+                <p class="book-author">Shakespeare</p>
+                <span class="book-price">$ 65.00</span>
+               </div>
+            </a>
+            <a href="pages/book_details.html" class="book-slide">
               <img
-                src="assets/images/book4.jpg"
+                src="assets/images/book12.jpg"
                 alt="Court of Envy"
                 width="220"
               />
-            </div>
-            <div class="book-slide">
+              <div class="book-info">
+                <h3 class="book-title">Orfeia</h3>
+                <p class="book-author">Joanne M. Harris</p>
+                <span class="book-price">$ 45.00</span>
+               </div>
+            </a>
+            <a href="pages/book_details.html" class="book-slide">
               <img
-                src="assets/images/book3.jpg"
+                src="assets/images/book13.jpg"
                 alt="The Adventurer's Companion"
                 width="220"
               />
-            </div>
-            <div class="book-slide">
+              <div class="book-info">
+                <h3 class="book-title">Ruthless</h3>
+                <p class="book-author">Lauren Roberts</p>
+                <span class="book-price">$ 55.00</span>
+               </div>
+            </a>
+            <a href="pages/book_details.html" class="book-slide">
               <img
-                src="assets/images/book2.jpg"
+                src="assets/images/book14.jpg"
                 alt="The Happy Prince and Other Tales"
                 width="220"
               />
-            </div>
-            <div class="book-slide">
+              <div class="book-info">
+                <h3 class="book-title">Le Trône De Braises</h3>
+                <p class="book-author">Azrah H. Khayal</p>
+                <span class="book-price">$ 55.00</span>
+               </div>
+            </a>
+            <a href="pages/book_details.html" class="book-slide">
               <img
-                src="assets/images/book1.jpg"
+                src="assets/images/book15.jpg"
                 alt="Around The World in 80 Days"
                 width="220"
               />
-            </div>
+              <div class="book-info">
+                <h3 class="book-title">Freed From Gravity</h3>
+                <p class="book-author">Jenny Hickman</p>
+                <span class="book-price">$ 50.00</span>
+               </div>
+            </a>
           </div>
 
           <button class="slider-btn" id="next-btn-bs">&gt;</button>
@@ -251,20 +285,37 @@
         </div>
 
         <div class="footer-social">
+          <h3>Follow Us</h3>
           <ul>
-            <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
             <li>
-              <a href="https://twitter.com" target="_blank">Twitter (X)</a>
-            </li>
-            <li>
-              <a href="https://instagram.com" target="_blank">Instagram</a>
-            </li>
-            <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+    <i class="fa-brands fa-facebook"></i> Facebook
+  </a>
+</li>
+
+<li>
+  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+    <i class="fa-brands fa-instagram"></i> Instagram
+  </a>
+</li>
+
+<li>
+  <a href="https://X.com" target="_blank" rel="noopener noreferrer">
+    <i class="fa-brands fa-x-twitter"></i> Twitter(x)
+  </a>
+</li>
+
+<li>
+  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+    <i class="fa-brands fa-linkedin"></i> LinkedIn
+  </a>
+</li>
           </ul>
         </div>
       </div>
       <p>&copy; 2026 CU Library. All rights reserved.</p>
     </footer>
     <script src="js/components/navbar.js"></script>
+    <script src="js/pages/home.js"></script>
   </body>
 </html>
