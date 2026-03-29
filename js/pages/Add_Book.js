@@ -13,7 +13,7 @@ let book = {
     Total_Copies:document.getElementById("Total-Copies").value,
     Cover_Image:document.getElementById("Cover-Image").value,
     Edition:document.getElementById("Edition").value,
-    sold:0
+    Borrowed:0
 
 }
 localStorage.setItem("Book"+book.ISBN,JSON.stringify(book));
