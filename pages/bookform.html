@@ -72,34 +72,41 @@
       <p>Please fill out the details below to add a book to the collection.</p>
 
       <label for="Title">Title:</label>
-      <input type="text" name="Title" id="Title" required />
+      <input type="text" name="Title" id="Title"  />
+      <span class="error" id="titleError"></span>
 
       <label for="Author">Author:</label>
-      <input type="text" name="Author" id="Author" required />
+      <input type="text" name="Author" id="Author"  />
+      <span class="error" id="authorError"></span>
 
       <label for="ISBN">ISBN:</label>
-      <input type="number" name="ISBN" id="ISBN" required />
+      <input type="number" name="ISBN" id="ISBN"  />
+      <span class="error" id="isbnError"></span>
 
       <label for="Publisher">Publisher:</label>
-      <input type="text" name="Publisher" id="Publisher" required />
+      <input type="text" name="Publisher" id="Publisher"  />
+      <span class="error" id="authorError"></span>
 
       <label for="Publication-Year">Publication Year:</label>
       <input
         type="date"
         name="Publication-Year"
         id="Publication-Year"
-        required
+        
       />
+      
 
       <label for="Language">Language:</label>
-      <select name="Language" id="Language" required>
+      <select name="Language" id="Language" >
         <option value="">--Select Language--</option>
         <option value="English">English</option>
         <option value="Arabic">Arabic</option>
         <option value="French">French</option></select
       >
+      
+
        <label for="Category">Category:</label>
-      <select name="Category" id="Category" required>
+      <select name="Category" id="Category" >
         <option value="select">----Select Category----</option>
         <option value="History">History</option>
         <option value="Fiction">Fiction</option>
@@ -114,7 +121,7 @@
       >
 
       <label for="Description">Description:</label>
-      <textarea name="Description" id="Description" rows="7" cols="50" required>
+      <textarea name="Description" id="Description" rows="7" cols="50" >
       </textarea
       ></div>
       <div>
@@ -126,7 +133,7 @@
         id="Call-Number"
         minlength="2"
         maxlength="3"
-        required
+        
       />
 
       <label for="Total-Copies">Total Copies:</label>
@@ -134,21 +141,24 @@
         type="number"
         name="Total-Copies"
         id="Total-Copies"
-        required
+        
       />
+      <span class="error" id="copiesError"></span>
 
       <label for="Cover-Image">Cover Image:</label>
     <input
      type="file"
      name="Cover-Image"
      id="Cover-Image"
-     required
+     
     />
 
       <label for="Edition">Edition:</label>
-      <input type="text" name="Edition" id="Edition" required />
-
-      <input type="submit" value="submit" />
+      <input type="text" name="Edition" id="Edition"  />
+      
+      <input type="submit" value="submit" id="button" />
+      
+      <div id="errorSummary" style="color: red; margin-bottom: 15px;"></div>
     </div>
     </form>
     <hr />

@@ -14,7 +14,7 @@ window.onload = () => {
         }
 
     }
-    
+
     document.getElementById("Total-Books").innerText = Total_Copies;
     document.getElementById("borrowed-books").innerText = borrowed_books;
     document.getElementById("Available-Books").innerText = Total_Copies - borrowed_books;
@@ -31,7 +31,7 @@ window.onload = () => {
             let data = localStorage.getItem(key);
             let book = JSON.parse(data);
 
-            if (book.Titel.toLowerCase().includes(value) || book.ISBN.toString().includes(value)|| book.Author.toLowerCase().includes(value)) {
+            if (book.Titel.toLowerCase().includes(value) || book.ISBN.toString().includes(value) || book.Author.toLowerCase().includes(value)) {
                 tableBody.appendChild(create_row(book));
             }
         }
@@ -54,16 +54,29 @@ window.onload = () => {
         status.innerText = (Book.Total_Copies == 0) ? "UnAvailable" : "Available";
         let action = document.createElement("td");
 
-        let edit = document.createElement("input");
-        edit.type = "button";
-        edit.value = "Edit";
+        let editIcon = document.createElement("i");
+        editIcon.className = "fa-solid fa-pen-to-square action-icon edit-btn";;
+        editIcon.title = "Edit Book";
+        editIcon.onclick = () => {
+            window.location.href = `bookform.html?edit=${Book.ISBN}`;
+        };
 
-        let delet = document.createElement("input");
-        delet.type = "button";
-        delet.value = "Delete";
-        action.appendChild(edit);
-        action.appendChild(delet);
 
+
+        
+        let trashIcon = document.createElement("i");
+        trashIcon.className = "fa-solid fa-trash";
+        trashIcon.style.color = "rgb(222, 13, 13)";
+        trashIcon.style.cursor = "pointer";
+        trashIcon.style.marginLeft = "15px";
+        trashIcon.onclick = function () {
+            if (confirm(`Delete "${Book.Titel}"?`)) {
+                row.remove();
+                localStorage.removeItem("Book" + Book.ISBN);
+            }
+        };
+        action.appendChild(editIcon);
+        action.appendChild(trashIcon);
 
         row.appendChild(ISBN);
         row.appendChild(titel);
@@ -72,15 +85,9 @@ window.onload = () => {
         row.appendChild(action);
 
 
-        delet.onclick = () => {
-            delet.parentElement.parentElement.remove();
-            localStorage.removeItem("Book" + Book.ISBN)
-        }
 
 
-        edit.onclick = () => {
-            window.location.href = `bookform.html?edit=${Book.ISBN}`;
-        };
+        
         return row;
 
     }

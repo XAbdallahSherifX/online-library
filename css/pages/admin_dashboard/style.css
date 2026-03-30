@@ -1,17 +1,53 @@
 @import url("../../base/variables.css");
 @import url("../../base/reset.css");
+body{
+  background-color: var(--color-table-row-hover);
+  padding: 2% 2% 2% 2%;
+}
 #Admin-Dashboard{
 margin-top: 100px;
+}
+
+.titel-font{
+font-size: 2.5rem;
+font-weight: 400;
+font-family:'Prata' ,serif;
+line-height: 1.1;
+margin: 0;
+text-shadow: 0 2px 20px var(--color-shadow-md);
+}
+#search{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 50px;
+    border-color: black;
 }
 table{
     margin-bottom: 10px;
     text-align: center;
     border: auto;
 }
-th,td{
+th,td ,label{
     margin-bottom: 10px;
+
+    font-size: 1rem;
+        font-weight: 400;
+        font-family: 'Prata', serif;
+        line-height: 1.1;
+        margin: 0;
+        text-shadow: 0 2px 20px var(--color-shadow-md);
 }
 tbody tr:hover {
-  background-color:#f5f5f5; 
+  background-color: rgba(0, 0, 0, 0.04); 
   cursor: pointer;           
+}
+.Add-btn{
+  color: var(--color-action-primary);
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.8);
+  border: 1px solid #c9beaa;
+  background-color: #fcfaf5;
+  box-shadow:
+    inset 0px 2px 1px rgba(255, 255, 255, 0.9),
+    inset 0px -2px 2px rgba(0, 0, 0, 0.05),
+    0px 4px 4px rgba(0, 0, 0, 0.1);
 }
