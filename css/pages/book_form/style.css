@@ -2,6 +2,7 @@
 @import url("../../base/reset.css");
 body{
   background-color: var(--color-bg-primary);
+  padding: 80px 5% 40px !important;
 }
 h1{
 font-size: 2.5rem;

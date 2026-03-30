@@ -2,7 +2,7 @@
 @import url("../../base/reset.css");
 body{
   background-color: var(--color-table-row-hover);
-  padding: 2% 2% 2% 2%;
+  padding: 80px 5% 40px !important;
 }
 #Admin-Dashboard{
 margin-top: 100px;
