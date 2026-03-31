@@ -1,179 +1,191 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+          integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/components/footer/style.css">
+    <link rel="stylesheet" href="css/components/footer/media.css">
+    <link rel="stylesheet" href="../css/components/footer/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap"
+          rel="stylesheet" />
     <link rel="stylesheet" href="../css/components/navbar/style.css" />
     <link rel="stylesheet" href="../css/components/navbar/media.css" />
     <link rel="stylesheet" href="../css/pages/support/style.css" />
     <link rel="stylesheet" href="../css/pages/support/media.css" />
     <title>GILDORA - Support</title>
-  </head>
+</head>
   <body>
-    <nav class="navbar">
+      <nav class="navbar">
+          <div>
+              <h2 class="navbar-logo">
+                  <i class="fa-solid fa-book-open fa-2xl"></i>
+                  <a class="logo-link" href="../index.html">GILDORA</a>
+              </h2>
+
+              <button class="mobile-toggle" aria-label="Toggle navigation">
+                  <i class="fa-solid fa-bars"></i>
+              </button>
+
+              <div class="nav-menu-container">
+                  <ul class="navbar-nav">
+                      <li class="nav-item">
+                          <a class="nav-link" href="../index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="./books.html">Books</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="./about.html">About</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="./contact.html">Contact</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="./support.html">Support</a>
+                      </li>
+                  </ul>
+                  <ul class="auth-nav">
+                      <li>
+                          <a class="auth-link link-login" href="./login.html">Login</a>
+                      </li>
+                      <li>
+                          <a class="auth-link link-signup" href="./signup.html">Sign Up</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+      <hr />
+
       <div>
-        <h2 class="navbar-logo">
-          <i class="fa-solid fa-book-open fa-2xl"></i>
-          <a class="logo-link" href="../index.html">GILDORA</a>
-        </h2>
-
-        <button class="mobile-toggle" aria-label="Toggle navigation">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-
-        <div class="nav-menu-container">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./books.html">Books</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./contact.html">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./support.html">Support</a>
-            </li>
-          </ul>
-          <ul class="auth-nav">
-            <li>
-              <a class="auth-link link-login" href="./login.html">Login</a>
-            </li>
-            <li>
-              <a class="auth-link link-signup" href="./signup.html">Sign Up</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <hr />
-
-    <div>
-      <h2>Help & Support Center</h2>
-      <p>
-        Welcome to the GILDORA support page. Click on the questions below to
-        find answers to common issues.
-      </p>
-      <br />
-
-      <h3>Frequently Asked Questions (FAQs)</h3>
-
-      <details>
-        <summary><strong>How do I borrow a book?</strong></summary>
-        <p>
-          To borrow a book, you must first <a href="login.html">log in</a> to
-          your User account. Navigate to the "Browse Books" page, select a book
-          that is marked as "Available," and click the "Borrow Book" button.
-        </p>
-      </details>
-      <br />
-
-      <details>
-        <summary>
-          <strong>What is the difference between an Admin and a User?</strong>
-        </summary>
-        <p>
-          Users can search our catalog, view book details, and borrow available
-          books. Admins are responsible for managing the library; they can add
-          new books to the system, edit existing book details, and delete books.
-        </p>
-      </details>
-      <br />
-
-      <details>
-        <summary>
-          <strong>How can I see which books I have borrowed?</strong>
-        </summary>
-        <p>
-          Once logged in, open the "User Menu" in the navigation bar and click
-          on "My Borrowed Books" to see a complete list of your current rentals.
-        </p>
-      </details>
-      <br />
-
-      <details>
-        <summary>
-          <strong>Why is the "Borrow Book" button disabled?</strong>
-        </summary>
-        <p>
-          If a button is disabled and greyed out, it means another user has
-          already borrowed that specific book. Check back later to see if its
-          status has changed to "Available".
-        </p>
-      </details>
-      <br />
-
-      <h3>Still need help?</h3>
-      <p>
-        If you cannot find the answer to your question here, please reach out to
-        us directly via our <a href="contact.html">Contact Page</a>.
-      </p>
-    </div>
-    <br />
-
-    <hr />
-
-    <footer>
-      <div class="footer-container">
-        <div class="footer-about">
-          <h3>GILDORA</h3>
+          <h2>Help & Support Center</h2>
           <p>
-            Your gateway to endless knowledge. Explore, borrow, and read
-            thousands of books from our classic and modern collections.
+              Welcome to the GILDORA support page. Click on the questions below to
+              find answers to common issues.
           </p>
-        </div>
+          <br />
 
-        <div class="footer-links">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="books.html">Discover</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="support.html">Support</a></li>
-          </ul>
-        </div>
+          <h3>Frequently Asked Questions (FAQs)</h3>
 
-        <div class="footer-contact">
-          <h3>Contact Us</h3>
-          <address>
-            <p>Giza, Egypt</p>
-            <p>Email: info@gildora.edu.eg</p>
-            <p>Phone: +20 123 456 7890</p>
-          </address>
-        </div>
+          <details>
+              <summary><strong>How do I borrow a book?</strong></summary>
+              <p>
+                  To borrow a book, you must first <a href="login.html">log in</a> to
+                  your User account. Navigate to the "Browse Books" page, select a book
+                  that is marked as "Available," and click the "Borrow Book" button.
+              </p>
+          </details>
+          <br />
 
-        <div class="footer-social">
-          <ul>
-            <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
-            <li>
-              <a href="https://twitter.com" target="_blank">Twitter (X)</a>
-            </li>
-            <li>
-              <a href="https://instagram.com" target="_blank">Instagram</a>
-            </li>
-            <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
-          </ul>
-        </div>
+          <details>
+              <summary>
+                  <strong>What is the difference between an Admin and a User?</strong>
+              </summary>
+              <p>
+                  Users can search our catalog, view book details, and borrow available
+                  books. Admins are responsible for managing the library; they can add
+                  new books to the system, edit existing book details, and delete books.
+              </p>
+          </details>
+          <br />
+
+          <details>
+              <summary>
+                  <strong>How can I see which books I have borrowed?</strong>
+              </summary>
+              <p>
+                  Once logged in, open the "User Menu" in the navigation bar and click
+                  on "My Borrowed Books" to see a complete list of your current rentals.
+              </p>
+          </details>
+          <br />
+
+          <details>
+              <summary>
+                  <strong>Why is the "Borrow Book" button disabled?</strong>
+              </summary>
+              <p>
+                  If a button is disabled and greyed out, it means another user has
+                  already borrowed that specific book. Check back later to see if its
+                  status has changed to "Available".
+              </p>
+          </details>
+          <br />
+
+          <h3>Still need help?</h3>
+          <p>
+              If you cannot find the answer to your question here, please reach out to
+              us directly via our <a href="contact.html">Contact Page</a>.
+          </p>
       </div>
-      <p>&copy; 2026 CU Library. All rights reserved.</p>
-    </footer>
-    <script src="../js/components/navbar.js"></script>
+      <br />
+
+      <hr />
+
+      <footer>
+          <div class="footer-container">
+              <div class="footer-about">
+                  <h3>GILDORA</h3>
+                  <p>
+                      Your gateway to endless knowledge. Explore, borrow, and read
+                      thousands of books from our classic and modern collections.
+                  </p>
+              </div>
+
+              <div class="footer-links">
+                  <h3>Quick Links</h3>
+                  <ul>
+                      <li><a href="about.html">About Us</a></li>
+                      <li><a href="books.html">Discover</a></li>
+                      <li><a href="contact.html">Contact</a></li>
+                      <li><a href="support.html">Support</a></li>
+                  </ul>
+              </div>
+
+              <div class="footer-contact">
+                  <h3>Contact Us</h3>
+                  <address>
+                      <p>Giza, Egypt</p>
+                      <p>Email: info@gildora.edu.eg</p>
+                      <p>Phone: +20 123 456 7890</p>
+                  </address>
+              </div>
+
+              <div class="footer-social">
+                  <h3>Follow Us</h3>
+                  <ul>
+                      <li>
+                          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                              <i class="fa-brands fa-facebook"></i> Facebook
+                          </a>
+                      </li>
+                      <li>
+                          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                              <i class="fa-brands fa-instagram"></i> Instagram
+                          </a>
+                      </li>
+                      <li>
+                          <a href="https://x.com" target="_blank" rel="noopener noreferrer">
+                              <i class="fa-brands fa-x-twitter"></i> Twitter(X)
+                          </a>
+                      </li>
+                      <li>
+                          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                              <i class="fa-brands fa-linkedin"></i> LinkedIn
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <p>&copy; 2026 CU Library. All rights reserved.</p>
+      </footer>
+      <script src="../js/components/navbar.js"></script>
   </body>
 </html>

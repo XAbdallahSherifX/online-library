@@ -1,14 +1,79 @@
-@media all and (min-width: 576px) {
+﻿@media (max-width: 768px) {
+    body > form {
+        max-width: 90%;
+        margin: 44px auto;
+        padding: 50px 28px 36px;
+    }
+
+        body > form::before {
+            font-size: 1.20rem;
+            letter-spacing: 0.07em;
+        }
 }
 
-@media all and (min-width: 768px) {
+@media (max-width: 540px) {
+    body > form {
+        max-width: 100%;
+        margin: 32px 16px;
+        padding: 46px 22px 32px;
+        border-radius: 8px;
+    }
+
+        body > form::before {
+            font-size: 1.10rem;
+            letter-spacing: 0.05em;
+            padding-top: 18px;
+        }
+
+        body > form > input[type="text"],
+        body > form > input[type="email"],
+        body > form > input[type="password"] {
+            height: 44px;
+            font-size: 0.92rem;
+        }
+
+        body > form > button[type="submit"] {
+            height: 48px;
+            font-size: 0.88rem;
+        }
+
+    body > p {
+        margin: 0 16px 40px;
+        font-size: 0.83rem;
+    }
 }
 
-@media all and (min-width: 992px) {
-}
+@media (max-width: 390px) {
+    body > form {
+        margin: 24px 10px;
+        padding: 42px 18px 28px;
+    }
 
-@media all and (min-width: 1200px) {
-}
+        body > form::before {
+            font-size: 0.98rem;
+            letter-spacing: 0.03em;
+        }
 
-@media all and (min-width: 1400px) {
+        body > form > label {
+            font-size: 0.72rem;
+        }
+
+        body > form > input[type="text"],
+        body > form > input[type="email"],
+        body > form > input[type="password"] {
+            height: 42px;
+            padding: 0 12px;
+            font-size: 0.88rem;
+            margin-bottom: 14px;
+        }
+
+        body > form > button[type="submit"] {
+            height: 46px;
+            font-size: 0.84rem;
+            margin-top: 20px;
+        }
+
+    body > p {
+        margin: 0 10px 32px;
+    }
 }
