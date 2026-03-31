@@ -1,14 +1,87 @@
-@media all and (min-width: 576px) {
+﻿@media (max-width: 768px) {
+    main {
+        padding: 44px 16px;
+    }
+
+    .login-card {
+        max-width: 90%;
+        padding: 50px 28px 36px;
+    }
+
+        .login-card::before {
+            font-size: 1.22rem;
+            letter-spacing: 0.07em;
+        }
 }
 
-@media all and (min-width: 768px) {
+@media (max-width: 540px) {
+    main {
+        padding: 32px 16px;
+        align-items: flex-start;
+    }
+
+    .login-card {
+        max-width: 100%;
+        border-radius: 8px;
+        padding: 46px 22px 32px;
+    }
+
+        .login-card::before {
+            font-size: 1.12rem;
+            letter-spacing: 0.05em;
+            padding-top: 18px;
+        }
+
+    .login-form input[type="email"],
+    .login-form input[type="password"],
+    .login-form input[type="text"] {
+        height: 44px;
+        font-size: 0.92rem;
+    }
+
+    .login-form button[type="submit"] {
+        height: 48px;
+        font-size: 0.88rem;
+    }
+
+    .forgot-password {
+        font-size: 0.75rem;
+    }
+
+    .login-signup-prompt {
+        font-size: 0.83rem;
+    }
 }
 
-@media all and (min-width: 992px) {
-}
+@media (max-width: 390px) {
+    .login-card {
+        padding: 42px 18px 28px;
+    }
 
-@media all and (min-width: 1200px) {
-}
+        .login-card::before {
+            font-size: 1.00rem;
+            letter-spacing: 0.03em;
+        }
 
-@media all and (min-width: 1400px) {
+    .login-form label {
+        font-size: 0.72rem;
+    }
+
+    .login-form input[type="email"],
+    .login-form input[type="password"],
+    .login-form input[type="text"] {
+        height: 42px;
+        padding: 0 12px;
+        margin-bottom: 16px;
+    }
+
+    .login-form button[type="submit"] {
+        height: 46px;
+        font-size: 0.84rem;
+        margin-top: 0;
+    }
+
+    .remember-me span {
+        font-size: 0.80rem;
+    }
 }

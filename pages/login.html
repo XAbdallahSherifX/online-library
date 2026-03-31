@@ -64,34 +64,40 @@
       </nav>
       <hr />
 
-      <h2>Login</h2>
+      <main>
+          <div class="login-card">
 
-      <form action="../index.html">
-          <label>Email:</label>
-          <br />
-          <input type="email"
-                 name="email"
-                 placeholder="Enter your email"
-                 required />
-          <br /><br />
+              <form class="login-form" action="../index.html">
 
-          <label>Password:</label>
-          <br />
-          <input type="password"
-                 name="password"
-                 placeholder="Enter your password"
-                 required />
-          <br /><br />
+                  <label>Email</label>
+                  <input type="email" name="email" placeholder="Enter your email" required />
 
-          <button type="submit">Login</button>
-      </form>
+                  <label>Password</label>
 
-      <br />
+                  <div class="password-field-wrapper">
+                      <input type="password" name="password" placeholder="Enter your password" required />
+                  </div>
 
-      <p>
-          Don't have an account?
-          <a href="signup.html">Create Account</a>
-      </p>
+                  <label class="remember-me">
+                      <input type="checkbox" />
+                      <span>Remember me</span>
+                  </label>
+
+                  <button type="submit">Login</button>
+
+              </form>
+
+              <div class="login-divider">
+                  <span>OR</span>
+              </div>
+
+              <p class="login-signup-prompt">
+                  Don't have an account?
+                  <a href="signup.html">Create Account</a>
+              </p>
+
+          </div>
+      </main>
       <hr />
 
       <footer>
