@@ -73,6 +73,7 @@ window.onload = () => {
             if (confirm(`Delete "${Book.Titel}"?`)) {
                 row.remove();
                 localStorage.removeItem("Book" + Book.ISBN);
+                location.reload();
             }
         };
         action.appendChild(editIcon);

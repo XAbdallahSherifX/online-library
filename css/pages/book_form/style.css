@@ -1,72 +1,132 @@
 @import url("../../base/variables.css");
 @import url("../../base/reset.css");
-body{
+
+body {
   background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-primary);
   
 }
-h1{
-font-size: 2.5rem;
-font-weight: 400;
-font-family:'Prata' ,serif;
-line-height: 1.1;
-margin: 0;
-text-shadow: 0 2px 20px var(--color-shadow-md);
-}
-label{
-font-size: 1rem;
-font: weight 50px;;
-font-family:'Prata' ,serif;
-line-height: 1.1;
-margin: 0;
-text-shadow: 0 2px 5px var(--color-shadow-md);
-}
-#button{
-  color: white;
-  text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.4);
-  border: 1px solid #4d0013;
-  background-color: var(--color-action-primary);
-  box-shadow:
-    inset 0px 2px 1px rgba(255, 255, 255, 0.2),
-    inset 0px -2px 2px rgba(0, 0, 0, 0.3),
-    0px 4px 4px rgba(0, 0, 0, 0.2);
-}
-#button:hover {
-  filter: brightness(1.15);
-  transform: translateY(-1px);
-  box-shadow:
-    inset 0px 2px 1px rgba(255, 255, 255, 0.3),
-    inset 0px -2px 2px rgba(0, 0, 0, 0.3),
-    0px 6px 8px rgba(0, 0, 0, 0.2);
+
+form {
+  
+  margin: 100px auto 60px;
+  padding: 0 2%;
+  max-width: 700px; 
 }
 
-form{
-    margin-top: 100px;
-    margin-left: 2%;
-    margin-right: 2%;
-
+form > div {
+  margin-bottom: 4%;
 }
 
-form>div {
-  display: flex;
-  flex-wrap:wrap; 
-  gap: 15px ; 
-  margin-bottom: 40px;
+form h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-text-primary);
+  margin-top: 2%;
+  margin-bottom: 1%;
+  padding-bottom:1%;
+  border-bottom: 2px solid var(--color-border-default);
 }
-form > div > h1,
-form > div > p,
-form > div > label[for="Description"],
-form > div > textarea
-{
+
+form p {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  color: var(--color-form-label);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
   width: 100%;
-}
-form > div > label:not([for="Description"]) {
-  width: 15%;
-  text-align: right;
-}
-form > div > input:not([type="submit"]),
-form > div > select {
-  width: 30%;
-  padding: 8px;
-  box-sizing:border-box; 
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--color-border-default);
+  background-color: var(--color-form-input-bg);
+  color: var(--color-form-input-text);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-border-focus);
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.15); /* Subtle gold glow */
+}
+
+textarea {
+  min-height: 120px;
+  margin-bottom: 1rem;
+}
+
+input[type="file"] {
+  width: 100%;
+  padding: 0.6rem 0;
+  font-family: inherit;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+.error {
+  display: block;
+  color: var(--color-form-error);
+  font-size: 0.85rem;
+  font-weight: bold;
+  min-height: 1.2rem; 
+  margin-top: 0.3rem;
+}
+
+#errorSummary {
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+#button {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  background-color: var(--color-action-primary);
+  color: var(--color-text-inverse);
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-family: inherit;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease;
+}
+
+#button:hover {
+  background-color: var(--color-action-primary-hover);
+}
+
+@media (min-width: 768px) {
+ 
+  form {
+    padding: 2.5rem 3rem;
+    background-color: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border-default);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02); 
+  }
+}

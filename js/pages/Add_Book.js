@@ -33,7 +33,7 @@ document.querySelector("form").onsubmit = (e) => {
     
     if (book.Author.trim() == "") addError("Author name is required.", "Author");
 
-    if (book.ISBN.length < 10) addError("ISBN must be at least 10 digits.", "ISBN");
+    if (book.ISBN.length < 5) addError("ISBN must be at least 10 digits.", "ISBN");
 
     if (book.Publisher == "") addError("Publisher name is required.", "Publisher");
 
