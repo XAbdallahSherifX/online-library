@@ -1,88 +1,115 @@
 /* =========================================
-   NAVBAR BREAKPOINTS
+   RESPONSIVE BREAKPOINTS
+   Scaling padding, gaps, and typography
    ========================================= */
 
-/* Landscape Phones / Small Tablets */
 @media all and (min-width: 576px) {
   .navbar > div {
-    padding: 14px 28px;
+    padding: 16px 24px;
   }
   
   .auth-nav {
     flex-direction: row;
     justify-content: center;
+    gap: 15px;
   }
 }
 
-/* Tablets */
 @media all and (min-width: 768px) {
-  .navbar {
-    padding: 12px 24px;
+  .navbar > div {
+    padding: 18px 28px;
   }
   
   .logo-link {
-    font-size: 32px; /* Restore desktop logo size */
+    font-size: 28px; /* Increased from 24px */
+  }
+
+  .nav-link {
+    font-size: 16px;
   }
 }
 
-/* Desktops - THE MAJOR LAYOUT SWITCH */
 @media all and (min-width: 992px) {
   .mobile-toggle {
-    display: none; /* Hide the hamburger button */
+    display: none; 
   }
   
   .nav-menu-container {
-    display: flex !important; /* Force show the menu, overriding JS toggle */
-    width: auto;
+    display: flex !important; 
     flex-direction: row;
-    align-items: center;
-    column-gap: 20px;
+    width: auto;
     margin-top: 0;
     padding-top: 0;
-    border-top: none; /* Remove mobile separation line */
-    box-shadow: none;
+    border-top: none;
+    flex-grow: 1;
+    justify-content: flex-end; 
+    gap: 24px; 
+    animation: none;
   }
 
   .navbar-nav {
     flex-direction: row;
     width: auto;
-    margin-bottom: 0;
-    column-gap: 15px;
+    gap: 16px; 
+  }
+
+  .nav-item {
+    width: auto;
   }
 
   .auth-nav {
     flex-direction: row;
     width: auto;
-    column-gap: 15px;
+    gap: 12px; 
   }
-  
-  .link-signup, .link-login {
-    width: auto; /* Buttons only take up required space */
+
+  .auth-nav li {
+    width: auto;
+  }
+
+  .auth-link {
+    padding: 8px 20px;
+    font-size: 15px;
   }
 }
 
-/* Large Desktops */
 @media all and (min-width: 1200px) {
+  .navbar > div {
+    padding: 18px 32px;
+  }
+
   .nav-menu-container {
-    column-gap: 30px; /* Give more breathing room between sections */
+    gap: 40px; 
   }
   
   .navbar-nav {
-    column-gap: 20px;
+    gap: 24px; 
   }
   
   .auth-nav {
-    column-gap: 20px;
+    gap: 16px;
+  }
+
+  .logo-link {
+    font-size: 32px;
   }
 }
 
-/* Extra Large Screens */
 @media all and (min-width: 1400px) {
-  .navbar {
-    padding: 16px 32px; /* Widen the outer padding */
+  .navbar > div {
+    padding: 20px 40px; 
   }
   
-  .navbar > div {
-    padding: 16px 36px;
+  .navbar-nav {
+    gap: 32px;
+  }
+
+  .nav-link {
+    font-size: 17px; 
+  }
+
+  .auth-link {
+    padding: 10px 24px;
+    font-size: 16px;
   }
 }

@@ -1,71 +1,165 @@
-@media (min-width: 576px) {
-  
-footer {
-padding: 70px 6% 35px;
+.site-footer {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-footer-text);
+  border-top: 4px double var(--color-action-primary);
+  width: 100%;
+  box-sizing: border-box; 
+  overflow-x: hidden; 
+  padding: 3rem 1.5rem 1.5rem;
+  font-family: var(--font-primary);
+  margin-top: 4rem;
 }
 
-.footer-container {
-grid-template-columns: 1fr;
-gap: 35px;
+/* Top Brand Section */
+.footer-top {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(80, 114, 85, 0.2); 
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.footer-about p,
-.footer-contact address,
-.footer-links a,
-.footer-social a {
-font-size: 0.95rem;
-}
-}
-
-
-@media (min-width: 768px) {
-  footer {
-    padding: 80px 8% 40px;
-  }
-
-  .footer-container {
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-  }
-
-  .footer-about h3,
-  .footer-links h3,
-  .footer-contact h3,
-  .footer-social h3 {
-    font-size: 1.2rem;
-  }
+.footer-brand h2 {
+  color: var(--color-action-primary);
+  font-family: var(--font-primary);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  letter-spacing: 2px;
 }
 
-
-@media (min-width: 992px) {
-footer {
-padding: 90px 10% 45px;
+.footer-brand p {
+  color: var(--color-text-primary);
+  font-size: 1.05rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  padding: 0 10px;
 }
 
-.footer-container {
-grid-template-columns: 2fr 1fr 1fr 1fr;
-gap: 50px;
+/* Main Flexbox Layout */
+.footer-main {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between;
+  gap: 3rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 3rem;
 }
 
-.footer-about p {
-max-width: 420px;
-}
-}
-
-
-@media (min-width: 1200px) {
-  footer {
-    padding: 100px 12% 50px;
-  }
-
-  .footer-container {
-    gap: 60px;
-  }
+.footer-col {
+  flex: 1 1 280px; 
+  overflow-wrap: break-word; 
+  word-wrap: break-word;
 }
 
-
-@media (min-width: 1400px) {
-  footer {
-    padding: 110px 15% 55px;
-  }
+.footer-col h3 {
+  color: var(--color-text-primary);
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
 }
+
+.footer-col h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-accent-gold);
+}
+
+.footer-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-col a {
+  color: var(--color-footer-link);
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.footer-col a:hover {
+  color: var(--color-action-primary-hover);
+  transform: translateX(6px);
+}
+
+.footer-col address {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-col address p {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-text-primary);
+  font-size: 1.05rem;
+}
+
+.footer-col address i {
+  color: var(--color-action-secondary);
+  font-size: 1.2rem;
+  min-width: 20px; 
+}
+
+/* Social Buttons */
+.social-grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.social-grid a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--color-bg-tertiary);
+  color: var(--color-action-primary);
+  border: 1px solid var(--color-border-default);
+  transition: all 0.3s ease;
+  font-size: 1.25rem;
+  padding: 0; 
+}
+
+.social-grid a:hover {
+  background-color: var(--color-action-primary);
+  color: var(--color-text-inverse);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(128, 0, 32, 0.25);
+}
+
+/* Bottom Copyright Section */
+.footer-bottom {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(80, 114, 85, 0.2);
+  width: 100%;
+}
+
+.footer-bottom p {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+}
+

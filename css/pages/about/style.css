@@ -1,184 +1,186 @@
 @import url("../../base/variables.css");
 @import url("../../base/reset.css");
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Prata&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Prata&display=swap");
+
+/* =========================================
+   BASE STYLES (MOBILE-FIRST)
+   ========================================= */
 
 body {
-padding-top: 100px;
-background-color: var(--color-bg-primary);
-color: var(--color-text-primary);
-overflow-x: hidden;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  overflow-x: hidden;
 }
 
 .about-wrapper {
-max-width: 900px;
-margin: 0 auto;
-padding: 0 40px 100px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 5% 60px; /* Mobile first padding */
 }
 
 .about-hero-section {
-position: relative;
-background-image: url('../../../assets/images/about-image.jpg');
-background-size: cover;
-background-position: center;
-background-attachment: fixed;
-padding: 120px 40px;
-margin-bottom: 60px;
-width: 100%;
-min-height: 60vh;
+  position: relative;
+  background-image: url("../../../assets/images/about-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 60px 5%; /* Mobile first padding */
+  margin-bottom: 40px; /* Mobile first margin */
+  width: 100%;
+  min-height: auto; /* Let content dictate height on mobile */
 }
 
 .about-hero-overlay {
-position: absolute;
-inset: 0;
-background-color: var(--color-overlay-light);
-z-index: 0;
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-overlay-light);
+  z-index: 0;
 }
 
 .about-hero-content {
-position: relative;
-z-index: 1;
-max-width: 900px;
-margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .about-page-title {
-font-family: 'Prata', serif;
-font-size: 2.7rem;
-font-weight: 400;
-letter-spacing: 2px;
-color: var(--color-text-primary);
-margin-bottom: 35px;
-margin-top: 20px;
+  font-family: "Prata", serif;
+  font-size: 2rem; /* Mobile first typography */
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: var(--color-text-primary);
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .about-intro {
-display: grid;
-grid-template-columns: 1.2fr 1fr;
-gap: 48px;
-margin-bottom: 0;
-align-items: start;
+  display: flex;
+  flex-direction: column; /* Stack vertically on mobile */
+  gap: 20px; /* Mobile gap */
+  margin-bottom: 0;
+  align-items: start;
 }
 
 .about-intro-main {
-font-family: 'Prata', serif;
-font-size: 1.25rem;
-font-weight: 400;
-line-height: 1.7;
-color: var(--color-text-primary);
+  font-family: "Prata", serif;
+  font-size: 1.1rem; /* Mobile first typography */
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-text-primary);
 }
 
 .about-intro-side {
-font-size: 0.85rem;
-line-height: 1.9;
-color: var(--color-text-secondary);
-padding-top: 6px;
+  font-size: 0.9rem; /* Mobile first typography */
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  padding-right: 30px;
 }
 
 .about-divider {
-border: none;
-border-top: 1px solid var(--color-border-default);
-margin: 0 0 56px;
+  border: none;
+  border-top: 1px solid var(--color-border-default);
+  margin: 0 0 30px; /* Mobile margin */
 }
 
 .about-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 56px 48px;
-margin-bottom: 64px;
+  display: flex;
+  flex-direction: column; /* Stack grid items on mobile */
+  gap: 30px; /* Mobile gap */
+  margin-bottom: 40px; /* Mobile margin */
 }
 
 .about-label {
-font-size: 0.72rem;
-letter-spacing: 2.5px;
-text-transform: uppercase;
-color: var(--color-text-disabled);
-margin-bottom: 16px;
-display: block;
-border-bottom: 1px solid var(--color-border-default);
-padding-bottom: 8px;
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-text-disabled);
+  margin-bottom: 12px;
+  display: block;
+  border-bottom: 1px solid var(--color-border-default);
+  padding-bottom: 8px;
 }
 
 .about-grid-item h3 {
-font-family: 'Prata', serif;
-font-size: 1.2rem;
-font-weight: 400;
-color: var(--color-text-primary);
-margin-bottom: 12px;
-line-height: 1.4;
+  font-family: "Prata", serif;
+  font-size: 1.1rem; /* Mobile first typography */
+  font-weight: 400;
+  color: var(--color-text-primary);
+  margin-bottom: 10px;
+  line-height: 1.4;
 }
 
 .about-grid-item p {
-font-size: 0.88rem;
-line-height: 1.9;
-color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
 }
 
 .about-offers {
-display: flex;
-flex-direction: column;
-gap: 10px;
-margin-top:8px;
-list-style: none;
-padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+  list-style: none;
+  padding: 0;
 }
 
 .about-offers li {
-font-size: 0.88rem;
-line-height: 1.8;
-color: var(--color-text-secondary);
-padding-left: 16px;
-position: relative;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  padding-left: 16px;
+  position: relative;
 }
 
 .about-offers li::before {
-content: "—";
-position: absolute;
-left: 0;
-color: var(--color-text-disabled);
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--color-text-disabled);
 }
 
 .about-offers li strong {
-color: var(--color-text-primary);
-font-weight: 600;
+  color: var(--color-text-primary);
+  font-weight: 600;
 }
 
 .about-cta-block {
-border-top: 1px solid var(--color-border-default);
-padding-top:56px;
-padding-bottom:25px;
-text-align: center;
+  border-top: 1px solid var(--color-border-default);
+  padding-top: 40px; /* Mobile padding */
+  padding-bottom: 20px; /* Mobile padding */
+  text-align: center;
 }
 
 .about-cta-block p {
-font-family: 'Prata', serif;
-font-size: 1.4rem;
-font-weight: 400;
-line-height: 1.7;
-color: var(--color-text-primary);
-max-width: 580px;
-margin: 0 auto 28px;
+  font-family: "Prata", serif;
+  font-size: 1.2rem; /* Mobile typography */
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  max-width: 100%;
+  margin: 0 auto 20px;
 }
 
 .about-cta-link {
-display: inline-flex;
-align-items: center;
-gap: 8px;
-font-size: 0.78rem;
-letter-spacing: 3px;
-text-transform: uppercase;
-color: var(--color-action-primary);
-text-decoration: none;
-border-bottom: 1px solid var(--color-action-primary);
-padding-bottom: 3px;
-transition: opacity 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-action-primary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-action-primary);
+  padding-bottom: 3px;
+  transition: opacity 0.3s ease;
 }
 
 .about-cta-link:hover {
-opacity: 0.6;
+  opacity: 0.6;
 }
 
 .about-cta-link::after {
-content: "↗";
-font-size: 0.9rem;
+  content: "↗";
+  font-size: 0.9rem;
 }
-
