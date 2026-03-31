@@ -1,12 +1,15 @@
 @import url("../../base/variables.css");
 @import url("../../base/reset.css");
-body{
+body {
   background-color: var(--color-table-row-hover);
-  padding: 80px 5% 40px !important;
+  
 }
 #Admin-Dashboard{
 margin-top: 100px;
+  padding-left: 2%;
+  padding-right: 2%;
 }
+
 
 .titel-font{
 font-size: 2.5rem;
