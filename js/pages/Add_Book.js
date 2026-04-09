@@ -1,4 +1,8 @@
 document.querySelector("form").onsubmit = (e) => {
+    e.preventDefault();
+
+    let booksArray = JSON.parse(localStorage.getItem("books")) || [];
+
     let book = {
         Titel: document.getElementById("Title").value,
         Author: document.getElementById("Author").value,
@@ -12,13 +16,13 @@ document.querySelector("form").onsubmit = (e) => {
         Total_Copies: document.getElementById("Total-Copies").value,
         Cover_Image: document.getElementById("Cover-Image").value,
         Edition: document.getElementById("Edition").value,
+        Is_Edited: false,
         Borrowed: 0
     };
 
     let isValid = true;
     const errorSummary = document.getElementById('errorSummary');
-    
-    errorSummary.innerHTML = ""; 
+    errorSummary.innerHTML = "";
     document.querySelectorAll('input, select, textarea').forEach(el => el.classList.remove('input-error'));
 
     function addError(message, inputId) {
@@ -29,35 +33,44 @@ document.querySelector("form").onsubmit = (e) => {
         isValid = false;
     }
 
+    const isEditMode = document.getElementById("ISBN").readOnly;
+
+    if (!isEditMode) {
+        const isDuplicate = booksArray.some(existingBook => existingBook.ISBN === book.ISBN);
+        if (isDuplicate) {
+            addError("A book with this ISBN already exists.", "ISBN");
+        }
+    }
+
     if (book.Titel == "") addError("Title is required.", "Title");
-    
     if (book.Author.trim() == "") addError("Author name is required.", "Author");
-
-    if (book.ISBN.length < 5) addError("ISBN must be at least 10 digits.", "ISBN");
-
+    if (book.ISBN.length < 2) addError("ISBN must be at least 2 digits.", "ISBN");
     if (book.Publisher == "") addError("Publisher name is required.", "Publisher");
-
-    if (book.Publication_Year === "") addError("Please select a Publication Year.", "Publication-Year");
-
-    if (book.Language == "") addError("Please select a Language.", "Language");
-
-    if (book.Category == "" || book.Category === "select") addError("Please select a valid Category.", "Category");
-
+    if (book.Publication_Year === "") addError("Select a Publication Year.", "Publication-Year");
+    if (book.Language == "") addError("Select a Language.", "Language");
+    if (book.Category == "" || book.Category === "select") addError("Select a valid Category.", "Category");
     if (book.Description == "") addError("Description cannot be empty.", "Description");
-
     if (book.Call_Number.length < 2) addError("Call Number must be 2-3 characters.", "Call-Number");
-
     if (book.Total_Copies == "" || book.Total_Copies < 1) addError("Total Copies must be 1 or more.", "Total-Copies");
-
-    if (book.Cover_Image == "") addError("Please upload a Cover Image.", "Cover-Image");
-
+    if (book.Cover_Image == "" && !isEditMode) addError("Upload a Cover Image.", "Cover-Image");
     if (book.Edition == "") addError("Edition details are required.", "Edition");
 
-    if (!isValid) {
-        e.preventDefault();
-       
-    } else {
-        localStorage.setItem("Book" + book.ISBN, JSON.stringify(book));
-        alert("Book added successfully!");
+    if (isValid) {
+        const existingIndex = booksArray.findIndex(b => b.ISBN === book.ISBN);
+
+        if (existingIndex !== -1) {
+            book.Borrowed = booksArray[existingIndex].Borrowed;
+            if (book.Cover_Image === "") {
+                book.Cover_Image = booksArray[existingIndex].Cover_Image;
+            }
+            booksArray[existingIndex] = book;
+            alert("Book updated successfully!");
+        } else {
+            booksArray.push(book);
+            alert("Book added successfully!");
+        }
+
+        localStorage.setItem("books", JSON.stringify(booksArray));
+        window.location.href = "admin_dashboard.html";
     }
 }
