@@ -5,8 +5,8 @@
     "\\css\\pages",
     "\\css\\pages\\login",
     "\\css\\pages\\signup",
-    "\\pages"
+    "\\js\\pages"
   ],
-  "SelectedNode": "\\css\\pages\\login\\style.css",
+  "SelectedNode": "\\css\\pages\\signup\\style.css",
   "PreviewInSolutionExplorer": false
 }

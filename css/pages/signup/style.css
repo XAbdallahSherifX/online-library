@@ -4,8 +4,8 @@
 
 
 :root {
-    --burgundy: #b01a3c;
-    --burgundy-dark: #800020;
+    --burgundy: #800020;
+    --burgundy-dark: #5c0018;
     --white: #ffffff;
     --off-white: #f9f9f9;
     --gray-light: #e0e0e0;
@@ -28,7 +28,6 @@
 
 
 body {
-    padding-top: 80px;
     font-family: var(--font-body);
     font-size: 16px;
     color: var(--gray-text);
@@ -48,9 +47,9 @@ body::before {
     content: '';
     position: fixed;
     inset: 0;
-    background: inherit;
+    background: rgba(255, 255, 255, 0.5);
     background-attachment: fixed;
-    filter: blur(6px) brightness(0.60);
+    filter: blur(6px);
     transform: scale(1.05);
     z-index: -1;
  }
@@ -128,7 +127,7 @@ body > form > label {
     font-family: var(--font-body);
     font-size: 0.75rem;
     font-weight: 700;
-    color: rgba(255, 255, 255, 0.9); 
+    color: #000; 
     letter-spacing: 0.04em;
     text-transform: uppercase;
     margin-bottom: 6px;
@@ -148,7 +147,7 @@ body > form > input[type="password"] {
     border-radius: 8px;
     font-family: var(--font-body);
     font-size: 0.95rem;
-    color: var(--white);
+    color: var(--gray-text);
     outline: none;
     transition: all var(--transition);
 }
@@ -156,7 +155,7 @@ body > form > input[type="password"] {
     body > form > input[type="text"]::placeholder,
     body > form > input[type="email"]::placeholder,
     body > form > input[type="password"]::placeholder {
-        color: var(--gray-mid);
+        color: rgba(0, 0, 0, 0.5);
         font-weight: 300;
     }
 
@@ -179,7 +178,7 @@ body > form > input:focus:invalid,
 body > form > input:not(:placeholder-shown):invalid {
     border-color: var(--burgundy) !important;
     background: rgba(255, 255, 255, 0.12) !important;
-    color: var(--white) !important;
+    color: var(--gray-text) !important;
     box-shadow: 0 0 0 4px rgba(176, 26, 60, 0.15);
 }
 
@@ -191,7 +190,7 @@ body > form > input[type="radio"] {
     height: 18px;
     border-radius: 50%;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.7);
     cursor: pointer;
     vertical-align: middle;
     margin: 0 8px 0 0;
@@ -261,18 +260,37 @@ body > form > button[type="submit"] {
     }
 
 body > p {
-    color: rgba(255, 255, 255, 0.6); 
+    text-align: center;
+    margin-top: -30px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: #000; 
+    font-weight: 500;
 }
 
     body > p a {
-        color: var(--white);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        color: var(--burgundy); 
         text-decoration: none;
+        font-weight: 700;
+        border-bottom: 2px solid transparent;
+        transition: var(--transition);
     }
 
         body > p a:hover {
-            border-bottom-color: var(--white);
+            border-bottom-color: var(--burgundy);
+            color: var(--burgundy-dark);
         }
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--gray-text);
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-transform: none;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
 
 ::selection {
     background: rgba(128, 0, 32, 0.15);

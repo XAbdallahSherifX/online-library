@@ -1,14 +1,93 @@
-@media all and (min-width: 576px) {
+﻿@media (max-width: 768px) {
+    body > div:first-of-type {
+        padding: 44px 16px 52px;
+    }
+
+        body > div:first-of-type > h2 {
+            font-size: 1.70rem;
+            letter-spacing: 0.12em;
+        }
+
+        body > div:first-of-type > form {
+            padding: 40px 28px 36px;
+        }
 }
 
-@media all and (min-width: 768px) {
+@media (max-width: 540px) {
+    body > div:first-of-type {
+        padding: 36px 16px 48px;
+        justify-content: flex-start; 
+    }
+
+        body > div:first-of-type > h2 {
+            font-size: 1.45rem;
+            letter-spacing: 0.09em;
+        }
+
+        body > div:first-of-type > p {
+            font-size: 0.90rem;
+            margin-bottom: 22px;
+        }
+
+        body > div:first-of-type > form {
+            max-width: 100%;
+            border-radius: 8px;
+            padding: 38px 20px 32px;
+        }
+
+            body > div:first-of-type > form > input[type="text"],
+            body > div:first-of-type > form > input[type="email"] {
+                height: 44px;
+                font-size: 0.91rem;
+            }
+
+            body > div:first-of-type > form > textarea {
+                min-height: 130px;
+                font-size: 0.91rem;
+            }
+
+            body > div:first-of-type > form > button[type="submit"] {
+                height: 50px;
+                font-size: 0.84rem;
+                letter-spacing: 0.16em;
+            }
 }
 
-@media all and (min-width: 992px) {
-}
+@media (max-width: 390px) {
+    body > div:first-of-type > h2 {
+        font-size: 1.25rem;
+        letter-spacing: 0.07em;
+    }
 
-@media all and (min-width: 1200px) {
-}
+    body > div:first-of-type > p {
+        font-size: 0.86rem;
+    }
 
-@media all and (min-width: 1400px) {
+    body > div:first-of-type > form {
+        padding: 34px 16px 28px;
+    }
+
+        body > div:first-of-type > form > label {
+            font-size: 0.72rem;
+        }
+
+        body > div:first-of-type > form > input[type="text"],
+        body > div:first-of-type > form > input[type="email"] {
+            height: 42px;
+            padding: 0 12px;
+            font-size: 0.88rem;
+            margin-bottom: 16px;
+        }
+
+        body > div:first-of-type > form > textarea {
+            padding: 12px;
+            font-size: 0.88rem;
+            min-height: 120px;
+            margin-bottom: 20px;
+        }
+
+        body > div:first-of-type > form > button[type="submit"] {
+            height: 48px;
+            font-size: 0.80rem;
+        }
 }

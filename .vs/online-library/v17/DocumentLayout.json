@@ -3,32 +3,24 @@
   "WorkspaceRootPath": "D:\\\u062D\u0627\u0633\u0628\u0627\u062A\\\u062A\u0627\u0646\u064A\u0629\\\u062A\u0631\u0645 \u062A\u0627\u0646\u064A\\Web\\New folder\\online-library\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u062D\u0627\u0633\u0628\u0627\u062A\\\u062A\u0627\u0646\u064A\u0629\\\u062A\u0631\u0645 \u062A\u0627\u0646\u064A\\Web\\New folder\\online-library\\css\\pages\\signup\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:css\\pages\\signup\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u062D\u0627\u0633\u0628\u0627\u062A\\\u062A\u0627\u0646\u064A\u0629\\\u062A\u0631\u0645 \u062A\u0627\u0646\u064A\\Web\\New folder\\online-library\\css\\pages\\login\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:css\\pages\\login\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u062D\u0627\u0633\u0628\u0627\u062A\\\u062A\u0627\u0646\u064A\u0629\\\u062A\u0631\u0645 \u062A\u0627\u0646\u064A\\Web\\New folder\\online-library\\pages\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:pages\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u062D\u0627\u0633\u0628\u0627\u062A\\\u062A\u0627\u0646\u064A\u0629\\\u062A\u0631\u0645 \u062A\u0627\u0646\u064A\\Web\\New folder\\online-library\\js\\pages\\login.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\pages\\login.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u062D\u0627\u0633\u0628\u0627\u062A\\\u062A\u0627\u0646\u064A\u0629\\\u062A\u0631\u0645 \u062A\u0627\u0646\u064A\\Web\\New folder\\online-library\\css\\pages\\login\\media.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:css\\pages\\login\\media.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u062D\u0627\u0633\u0628\u0627\u062A\\\u062A\u0627\u0646\u064A\u0629\\\u062A\u0631\u0645 \u062A\u0627\u0646\u064A\\Web\\New folder\\online-library\\css\\pages\\signup\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:css\\pages\\signup\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u062D\u0627\u0633\u0628\u0627\u062A\\\u062A\u0627\u0646\u064A\u0629\\\u062A\u0631\u0645 \u062A\u0627\u0646\u064A\\Web\\New folder\\online-library\\js\\pages\\signup.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\pages\\signup.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u062D\u0627\u0633\u0628\u0627\u062A\\\u062A\u0627\u0646\u064A\u0629\\\u062A\u0631\u0645 \u062A\u0627\u0646\u064A\\Web\\New folder\\online-library\\pages\\signup.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:pages\\signup.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u062D\u0627\u0633\u0628\u0627\u062A\\\u062A\u0627\u0646\u064A\u0629\\\u062A\u0631\u0645 \u062A\u0627\u0646\u064A\\Web\\New folder\\online-library\\pages\\bookform.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:pages\\bookform.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u062D\u0627\u0633\u0628\u0627\u062A\\\u062A\u0627\u0646\u064A\u0629\\\u062A\u0631\u0645 \u062A\u0627\u0646\u064A\\Web\\New folder\\online-library\\pages\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:pages\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,8 +30,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "style.css",
+              "DocumentMoniker": "D:\\\u062D\u0627\u0633\u0628\u0627\u062A\\\u062A\u0627\u0646\u064A\u0629\\\u062A\u0631\u0645 \u062A\u0627\u0646\u064A\\Web\\New folder\\online-library\\css\\pages\\signup\\style.css",
+              "RelativeDocumentMoniker": "css\\pages\\signup\\style.css",
+              "ToolTip": "D:\\\u062D\u0627\u0633\u0628\u0627\u062A\\\u062A\u0627\u0646\u064A\u0629\\\u062A\u0631\u0645 \u062A\u0627\u0646\u064A\\Web\\New folder\\online-library\\css\\pages\\signup\\style.css",
+              "RelativeToolTip": "css\\pages\\signup\\style.css",
+              "ViewState": "AgIAABIBAABAmTMzMzMbwAcBAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-31T17:13:20.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "style.css",
+              "DocumentMoniker": "D:\\\u062D\u0627\u0633\u0628\u0627\u062A\\\u062A\u0627\u0646\u064A\u0629\\\u062A\u0631\u0645 \u062A\u0627\u0646\u064A\\Web\\New folder\\online-library\\css\\pages\\login\\style.css",
+              "RelativeDocumentMoniker": "css\\pages\\login\\style.css",
+              "ToolTip": "D:\\\u062D\u0627\u0633\u0628\u0627\u062A\\\u062A\u0627\u0646\u064A\u0629\\\u062A\u0631\u0645 \u062A\u0627\u0646\u064A\\Web\\New folder\\online-library\\css\\pages\\login\\style.css",
+              "RelativeToolTip": "css\\pages\\login\\style.css",
+              "ViewState": "AgIAAE8BAAAAAAAAAAAwwG0BAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-31T16:39:07.41Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -47,92 +65,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "style.css",
-              "DocumentMoniker": "D:\\\u062D\u0627\u0633\u0628\u0627\u062A\\\u062A\u0627\u0646\u064A\u0629\\\u062A\u0631\u0645 \u062A\u0627\u0646\u064A\\Web\\New folder\\online-library\\css\\pages\\signup\\style.css",
-              "RelativeDocumentMoniker": "css\\pages\\signup\\style.css",
-              "ToolTip": "D:\\\u062D\u0627\u0633\u0628\u0627\u062A\\\u062A\u0627\u0646\u064A\u0629\\\u062A\u0631\u0645 \u062A\u0627\u0646\u064A\\Web\\New folder\\online-library\\css\\pages\\signup\\style.css",
-              "RelativeToolTip": "css\\pages\\signup\\style.css",
-              "ViewState": "AgIAAAcAAAAAAAAAAABsPR4AAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-03-31T12:37:19.605Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "media.css",
               "DocumentMoniker": "D:\\\u062D\u0627\u0633\u0628\u0627\u062A\\\u062A\u0627\u0646\u064A\u0629\\\u062A\u0631\u0645 \u062A\u0627\u0646\u064A\\Web\\New folder\\online-library\\css\\pages\\login\\media.css",
               "RelativeDocumentMoniker": "css\\pages\\login\\media.css",
               "ToolTip": "D:\\\u062D\u0627\u0633\u0628\u0627\u062A\\\u062A\u0627\u0646\u064A\u0629\\\u062A\u0631\u0645 \u062A\u0627\u0646\u064A\\Web\\New folder\\online-library\\css\\pages\\login\\media.css",
               "RelativeToolTip": "css\\pages\\login\\media.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAAAwwD8AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-03-31T12:32:49.743Z",
+              "WhenOpened": "2026-03-31T16:39:05.66Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "style.css",
-              "DocumentMoniker": "D:\\\u062D\u0627\u0633\u0628\u0627\u062A\\\u062A\u0627\u0646\u064A\u0629\\\u062A\u0631\u0645 \u062A\u0627\u0646\u064A\\Web\\New folder\\online-library\\css\\pages\\login\\style.css",
-              "RelativeDocumentMoniker": "css\\pages\\login\\style.css",
-              "ToolTip": "D:\\\u062D\u0627\u0633\u0628\u0627\u062A\\\u062A\u0627\u0646\u064A\u0629\\\u062A\u0631\u0645 \u062A\u0627\u0646\u064A\\Web\\New folder\\online-library\\css\\pages\\login\\style.css",
-              "RelativeToolTip": "css\\pages\\login\\style.css",
-              "ViewState": "AgIAAK0AAAAAAAAAAAAAAK8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-03-31T12:32:32.903Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "login.html",
-              "DocumentMoniker": "D:\\\u062D\u0627\u0633\u0628\u0627\u062A\\\u062A\u0627\u0646\u064A\u0629\\\u062A\u0631\u0645 \u062A\u0627\u0646\u064A\\Web\\New folder\\online-library\\pages\\login.html",
-              "RelativeDocumentMoniker": "pages\\login.html",
-              "ToolTip": "D:\\\u062D\u0627\u0633\u0628\u0627\u062A\\\u062A\u0627\u0646\u064A\u0629\\\u062A\u0631\u0645 \u062A\u0627\u0646\u064A\\Web\\New folder\\online-library\\pages\\login.html",
-              "RelativeToolTip": "pages\\login.html",
-              "ViewState": "AgIAAEIAAAAAkGZmZmYkwE4AAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-03-31T12:24:05.313Z",
+              "DocumentIndex": 2,
+              "Title": "login.js",
+              "DocumentMoniker": "D:\\\u062D\u0627\u0633\u0628\u0627\u062A\\\u062A\u0627\u0646\u064A\u0629\\\u062A\u0631\u0645 \u062A\u0627\u0646\u064A\\Web\\New folder\\online-library\\js\\pages\\login.js",
+              "RelativeDocumentMoniker": "js\\pages\\login.js",
+              "ToolTip": "D:\\\u062D\u0627\u0633\u0628\u0627\u062A\\\u062A\u0627\u0646\u064A\u0629\\\u062A\u0631\u0645 \u062A\u0627\u0646\u064A\\Web\\New folder\\online-library\\js\\pages\\login.js",
+              "RelativeToolTip": "js\\pages\\login.js",
+              "ViewState": "AgIAAIYAAAAABmdmZmYUwEIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-03-31T16:38:52.469Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "signup.js",
-              "DocumentMoniker": "D:\\\u062D\u0627\u0633\u0628\u0627\u062A\\\u062A\u0627\u0646\u064A\u0629\\\u062A\u0631\u0645 \u062A\u0627\u0646\u064A\\Web\\New folder\\online-library\\js\\pages\\signup.js",
-              "RelativeDocumentMoniker": "js\\pages\\signup.js",
-              "ToolTip": "D:\\\u062D\u0627\u0633\u0628\u0627\u062A\\\u062A\u0627\u0646\u064A\u0629\\\u062A\u0631\u0645 \u062A\u0627\u0646\u064A\\Web\\New folder\\online-library\\js\\pages\\signup.js",
-              "RelativeToolTip": "js\\pages\\signup.js",
-              "ViewState": "AgIAAOMAAAAAmDEzMzMLwPIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-03-31T11:50:19.977Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "bookform.html",
-              "DocumentMoniker": "D:\\\u062D\u0627\u0633\u0628\u0627\u062A\\\u062A\u0627\u0646\u064A\u0629\\\u062A\u0631\u0645 \u062A\u0627\u0646\u064A\\Web\\New folder\\online-library\\pages\\bookform.html",
-              "RelativeDocumentMoniker": "pages\\bookform.html",
-              "ToolTip": "D:\\\u062D\u0627\u0633\u0628\u0627\u062A\\\u062A\u0627\u0646\u064A\u0629\\\u062A\u0631\u0645 \u062A\u0627\u0646\u064A\\Web\\New folder\\online-library\\pages\\bookform.html",
-              "RelativeToolTip": "pages\\bookform.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAiAAAAAAAAAA==",
+              "Title": "login.html",
+              "DocumentMoniker": "D:\\\u062D\u0627\u0633\u0628\u0627\u062A\\\u062A\u0627\u0646\u064A\u0629\\\u062A\u0631\u0645 \u062A\u0627\u0646\u064A\\Web\\New folder\\online-library\\pages\\login.html",
+              "RelativeDocumentMoniker": "pages\\login.html",
+              "ToolTip": "D:\\\u062D\u0627\u0633\u0628\u0627\u062A\\\u062A\u0627\u0646\u064A\u0629\\\u062A\u0631\u0645 \u062A\u0627\u0646\u064A\\Web\\New folder\\online-library\\pages\\login.html",
+              "RelativeToolTip": "pages\\login.html",
+              "ViewState": "AgIAAEQAAAAASDMzMzMpwFIAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-03-31T11:41:55.196Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "signup.html",
-              "DocumentMoniker": "D:\\\u062D\u0627\u0633\u0628\u0627\u062A\\\u062A\u0627\u0646\u064A\u0629\\\u062A\u0631\u0645 \u062A\u0627\u0646\u064A\\Web\\New folder\\online-library\\pages\\signup.html",
-              "RelativeDocumentMoniker": "pages\\signup.html",
-              "ToolTip": "D:\\\u062D\u0627\u0633\u0628\u0627\u062A\\\u062A\u0627\u0646\u064A\u0629\\\u062A\u0631\u0645 \u062A\u0627\u0646\u064A\\Web\\New folder\\online-library\\pages\\signup.html",
-              "RelativeToolTip": "pages\\signup.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-03-31T11:39:35.798Z",
+              "WhenOpened": "2026-03-31T12:24:05.313Z",
               "EditorCaption": ""
             }
           ]
