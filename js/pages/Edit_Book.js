@@ -3,19 +3,14 @@ window.onload = () => {
     let editISBN = urlParams.get('edit');
 
     if (editISBN) {
-        
         const booksData = localStorage.getItem("books");
 
         if (booksData) {
             const books = JSON.parse(booksData);
-
-
             const book = books.find(b => b.ISBN === editISBN);
 
             if (book) {
-
-               
-                document.getElementById("Title").value = book.Titel;
+                document.getElementById("Title").value = book.Title; // Fixed variable error
                 document.getElementById("Author").value = book.Author;
                 document.getElementById("ISBN").value = book.ISBN;
                 document.getElementById("Publisher").value = book.Publisher;
@@ -27,16 +22,14 @@ window.onload = () => {
                 document.getElementById("Total-Copies").value = book.Total_Copies;
                 document.getElementById("Edition").value = book.Edition;
                 
-                
                 document.getElementById("ISBN").readOnly = true;
 
-                
                 let fileInput = document.getElementById("Cover-Image");
                 if (fileInput) {
                     fileInput.removeAttribute("required");
                 }
 
-                document.querySelector("h1").innerText = "Edit Book: " + book.Titel;
+                document.querySelector("h1").innerText = "Edit Book: " + book.Title; // Fixed variable error
             } else {
                 console.error("Book not found in the array.");
             }

@@ -24,7 +24,6 @@
     <link rel="stylesheet" href="../css/pages/admin_dashboard/media.css" />
     <script src="../js/pages/admin_dashboard.js" defer ></script>
     
-    
     <title>GILDORA - Admin Dashboard</title>
   </head>
   <body>
@@ -71,47 +70,46 @@
     
     <div id="Admin-Dashboard">
       <div>
-    <h3 class="titel-font">Quick Stats</h3>
-    <table  width="100%" id="stats">
-      <thead>
-        <tr>
-          <th>Total Books</th>
-          <th>Borrowed Books</th>
-          <th> Members</th>
-          <th>Available Books</th>
-        </tr>
-      </thead>
-      <tbody>
-        <td id="Total-Books"></td>
-        <td id="borrowed-books"></td>
-        <td id="New-Members">0</td>
-        <td id="Available-Books">800</td>
-      </tbody>
-    </table>
-    </div>
-    <div>
-    <h3 class="titel-font">Book Inventory</h3>
-    <label for="search">Search:</label>
-    <input type="search" name="search" id="search" />
-    <a href="BookForm.html"><input type="button" value="Add" class="Add-btn"/></a>
+        <h3 class="titel-font">Quick Stats</h3>
+        <div id="stats" class="stats-container">
+          <div class="stat-box">
+            <div class="stat-label">Total Books</div>
+            <div class="stat-value" id="Total-Books">0</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Borrowed Books</div>
+            <div class="stat-value" id="borrowed-books">0</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Members</div>
+            <div class="stat-value" id="New-Members">0</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Available Books</div>
+            <div class="stat-value" id="Available-Books">800</div>
+          </div>
+        </div>
+      </div>
 
-    <table width="100%" id="Book-Inventory">
-      <thead>
-        <tr>
-          <th>ISBN</th>
-          <th>Book Title</th>
-          <th>Author</th>
-          <th>Status</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        
-        
-      </tbody>
-    </table>
+      <div>
+        <h3 class="titel-font">Book Inventory</h3>
+        <label for="search">Search:</label>
+        <input type="search" name="search" id="search" />
+        <a href="BookForm.html"><input type="button" value="Add New Book" class="Add-btn"/></a>
+
+        <div id="Book-Inventory" class="table-container">
+          <div class="table-header">
+            <div class="table-cell">ISBN</div>
+            <div class="table-cell">Book Title</div>
+            <div class="table-cell">Author</div>
+            <div class="table-cell">Status</div>
+            <div class="table-cell">Actions</div>
+          </div>
+          <div class="table-body" id="inventory-body">
+            </div>
+        </div>
+      </div>
     </div>
-</div>
    
     <footer class="site-footer">
       <div class="footer-top">
@@ -146,34 +144,10 @@
         <div class="footer-col">
           <h3>Connect</h3>
           <div class="social-grid">
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-              ><i class="fa-brands fa-facebook-f"></i
-            ></a>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-              ><i class="fa-brands fa-instagram"></i
-            ></a>
-            <a
-              href="https://x.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Twitter"
-              ><i class="fa-brands fa-x-twitter"></i
-            ></a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              ><i class="fa-brands fa-linkedin-in"></i
-            ></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
           </div>
         </div>
       </div>

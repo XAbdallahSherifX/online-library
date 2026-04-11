@@ -4,7 +4,7 @@ document.querySelector("form").onsubmit = (e) => {
     let booksArray = JSON.parse(localStorage.getItem("books")) || [];
 
     let book = {
-        Titel: document.getElementById("Title").value,
+        Title: document.getElementById("Title").value, 
         Author: document.getElementById("Author").value,
         ISBN: document.getElementById("ISBN").value,
         Publisher: document.getElementById("Publisher").value,
@@ -16,10 +16,10 @@ document.querySelector("form").onsubmit = (e) => {
         Total_Copies: document.getElementById("Total-Copies").value,
         Cover_Image: document.getElementById("Cover-Image").value,
         Edition: document.getElementById("Edition").value,
-        Is_Edited: false,
+        Is_Available: true,
         Borrowed: 0
     };
-
+    book.Is_Available = book.Total_Copies > 0 ? true:false;
     let isValid = true;
     const errorSummary = document.getElementById('errorSummary');
     errorSummary.innerHTML = "";
@@ -42,16 +42,16 @@ document.querySelector("form").onsubmit = (e) => {
         }
     }
 
-    if (book.Titel == "") addError("Title is required.", "Title");
+    if (book.Title == "") addError("Title is required.", "Title"); 
     if (book.Author.trim() == "") addError("Author name is required.", "Author");
-    if (book.ISBN.length < 2) addError("ISBN must be at least 2 digits.", "ISBN");
+    if (book.ISBN.length < 1) addError("ISBN must be at least 1 digits.", "ISBN");
     if (book.Publisher == "") addError("Publisher name is required.", "Publisher");
     if (book.Publication_Year === "") addError("Select a Publication Year.", "Publication-Year");
     if (book.Language == "") addError("Select a Language.", "Language");
     if (book.Category == "" || book.Category === "select") addError("Select a valid Category.", "Category");
     if (book.Description == "") addError("Description cannot be empty.", "Description");
     if (book.Call_Number.length < 2) addError("Call Number must be 2-3 characters.", "Call-Number");
-    if (book.Total_Copies == "" || book.Total_Copies < 1) addError("Total Copies must be 1 or more.", "Total-Copies");
+    if (book.Total_Copies == "" || book.Total_Copies < 0) addError("Total Copies must be 0 or more.", "Total-Copies");
     if (book.Cover_Image == "" && !isEditMode) addError("Upload a Cover Image.", "Cover-Image");
     if (book.Edition == "") addError("Edition details are required.", "Edition");
 
