@@ -102,18 +102,14 @@ document.addEventListener("DOMContentLoaded", () => {
                             <span class="meta-value">${dueDateStr}</span>
                         </div>
                     </div>
-                    <button class="btn-return" data-isbn="${book.ISBN}" data-index="${originalIndex}">Return Book</button>
+                    
                 </div>
             `;
 
       grid.appendChild(card);
     });
 
-    // Attach event listeners to newly created buttons
-    const returnButtons = document.querySelectorAll(".btn-return");
-    returnButtons.forEach((btn) => {
-      btn.addEventListener("click", handleReturnBook);
-    });
+   
   }
   renderBorrowedBooks();
 });

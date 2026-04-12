@@ -1,7 +1,11 @@
-const currentUser = JSON.parse(localStorage.getItem("credentials"));
-if (!currentUser|| currentUser.role !== "admin") {
+// 1. Rename variable to 'adminUser' to avoid clashing with other files
+const adminUser = JSON.parse(localStorage.getItem("credentials"));
+if (!adminUser || adminUser.role !== "admin") {
   window.location.href = "../index.html";
 }
+
+// 2. (Removed the console.log(book) that was here, as it would cause a ReferenceError)
+
 window.onload = () => {
   let urlParams = new URLSearchParams(window.location.search);
   let editISBN = urlParams.get("edit");
@@ -14,7 +18,7 @@ window.onload = () => {
       const book = books.find((b) => b.ISBN === editISBN);
 
       if (book) {
-        document.getElementById("Title").value = book.Title; // Fixed variable error
+        document.getElementById("Title").value = book.Title;
         document.getElementById("Author").value = book.Author;
         document.getElementById("ISBN").value = book.ISBN;
         document.getElementById("Publisher").value = book.Publisher;
@@ -34,7 +38,7 @@ window.onload = () => {
           fileInput.removeAttribute("required");
         }
 
-        document.querySelector("h1").innerText = "Edit Book: " + book.Title; // Fixed variable error
+        document.querySelector("h1").innerText = "Edit Book: " + book.Title;
       } else {
         console.error("Book not found in the array.");
       }
