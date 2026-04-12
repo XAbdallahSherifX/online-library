@@ -98,6 +98,9 @@ form.addEventListener("submit", function (e) {
       username: validUser.username,
       email: validUser.email,
       role: validUser.role,
+      phone: validUser.phone,
+      address: validUser.address,
+      memberSince: validUser.memberSince
     };
 
     // 2. Save token to local storage

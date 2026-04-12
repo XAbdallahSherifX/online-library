@@ -102,6 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             <span class="meta-value">${dueDateStr}</span>
                         </div>
                     </div>
+                    <button class="btn-return" data-isbn="${book.ISBN}" data-index="${originalIndex}">Return Book</button>
                 </div>
             `;
 

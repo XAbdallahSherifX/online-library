@@ -1,2 +1,88 @@
 @import url("../../base/variables.css");
 @import url("../../base/reset.css");
+/* =========================================
+   PROFILE PAGE STYLES (style.css)
+   ========================================= */
+
+h1 {
+  text-align: center;
+  color: var(--color-text-tertiary);
+  font-family: var(--font-primary, serif);
+  margin: 40px 0 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.profile {
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0 4px 15px var(--color-shadow-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--color-border-default);
+  box-shadow: 0 4px 8px var(--color-shadow-sm);
+  margin-bottom: 24px;
+}
+
+.profile-info h2 {
+  color: var(--color-text-primary);
+  font-family: var(--font-primary, serif);
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.profile-info p,
+.profile-stats p {
+  color: var(--color-text-primary);
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.profile-stats {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px dashed var(--color-border-default);
+  width: 100%;
+}
+
+.profile-stats h3 {
+  color: var(--color-text-secondary);
+  margin-bottom: 15px;
+  font-family: var(--font-primary, serif);
+}
+
+.edit-profile-btn {
+  background-color: var(--color-action-primary);
+  color: var(--color-text-inverse);
+  border: none;
+  padding: 12px 24px;
+  font-family: var(--font-primary, serif);
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 15px;
+  margin-top: 30px;
+transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.edit-profile-btn:hover {
+  background-color: var(--color-action-primary-hover);
+  transform: translateY(-5px);
+    box-shadow: 0 8px 16px var(--color-shadow-md);
+}
+.profile-info a {
+  text-decoration: none;
+}

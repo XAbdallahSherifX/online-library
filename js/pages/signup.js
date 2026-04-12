@@ -172,6 +172,7 @@ form.addEventListener("submit", function (e) {
     username: username,
     email: email,
     password: password,
+    memberSince: new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' }),
     role: role,
   };
 

@@ -74,6 +74,27 @@ document.addEventListener("DOMContentLoaded", () => {
     // Save updated books back to localStorage
     localStorage.setItem("books", JSON.stringify(allBooks));
 
+    // ===start edit===
+    const phoneInput = document.getElementById("phone");
+    const addressInput = document.getElementById("address");
+    const userForUpdate = JSON.parse(localStorage.getItem("credentials"));
+
+    if (phoneInput && addressInput && userForUpdate) {
+        // 1.update credentials in localStorage
+        userForUpdate.phone = phoneInput.value.trim();
+        userForUpdate.address = addressInput.value.trim();
+        localStorage.setItem("credentials", JSON.stringify(userForUpdate));
+
+        // 2.update user data in users array
+        let allUsersData = JSON.parse(localStorage.getItem("users")) || [];
+        let indexToUpdate = allUsersData.findIndex(u => u.email === userForUpdate.email);
+        if (indexToUpdate > -1) {
+            allUsersData[indexToUpdate].phone = userForUpdate.phone;
+            allUsersData[indexToUpdate].address = userForUpdate.address;
+            localStorage.setItem("users", JSON.stringify(allUsersData));
+        }
+    }
+    // ===end edit===
     // 3. Add to User's personal borrowed list so it shows up in "borrowed_books.html"
     let currentUser = JSON.parse(localStorage.getItem("credentials"));
     if (currentUser) {
