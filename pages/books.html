@@ -24,18 +24,16 @@
     <link rel="stylesheet" href="../css/pages/books/media.css" />
     <title>GILDORA - Books</title>
   </head>
-  <body>
+  <body class="page-books">
     <nav class="navbar">
       <div>
         <h2 class="navbar-logo">
           <i class="fa-solid fa-book-open fa-2xl"></i>
           <a class="logo-link" href="../index.html">GILDORA</a>
         </h2>
-
         <button class="mobile-toggle" aria-label="Toggle navigation">
           <i class="fa-solid fa-bars"></i>
         </button>
-
         <div class="nav-menu-container">
           <ul class="navbar-nav">
             <li class="nav-item">
@@ -54,7 +52,7 @@
               <a class="nav-link" href="./support.html">Support</a>
             </li>
           </ul>
-          <ul class="auth-nav">
+          <ul class="auth-nav" id="auth-buttons">
             <li>
               <a class="auth-link link-login" href="./login.html">Login</a>
             </li>
@@ -62,294 +60,68 @@
               <a class="auth-link link-signup" href="./signup.html">Sign Up</a>
             </li>
           </ul>
+          <div class="user-nav" id="user-menu" style="display: none">
+            <button class="profile-trigger" id="profile-btn">
+              <i class="fa-solid fa-user"></i>
+              <span id="nav-username">Profile</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="profile-dropdown" id="profile-dropdown">
+              <a href="profile.html"
+                ><i class="fa-solid fa-user"></i> Profile</a
+              >
+              <a
+                href="admin_dashboard.html"
+                id="admin-link"
+                style="display: none"
+                ><i class="fa-solid fa-gauge"></i> Dashboard</a
+              >
+              <a href="borrowed_books.html" id="user-link"
+                ><i class="fa-solid fa-book"></i> Borrowed Books</a
+              >
+              <button id="logout-btn" class="logout-link">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
-    <hr />
 
-    <h2>All Books</h2>
-    <label for="sort-books">Filter Books By :</label>
-    <select name="sort-books" id="sort-books">
-      <option value="TR" selected>Top Rated</option>
-      <option value="AZ">Name : from A to Z</option>
-      <option value="ZA">Name : from Z to A</option>
-      <option value="HL">Price : High to Low</option>
-      <option value="LH">Price : Low to High</option>
-    </select>
-    <hr />
+    <main class="books-main-container">
+      <div class="books-header">
+        <h2 class="page-title">All Books</h2>
 
-    <div>
-      <div>
-        <a href="book_details.html">
-          <img
-            src="../assets/images/book1.jpg"
-            alt="Around The World in 80 Days"
-            style="width: 150px"
-          />
-        </a>
-        <br />
-        <a href="book_details.html">
-          <strong>Around The World in 80 Days</strong>
-        </a>
-        <br />
-        <em>by Jules Verne</em>
-        <br />
-        <span>Category: Adventure</span>
-        <br />
-        <span>Rating: 4.8/5 ⭐</span>
-        <br />
-        <strong>Status: Available</strong>
-        <br /><br />
-        <form action="confirm_borrowing.html">
-          <button type="submit">Borrow Book</button>
-        </form>
-        <br />
+        <div class="books-toolbar">
+          <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Search by title, author, or category..."
+            />
+          </div>
+
+          <div class="sort-box">
+            <label for="sort-books">Sort By:</label>
+            <select name="sort-books" id="sort-books">
+              <option value="AZ">Name: A to Z</option>
+              <option value="ZA">Name: Z to A</option>
+            </select>
+          </div>
+        </div>
       </div>
 
-      <div>
-        <a href="book_details.html">
-          <img
-            src="../assets/images/book2.jpg"
-            alt="The Happy Prince and Other Tales"
-            style="width: 150px"
-          />
-        </a>
-        <br />
-        <a href="book_details.html">
-          <strong>The Happy Prince and Other Tales</strong>
-        </a>
-        <br />
-        <em>by Oscar Wilde</em>
-        <br />
-        <span>Category: Fairy Tales</span>
-        <br />
-        <span>Rating: 4.5/5 ⭐</span>
-        <br />
-        <strong>Status: Not Available</strong>
-        <br /><br />
-        <form action="confirm_borrowing.html">
-          <button type="submit" disabled>Borrow Book</button>
-        </form>
-        <br />
-      </div>
+      <hr class="section-divider" />
 
-      <div>
-        <a href="book_details.html">
-          <img
-            src="../assets/images/book3.jpg"
-            alt="The Adventurer's Companion"
-            style="width: 150px"
-          />
-        </a>
-        <br />
-        <a href="book_details.html">
-          <strong>The Adventurer's Companion</strong>
-        </a>
-        <br />
-        <em>by Unknown</em>
-        <br />
-        <span>Category: Guide</span>
-        <br />
-        <span>Rating: 4.2/5 ⭐</span>
-        <br />
-        <strong>Status: Available</strong>
-        <br /><br />
-        <form action="confirm_borrowing.html">
-          <button type="submit">Borrow Book</button>
-        </form>
-        <br />
-      </div>
+      <div class="books-grid" id="books-grid"></div>
 
-      <div>
-        <a href="book_details.html">
-          <img
-            src="../assets/images/book4.jpg"
-            alt="Court of Envy"
-            style="width: 150px"
-          />
-        </a>
-        <br />
-        <a href="book_details.html">
-          <strong>Court of Envy</strong>
-        </a>
-        <br />
-        <em>by S.J. Maas</em>
-        <br />
-        <span>Category: Fantasy</span>
-        <br />
-        <span>Rating: 4.7/5 ⭐</span>
-        <br />
-        <strong>Status: Not Available</strong>
-        <br /><br />
-        <form action="confirm_borrowing.html">
-          <button type="submit" disabled>Borrow Book</button>
-        </form>
-        <br />
+      <div id="no-results-msg" class="no-results" style="display: none">
+        <i class="fa-solid fa-book-journal-whills fa-3x"></i>
+        <h3>No books found!</h3>
+        <p>Try adjusting your search criteria.</p>
       </div>
-
-      <div>
-        <a href="book_details.html">
-          <img
-            src="../assets/images/book5.jpg"
-            alt="Den of Liars"
-            style="width: 150px"
-          />
-        </a>
-        <br />
-        <a href="book_details.html">
-          <strong>Den of Liars</strong>
-        </a>
-        <br />
-        <em>by M. Anderson</em>
-        <br />
-        <span>Category: Mystery</span>
-        <br />
-        <span>Rating: 3.9/5 ⭐</span>
-        <br />
-        <strong>Status: Available</strong>
-        <br /><br />
-        <form action="confirm_borrowing.html">
-          <button type="submit">Borrow Book</button>
-        </form>
-        <br />
-      </div>
-
-      <div>
-        <a href="book_details.html">
-          <img
-            src="../assets/images/book6.jpg"
-            alt="Wuthering Heights"
-            style="width: 150px"
-          />
-        </a>
-        <br />
-        <a href="book_details.html">
-          <strong>Wuthering Heights</strong>
-        </a>
-        <br />
-        <em>by Emily Brontë</em>
-        <br />
-        <span>Category: Romance</span>
-        <br />
-        <span>Rating: 4.6/5 ⭐</span>
-        <br />
-        <strong>Status: Available</strong>
-        <br /><br />
-        <form action="confirm_borrowing.html">
-          <button type="submit">Borrow Book</button>
-        </form>
-        <br />
-      </div>
-
-      <div>
-        <a href="book_details.html">
-          <img
-            src="../assets/images/book7.jpg"
-            alt="Great Expectations"
-            style="width: 150px"
-          />
-        </a>
-        <br />
-        <a href="book_details.html">
-          <strong>Great Expectations</strong>
-        </a>
-        <br />
-        <em>by Charles Dickens</em>
-        <br />
-        <span>Category: Classic</span>
-        <br />
-        <span>Rating: 4.4/5 ⭐</span>
-        <br />
-        <strong>Status: Not Available</strong>
-        <br /><br />
-        <form action="confirm_borrowing.html">
-          <button type="submit" disabled>Borrow Book</button>
-        </form>
-        <br />
-      </div>
-
-      <div>
-        <a href="book_details.html">
-          <img
-            src="../assets/images/book8.jpg"
-            alt="The Count of Monte Cristo"
-            style="width: 150px"
-          />
-        </a>
-        <br />
-        <a href="book_details.html">
-          <strong>The Count of Monte Cristo</strong>
-        </a>
-        <br />
-        <em>by Alexandre Dumas</em>
-        <br />
-        <span>Category: Historical Fiction</span>
-        <br />
-        <span>Rating: 4.9/5 ⭐</span>
-        <br />
-        <strong>Status: Available</strong>
-        <br /><br />
-        <form action="confirm_borrowing.html">
-          <button type="submit">Borrow Book</button>
-        </form>
-        <br />
-      </div>
-
-      <div>
-        <a href="book_details.html">
-          <img
-            src="../assets/images/book9.jpg"
-            alt="The Great Gatsby"
-            style="width: 150px"
-          />
-        </a>
-        <br />
-        <a href="book_details.html">
-          <strong>The Great Gatsby</strong>
-        </a>
-        <br />
-        <em>by F. Scott Fitzgerald</em>
-        <br />
-        <span>Category: Tragedy</span>
-        <br />
-        <span>Rating: 4.3/5 ⭐</span>
-        <br />
-        <strong>Status: Available</strong>
-        <br /><br />
-        <form action="confirm_borrowing.html">
-          <button type="submit">Borrow Book</button>
-        </form>
-        <br />
-      </div>
-
-      <div>
-        <a href="book_details.html">
-          <img
-            src="../assets/images/book10.jpg"
-            alt="The Hobbit"
-            style="width: 150px"
-          />
-        </a>
-        <br />
-        <a href="book_details.html">
-          <strong>The Hobbit</strong>
-        </a>
-        <br />
-        <em>by J.R.R. Tolkien</em>
-        <br />
-        <span>Category: Fantasy</span>
-        <br />
-        <span>Rating: 4.8/5 ⭐</span>
-        <br />
-        <strong>Status: Not Available</strong>
-        <br /><br />
-        <form action="confirm_borrowing.html">
-          <button type="submit" disabled>Borrow Book</button>
-        </form>
-        <br />
-      </div>
-    </div>
-    <hr />
+    </main>
 
     <footer class="site-footer">
       <div class="footer-top">
@@ -375,9 +147,9 @@
         <div class="footer-col">
           <h3>Explore</h3>
           <ul>
-            <li><a href="pages/books.html">Our Catalog</a></li>
-            <li><a href="pages/about.html">About Gildora</a></li>
-            <li><a href="pages/support.html">FAQ & Help</a></li>
+            <li><a href="books.html">Our Catalog</a></li>
+            <li><a href="about.html">About Gildora</a></li>
+            <li><a href="support.html">FAQ & Help</a></li>
           </ul>
         </div>
 
@@ -420,6 +192,8 @@
         <p>&copy; 2026 CU Library. All rights reserved.</p>
       </div>
     </footer>
+
     <script src="../js/components/navbar.js"></script>
+    <script src="../js/pages/books.js"></script>
   </body>
 </html>

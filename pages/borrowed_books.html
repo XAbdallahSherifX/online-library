@@ -16,26 +16,24 @@
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap"
       rel="stylesheet"
     />
-        <link rel="stylesheet" href="../css/components/footer/style.css" />
+    <link rel="stylesheet" href="../css/components/footer/style.css" />
     <link rel="stylesheet" href="../css/components/footer/media.css" />
     <link rel="stylesheet" href="../css/components/navbar/style.css" />
     <link rel="stylesheet" href="../css/components/navbar/media.css" />
     <link rel="stylesheet" href="../css/pages/borrowed_books/style.css" />
     <link rel="stylesheet" href="../css/pages/borrowed_books/media.css" />
-    <title>GILDORA - Borrowed Books</title>
+    <title>GILDORA - My Borrowed Books</title>
   </head>
-  <body>
+  <body class="page-borrowed">
     <nav class="navbar">
       <div>
         <h2 class="navbar-logo">
           <i class="fa-solid fa-book-open fa-2xl"></i>
           <a class="logo-link" href="../index.html">GILDORA</a>
         </h2>
-
         <button class="mobile-toggle" aria-label="Toggle navigation">
           <i class="fa-solid fa-bars"></i>
         </button>
-
         <div class="nav-menu-container">
           <ul class="navbar-nav">
             <li class="nav-item">
@@ -54,7 +52,7 @@
               <a class="nav-link" href="./support.html">Support</a>
             </li>
           </ul>
-          <ul class="auth-nav">
+          <ul class="auth-nav" id="auth-buttons">
             <li>
               <a class="auth-link link-login" href="./login.html">Login</a>
             </li>
@@ -62,134 +60,69 @@
               <a class="auth-link link-signup" href="./signup.html">Sign Up</a>
             </li>
           </ul>
+          <div class="user-nav" id="user-menu" style="display: none">
+            <button class="profile-trigger" id="profile-btn">
+              <i class="fa-solid fa-user"></i
+              ><span id="nav-username">Profile</span
+              ><i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="profile-dropdown" id="profile-dropdown">
+              <a href="profile.html"
+                ><i class="fa-solid fa-user"></i> Profile</a
+              >
+              <a
+                href="admin_dashboard.html"
+                id="admin-link"
+                style="display: none"
+                ><i class="fa-solid fa-gauge"></i> Dashboard</a
+              >
+              <a href="borrowed_books.html" id="user-link"
+                ><i class="fa-solid fa-book"></i> Borrowed Books</a
+              >
+              <button id="logout-btn" class="logout-link">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
-    <hr />
-    <h1>My Borrowed Books</h1>
-    <div class="borrowed-books-container">
-      <table border="1" width="100%">
-        <tr>
-          <th>Book Image</th>
-          <th>Book Title</th>
-          <th>Author</th>
-          <th>Borrow Date</th>
-          <th>Due Date</th>
-          <th>Status</th>
-          <th>Actions</th>
-        </tr>
 
-        <tr>
-          <td>
-            <img
-              src="../assets/images/book1.jpg"
-              alt="Book Image"
-              height="100"
-            />
-          </td>
-          <td>Around The World in 80 Days</td>
-          <td>Jules Verne</td>
-          <td>2026-3-01</td>
-          <td>2026-3-15</td>
-          <td>Active</td>
-          <td>
-            <button type="button">Renew</button>
-            <button type="button">Return</button>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <img
-              src="../assets/images/book2.jpg"
-              alt="Book Image"
-              height="100"
-            />
-          </td>
-          <td>The Happy Prince and Other Tales</td>
-          <td>Oscar Wilde</td>
-          <td>2026-2-24</td>
-          <td>2026-3-10</td>
-          <td>Overdue</td>
-          <td>
-            <button type="button" disabled>Renew</button>
-            <button type="button">Return</button>
-          </td>
-        </tr>
-      </table>
-    </div>
-    <br />
-    <hr />
+    <main class="borrowed-main-container">
+      <div class="dashboard-header">
+        <h1 class="page-title">My Borrowed Books</h1>
+        <p class="page-subtitle">
+          Manage your current reading list and return books here.
+        </p>
+      </div>
 
+      <hr class="section-divider" />
+
+      <div class="borrowed-grid" id="borrowed-grid"></div>
+
+      <div id="empty-state" class="empty-state" style="display: none">
+        <i class="fa-solid fa-book-open-reader fa-4x"></i>
+        <h2>No Books Borrowed Yet</h2>
+        <p>
+          Your reading list is currently empty. Explore our catalog to find your
+          next great read.
+        </p>
+        <a href="books.html" class="btn-primary">Browse Catalog</a>
+      </div>
+    </main>
 
     <footer class="site-footer">
       <div class="footer-top">
         <div class="footer-brand">
           <h2><i class="fa-solid fa-book-open"></i> GILDORA</h2>
-          <p>
-            Your gateway to endless knowledge. Explore, borrow, and read
-            thousands of books from our classic and modern collections.
-          </p>
         </div>
       </div>
-
-      <div class="footer-main">
-        <div class="footer-col">
-          <h3>Contact Us</h3>
-          <address>
-            <p><i class="fa-solid fa-location-dot"></i> Giza, Egypt</p>
-            <p><i class="fa-solid fa-envelope"></i> info@gildora.edu.eg</p>
-            <p><i class="fa-solid fa-phone"></i> +20 123 456 7890</p>
-          </address>
-        </div>
-
-        <div class="footer-col">
-          <h3>Explore</h3>
-          <ul>
-            <li><a href="pages/books.html">Our Catalog</a></li>
-            <li><a href="pages/about.html">About Gildora</a></li>
-            <li><a href="pages/support.html">FAQ & Help</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h3>Connect</h3>
-          <div class="social-grid">
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-              ><i class="fa-brands fa-facebook-f"></i
-            ></a>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-              ><i class="fa-brands fa-instagram"></i
-            ></a>
-            <a
-              href="https://x.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Twitter"
-              ><i class="fa-brands fa-x-twitter"></i
-            ></a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              ><i class="fa-brands fa-linkedin-in"></i
-            ></a>
-          </div>
-        </div>
-      </div>
-
       <div class="footer-bottom">
         <p>&copy; 2026 CU Library. All rights reserved.</p>
       </div>
     </footer>
+
     <script src="../js/components/navbar.js"></script>
+    <script src="../js/pages/borrowed_books.js"></script>
   </body>
 </html>

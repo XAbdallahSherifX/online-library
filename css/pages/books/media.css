@@ -1,14 +1,61 @@
+/* Tablet / Small Screens */
 @media all and (min-width: 576px) {
+  .books-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
+/* Tablets Landscape */
 @media all and (min-width: 768px) {
+  .books-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .page-title {
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .books-toolbar {
+    flex-direction: row;
+    width: 60%;
+    justify-content: flex-end;
+  }
+
+  .search-box {
+    flex-grow: 1;
+    max-width: 300px;
+  }
+
+  #sort-books {
+    width: auto;
+    min-width: 150px;
+  }
+
+  .books-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
+/* Desktops */
 @media all and (min-width: 992px) {
+  .books-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .books-main-container {
+    padding: 3rem 2rem;
+  }
 }
 
+/* Large Displays */
 @media all and (min-width: 1200px) {
+  .books-main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
 
-@media all and (min-width: 1400px) {
-}

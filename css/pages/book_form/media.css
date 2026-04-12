@@ -1,14 +1,41 @@
-@media all and (min-width: 576px) {
+/* =========================================
+   BREAKPOINTS (MIN-WIDTH)
+   ========================================= */
+
+@media (min-width: 576px) {
+  .bookform-main {
+    padding: 40px 5%;
+  }
+
+  .bookform-card {
+    padding: 35px 40px;
+  }
+
+  .bookform-title {
+    font-size: 2.2rem;
+  }
 }
 
-@media all and (min-width: 768px) {
-}
+@media (min-width: 768px) {
+  .bookform-main {
+    padding: 60px 5%;
+  }
 
-@media all and (min-width: 992px) {
-}
+  .bookform-card {
+    padding: 40px 50px;
+  }
 
-@media all and (min-width: 1200px) {
-}
+  /* Upgrade to a 2-column layout on larger screens */
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
 
-@media all and (min-width: 1400px) {
+  .btn-submit {
+    max-width: 300px;
+    margin: 20px auto 0 auto;
+    display: block;
+  }
 }

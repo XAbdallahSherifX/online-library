@@ -10,13 +10,17 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Prata&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="../css/components/footer/style.css" />
     <link rel="stylesheet" href="../css/components/footer/media.css" />
     <link rel="stylesheet" href="../css/components/navbar/style.css" />
@@ -53,7 +57,7 @@
               <a class="nav-link" href="./support.html">Support</a>
             </li>
           </ul>
-          <ul class="auth-nav">
+          <ul class="auth-nav" id="auth-buttons">
             <li>
               <a class="auth-link link-login" href="./login.html">Login</a>
             </li>
@@ -61,94 +65,155 @@
               <a class="auth-link link-signup" href="./signup.html">Sign Up</a>
             </li>
           </ul>
+          <div class="user-nav" id="user-menu" style="display: none">
+            <button class="profile-trigger" id="profile-btn">
+              <i class="fa-solid fa-user"></i>
+              <span id="nav-username">Profile</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="profile-dropdown" id="profile-dropdown">
+              <a href="profile.html"
+                ><i class="fa-solid fa-user"></i> Profile</a
+              >
+              <a
+                href="admin_dashboard.html"
+                id="admin-link"
+                style="display: none"
+                ><i class="fa-solid fa-gauge"></i> Dashboard</a
+              >
+              <a href="borrowed_books.html" id="user-link"
+                ><i class="fa-solid fa-book"></i> Borrowed Books</a
+              >
+              <button id="logout-btn" class="logout-link">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
 
-    <main>
-      <div class="about-hero-section">
+    <main class="about-main">
+      <section class="about-hero">
+        <div class="about-hero-bg"></div>
         <div class="about-hero-overlay"></div>
-        <div class="about-hero-content">
-          <h1 class="about-page-title">About Us</h1>
-          <div class="about-intro">
-            <p class="about-intro-main">
-              GILDORA was created with a clear purpose: to make every reader's
-              journey comfortable, seamless, and memorable.
-            </p>
-            <p class="about-intro-side">
-              Founded in 2026, our goal is to digitize the library experience —
-              allowing users to browse a vast collection of classic and modern
-              literature, check availability in real-time, and manage their
-              reading list from the comfort of their homes.
+        <div class="about-container">
+          <div class="about-hero-content">
+            <span class="about-subtitle">Welcome to Gildora</span>
+            <h1 class="about-title">Our Story</h1>
+            <p class="about-hero-text">
+              Digitizing the library experience. Making every reader's journey
+              comfortable, seamless, and memorable since 2026.
             </p>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="about-wrapper">
-        <hr class="about-divider" />
-
-        <div class="about-grid">
-          <div class="about-grid-item">
-            <span class="about-label">What we offer</span>
-            <h3>
-              We provide premium access to knowledge with a personal touch.
-            </h3>
-            <ul class="about-offers">
-              <li>
-                <strong>Extensive Catalog:</strong> Hundreds of books across
-                Fiction, Adventure, Fantasy, and Academic genres.
-              </li>
-              <li>
-                <strong>Easy Borrowing:</strong> A simple, click-to-borrow
-                system for registered users.
-              </li>
-              <li>
-                <strong>Real-Time Updates:</strong> Know exactly whether a book
-                is available or checked out.
-              </li>
-            </ul>
-          </div>
-
-          <div class="about-grid-item has-image">
-            <span class="about-label">Our Mission</span>
-            <p>
+      <section class="about-mission">
+        <div class="about-container">
+          <div class="mission-content">
+            <h2 class="section-heading">Our Mission</h2>
+            <div class="heading-underline"></div>
+            <p class="section-text">
               We believe that knowledge should be available to everyone. Our
               team is driven by a passion for literature and a deep love for the
-              written word.
+              written word. Our goal is to allow users to browse a vast
+              collection of classic and modern literature, check availability in
+              real-time, and manage their reading list from the comfort of their
+              homes.
             </p>
           </div>
+        </div>
+      </section>
 
-          <div class="about-grid-item">
-            <span class="about-label">Accessibility</span>
-            <h3>At GILDORA, inclusivity is at the heart of what we do.</h3>
-            <p>
-              We believe reading should be effortless and enjoyable for
-              everyone. Our platform is designed to be intuitive, fast, and
-              available across all devices — anytime, anywhere.
-            </p>
+      <section class="about-features">
+        <div class="about-container">
+          <div class="features-header">
+            <span class="about-label">What we offer</span>
+            <h2 class="section-heading">
+              Premium access to knowledge with a personal touch.
+            </h2>
           </div>
 
-          <div class="about-grid-item">
-            <span class="about-label">Our Team</span>
-            <p>
-              Our team isn't just there to serve you — they are passionate
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fa-solid fa-book-bookmark"></i>
+              </div>
+              <h3 class="feature-title">Extensive Catalog</h3>
+              <p class="feature-text">
+                Hundreds of books across Fiction, Adventure, Fantasy, and
+                Academic genres waiting to be explored.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fa-solid fa-hand-pointer"></i>
+              </div>
+              <h3 class="feature-title">Easy Borrowing</h3>
+              <p class="feature-text">
+                A simple, intuitive click-to-borrow system designed exclusively
+                for our registered users.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+              </div>
+              <h3 class="feature-title">Real-Time Updates</h3>
+              <p class="feature-text">
+                No more guessing. Know exactly whether a book is currently
+                available or checked out instantly.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fa-solid fa-universal-access"></i>
+              </div>
+              <h3 class="feature-title">Accessibility</h3>
+              <p class="feature-text">
+                Our platform is designed to be inclusive, fast, and available
+                across all devices — anytime, anywhere.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-team">
+        <div class="about-container">
+          <div class="team-content">
+            <span class="about-label">The People Behind Gildora</span>
+            <h2 class="section-heading">Our Team</h2>
+            <div class="heading-underline"></div>
+            <p class="section-text">
+              Our team isn't just here to serve you — they are passionate
               readers with a deep knowledge of literature across every genre.
               Whether sharing recommendations or helping you discover hidden
-              gems, they ensure every journey is as enriching as it is seamless.
+              gems, they ensure every reading journey is as enriching as it is
+              seamless.
             </p>
           </div>
         </div>
+      </section>
 
-        <div class="about-cta-block">
-          <p>
-            Whether you are an avid reader looking for your next adventure, or a
-            student doing research — GILDORA is here for you. Start your journey
-            today.
-          </p>
-          <a href="./signup.html" class="about-cta-link">Sign Up Now</a>
+      <section class="about-cta">
+        <div class="about-container">
+          <div class="cta-box">
+            <h2 class="cta-title">Ready to start your journey?</h2>
+            <p class="cta-text">
+              Whether you are an avid reader looking for your next adventure, or
+              a student doing research — GILDORA is here for you.
+            </p>
+            <a href="./signup.html" class="btn-cta"
+              >Sign Up Now <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
         </div>
-      </div>
+      </section>
     </main>
 
     <footer class="site-footer">
@@ -175,9 +240,9 @@
         <div class="footer-col">
           <h3>Explore</h3>
           <ul>
-            <li><a href="pages/books.html">Our Catalog</a></li>
-            <li><a href="pages/about.html">About Gildora</a></li>
-            <li><a href="pages/support.html">FAQ & Help</a></li>
+            <li><a href="books.html">Our Catalog</a></li>
+            <li><a href="about.html">About Gildora</a></li>
+            <li><a href="support.html">FAQ & Help</a></li>
           </ul>
         </div>
 

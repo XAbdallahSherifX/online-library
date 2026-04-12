@@ -20,11 +20,11 @@
     <link rel="stylesheet" href="../css/components/footer/media.css" />
     <link rel="stylesheet" href="../css/components/navbar/style.css" />
     <link rel="stylesheet" href="../css/components/navbar/media.css" />
-    <link rel="stylesheet" href="../css/pages/profile/style.css" />
-    <link rel="stylesheet" href="../css/pages/profile/media.css" />
-    <title>GILDORA - Profile</title>
+    <link rel="stylesheet" href="../css/pages/confirm_borrowing/style.css" />
+    <link rel="stylesheet" href="../css/pages/confirm_borrowing/media.css" />
+    <title>GILDORA - Confirm Borrowing</title>
   </head>
-  <body>
+  <body class="page-borrow">
     <nav class="navbar">
       <div>
         <h2 class="navbar-logo">
@@ -62,9 +62,9 @@
           </ul>
           <div class="user-nav" id="user-menu" style="display: none">
             <button class="profile-trigger" id="profile-btn">
-              <i class="fa-solid fa-user"></i>
-              <span id="nav-username">Profile</span>
-              <i class="fa-solid fa-chevron-down"></i>
+              <i class="fa-solid fa-user"></i
+              ><span id="nav-username">Profile</span
+              ><i class="fa-solid fa-chevron-down"></i>
             </button>
             <div class="profile-dropdown" id="profile-dropdown">
               <a href="profile.html"
@@ -88,104 +88,105 @@
       </div>
     </nav>
 
-    <h1>My Profile</h1>
-    <div class="profile">
-      <img
-        src="../assets/images/portrait_placeholder.png"
-        alt="Profile Picture"
-        class="profile-pic"
-        height="200"
-      />
+    <main class="borrow-main-container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> / <a href="books.html">Books</a> /
+        <span>Confirm Borrowing</span>
+      </div>
 
-      <div class="profile-info">
-        <h2>Name: Gildora</h2>
-        <p>Email: gildora@gmail.com</p>
-        <p>Telephone: +20 123 456 7890</p>
-        <p>Address: 123 Main Street, Giza, Egypt</p>
-        <a href="edit_profile.html"
-          ><button class="edit-profile-btn">Edit Profile</button></a
+      <div class="borrow-layout" id="borrow-layout" style="display: none">
+        <div class="book-summary">
+          <h3>You are borrowing:</h3>
+          <div class="summary-card">
+            <img id="summary-img" src="" alt="Book Cover" class="summary-img" />
+            <div class="summary-details">
+              <h4 id="summary-title">Loading...</h4>
+              <p id="summary-author" class="summary-author"></p>
+              <div class="summary-meta">
+                <span id="summary-isbn"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="borrow-form-container">
+          <h2>Delivery Details</h2>
+          <p class="form-subtitle">
+            Please provide your details to confirm the borrowing process.
+          </p>
+
+          <form id="confirm-borrow-form" class="borrow-form">
+            <input type="hidden" id="target-isbn" />
+
+            <div class="form-group">
+              <label for="city">City</label>
+              <input
+                type="text"
+                id="city"
+                name="city"
+                placeholder="e.g., Cairo, Giza"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="address">Full Address</label>
+              <input
+                type="text"
+                id="address"
+                name="address"
+                placeholder="Street name, Building number, Apartment"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+20 100 000 0000"
+                required
+              />
+            </div>
+
+            <div class="form-actions">
+              <a href="books.html" class="btn-cancel">Cancel</a>
+              <button type="submit" class="btn-submit">Confirm & Borrow</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div id="error-msg" class="no-results" style="display: none">
+        <i class="fa-solid fa-triangle-exclamation fa-3x"></i>
+        <h3 id="error-title">Book Unavailable</h3>
+        <p id="error-desc">
+          We couldn't process this request. The book may have been fully
+          borrowed or the link is invalid.
+        </p>
+        <a
+          href="books.html"
+          class="btn-cancel"
+          style="display: inline-block; margin-top: 1rem; text-decoration: none"
+          >Return to Catalog</a
         >
       </div>
-
-      <div class="profile-stats">
-        <h3>Statistics:</h3>
-        <p>Total Borrowed Books:7</p>
-        <p>Member Since: February 2026</p>
-      </div>
-    </div>
-
-    <hr />
+    </main>
 
     <footer class="site-footer">
       <div class="footer-top">
         <div class="footer-brand">
           <h2><i class="fa-solid fa-book-open"></i> GILDORA</h2>
-          <p>
-            Your gateway to endless knowledge. Explore, borrow, and read
-            thousands of books from our classic and modern collections.
-          </p>
         </div>
       </div>
-
-      <div class="footer-main">
-        <div class="footer-col">
-          <h3>Contact Us</h3>
-          <address>
-            <p><i class="fa-solid fa-location-dot"></i> Giza, Egypt</p>
-            <p><i class="fa-solid fa-envelope"></i> info@gildora.edu.eg</p>
-            <p><i class="fa-solid fa-phone"></i> +20 123 456 7890</p>
-          </address>
-        </div>
-
-        <div class="footer-col">
-          <h3>Explore</h3>
-          <ul>
-            <li><a href="books.html">Our Catalog</a></li>
-            <li><a href="about.html">About Gildora</a></li>
-            <li><a href="support.html">FAQ & Help</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h3>Connect</h3>
-          <div class="social-grid">
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-              ><i class="fa-brands fa-facebook-f"></i
-            ></a>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-              ><i class="fa-brands fa-instagram"></i
-            ></a>
-            <a
-              href="https://x.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Twitter"
-              ><i class="fa-brands fa-x-twitter"></i
-            ></a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              ><i class="fa-brands fa-linkedin-in"></i
-            ></a>
-          </div>
-        </div>
-      </div>
-
       <div class="footer-bottom">
         <p>&copy; 2026 CU Library. All rights reserved.</p>
       </div>
     </footer>
+
     <script src="../js/components/navbar.js"></script>
-    <script src="../js/pages/profile.js"></script>
+    <script src="../js/pages/confirm_borrowing.js"></script>
   </body>
 </html>

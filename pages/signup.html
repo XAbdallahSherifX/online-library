@@ -16,6 +16,11 @@
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Prata&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="../css/components/footer/style.css" />
     <link rel="stylesheet" href="../css/components/footer/media.css" />
     <link rel="stylesheet" href="../css/components/navbar/style.css" />
@@ -32,11 +37,9 @@
           <i class="fa-solid fa-book-open fa-2xl"></i>
           <a class="logo-link" href="../index.html">GILDORA</a>
         </h2>
-
         <button class="mobile-toggle" aria-label="Toggle navigation">
           <i class="fa-solid fa-bars"></i>
         </button>
-
         <div class="nav-menu-container">
           <ul class="navbar-nav">
             <li class="nav-item">
@@ -55,7 +58,7 @@
               <a class="nav-link" href="./support.html">Support</a>
             </li>
           </ul>
-          <ul class="auth-nav">
+          <ul class="auth-nav" id="auth-buttons">
             <li>
               <a class="auth-link link-login" href="./login.html">Login</a>
             </li>
@@ -63,67 +66,117 @@
               <a class="auth-link link-signup" href="./signup.html">Sign Up</a>
             </li>
           </ul>
+          <div class="user-nav" id="user-menu" style="display: none">
+            <button class="profile-trigger" id="profile-btn">
+              <i class="fa-solid fa-user"></i>
+              <span id="nav-username">Profile</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="profile-dropdown" id="profile-dropdown">
+              <a href="profile.html"
+                ><i class="fa-solid fa-user"></i> Profile</a
+              >
+              <a
+                href="admin_dashboard.html"
+                id="admin-link"
+                style="display: none"
+                ><i class="fa-solid fa-gauge"></i> Dashboard</a
+              >
+              <a href="borrowed_books.html" id="user-link"
+                ><i class="fa-solid fa-book"></i> Borrowed Books</a
+              >
+              <button id="logout-btn" class="logout-link">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
-    <hr />
-    <h2>Create New Account</h2>
 
-    <form action="login.html">
-        <label>Username:</label>
-        <br />
-        <input type="text"
-               name="username"
-               placeholder="Enter username"
-               required />
-        <br /><br />
+    <main class="signup-main">
+      <div class="signup-container">
+        <div class="signup-card">
+          <div class="signup-header">
+            <h2 class="signup-title">Create Account</h2>
+            <p class="signup-subtitle">Join the Gildora library today.</p>
+          </div>
 
-        <label>Email:</label>
-        <br />
-        <input type="email" name="email" placeholder="Enter email" required />
-        <br /><br />
+          <form id="signup-form" novalidate>
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Enter username"
+                required
+              />
+            </div>
 
-        <label>Password:</label>
-        <br />
-        <input type="password"
-               name="password"
-               placeholder="Enter password"
-               required />
-        <br /><br />
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter email address"
+                required
+              />
+            </div>
 
-        <label>Confirm Password:</label>
-        <br />
-        <input type="password"
-               name="confirm_password"
-               placeholder="Confirm password"
-               required />
-        <br /><br />
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Create a password"
+                required
+              />
+            </div>
 
-        <label>User Type:</label>
-        <br />
+            <div class="form-group">
+              <label for="confirm_password">Confirm Password</label>
+              <input
+                type="password"
+                id="confirm_password"
+                name="confirm_password"
+                placeholder="Confirm your password"
+                required
+              />
+            </div>
 
-        <label class="radio-option">
-            <input type="radio" name="role" value="student" required />
-            Student
-        </label>
+            <div class="form-group">
+              <label>User Type</label>
+              <div class="radio-group">
+                <label class="radio-label">
+                  <input
+                    type="radio"
+                    name="role"
+                    value="user"
+                    checked
+                    required
+                  />
+                  <span class="radio-text">User</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="role" value="admin" />
+                  <span class="radio-text">Admin</span>
+                </label>
+              </div>
+            </div>
 
-        <label class="radio-option">
-            <input type="radio" name="role" value="admin" />
-            Admin
-        </label>
+            <button type="submit" class="btn-submit">Sign Up</button>
+            <span id="submit-error" class="submit-error-msg"></span>
+          </form>
 
-        <br /><br />
-
-        <button type="submit">Sign Up</button>
-    </form>
-
-    <br />
-
-    <p>
-      Already have an account?
-      <a href="login.html">Login</a>
-    </p>
-    <hr />
+          <div class="auth-redirect">
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <footer class="site-footer">
       <div class="footer-top">
@@ -149,9 +202,9 @@
         <div class="footer-col">
           <h3>Explore</h3>
           <ul>
-            <li><a href="pages/books.html">Our Catalog</a></li>
-            <li><a href="pages/about.html">About Gildora</a></li>
-            <li><a href="pages/support.html">FAQ & Help</a></li>
+            <li><a href="books.html">Our Catalog</a></li>
+            <li><a href="about.html">About Gildora</a></li>
+            <li><a href="support.html">FAQ & Help</a></li>
           </ul>
         </div>
 

@@ -1,10 +1,10 @@
 @import url("../../base/variables.css");
 
-
 .navbar {
-
   width: 100%;
   transition: all 0.3s ease;
+  position: relative;
+  z-index: 9999;
 }
 
 .navbar > div {
@@ -13,15 +13,15 @@
   align-items: center;
   flex-wrap: wrap;
   padding: 10px 16px;
-  
+
   /* Full-width Glassmorphism */
-  background: rgba(253, 251, 247, 0.55); 
+  background: rgba(253, 251, 247, 0.55);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  
+
   /* Rectangular bottom edge with depth */
   border-bottom: 1px solid rgba(255, 255, 255, 0.7);
-  box-shadow: 0 4px 30px rgba(40, 56, 69, 0.08); 
+  box-shadow: 0 4px 30px rgba(40, 56, 69, 0.08);
 }
 
 /* --- 2. Brand / Logo --- */
@@ -107,7 +107,7 @@
   text-decoration: none;
   color: var(--color-nav-text);
   font-family: var(--font-primary);
-  font-size: 15px; 
+  font-size: 15px;
   font-weight: 700; /* Increased to 700 for better readability */
   padding: 6px 12px;
   position: relative;
@@ -117,7 +117,7 @@
 
 /* Animated Underline */
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 2px;
@@ -171,13 +171,17 @@
   color: var(--color-action-primary);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 4px 15px rgba(40, 56, 69, 0.15), inset 0 2px 5px rgba(255, 255, 255, 0.8);
+  box-shadow:
+    0 4px 15px rgba(40, 56, 69, 0.15),
+    inset 0 2px 5px rgba(255, 255, 255, 0.8);
 }
 
 .link-login:hover {
   background: rgba(255, 255, 255, 0.9);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(40, 56, 69, 0.2), inset 0 2px 5px rgba(255, 255, 255, 1);
+  box-shadow:
+    0 6px 20px rgba(40, 56, 69, 0.2),
+    inset 0 2px 5px rgba(255, 255, 255, 1);
 }
 
 /* Solid Signup Button */
@@ -194,12 +198,98 @@
   box-shadow: 0 8px 25px rgba(128, 0, 32, 0.6);
 }
 
-.link-signup:active, .link-login:active {
+.link-signup:active,
+.link-login:active {
   transform: translateY(1px);
 }
 
 /* --- Animations --- */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-5px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* --- Profile & Dropdown Styles --- */
+.user-nav {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: auto; /* Prevents the container from taking full width */
+}
+
+.profile-trigger {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  color: var(--color-action-primary);
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: max-content; /* Only as wide as the text and icon inside */
+  transition: all 0.3s ease;
+}
+
+.profile-trigger:hover {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 15px rgba(40, 56, 69, 0.15);
+}
+
+.profile-dropdown {
+  display: none;
+  position: absolute;
+  top: 115%;
+  right: 0;
+  background: #ffffff;
+  min-width: 180px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  z-index: 1000;
+  padding: 8px 0;
+  flex-direction: column; /* Stacks items vertically */
+}
+
+.profile-dropdown.show {
+  display: flex;
+}
+
+.profile-dropdown a,
+.profile-dropdown button {
+  width: 100%;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: var(--color-text-primary);
+  font-family: var(--font-primary);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  box-sizing: border-box; /* Prevents padding from breaking width */
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.profile-dropdown a:hover,
+.profile-dropdown button:hover {
+  background-color: #f8f9fa;
+  color: var(--color-action-primary);
+}
+
+.logout-link {
+  color: #d93025 !important;
+  border-top: 1px solid #eeeeee !important;
+  margin-top: 4px;
 }

@@ -3,13 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link
+    <link
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/components/footer/media.css">
+    <link rel="stylesheet" href="css/components/footer/media.css" />
     <link rel="stylesheet" href="css/components/footer/style.css" />
     <link rel="stylesheet" href="css/components/navbar/style.css" />
     <link rel="stylesheet" href="css/components/navbar/media.css" />
@@ -24,30 +31,28 @@
           <i class="fa-solid fa-book-open fa-2xl"></i>
           <a class="logo-link" href="index.html">GILDORA</a>
         </h2>
-
         <button class="mobile-toggle" aria-label="Toggle navigation">
           <i class="fa-solid fa-bars"></i>
         </button>
-
         <div class="nav-menu-container">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="./index.html">Home</a>
+              <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./pages/books.html">Books</a>
+              <a class="nav-link" href="pages/books.html">Books</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./pages/about.html">About</a>
+              <a class="nav-link" href="pages/about.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./pages/contact.html">Contact</a>
+              <a class="nav-link" href="pages/contact.html">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./pages/support.html">Support</a>
+              <a class="nav-link" href="pages/support.html">Support</a>
             </li>
           </ul>
-          <ul class="auth-nav">
+          <ul class="auth-nav" id="auth-buttons">
             <li>
               <a class="auth-link link-login" href="pages/login.html">Login</a>
             </li>
@@ -57,17 +62,41 @@
               >
             </li>
           </ul>
+          <div class="user-nav" id="user-menu" style="display: none">
+            <button class="profile-trigger" id="profile-btn">
+              <i class="fa-solid fa-user"></i>
+              <span id="nav-username">Profile</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="profile-dropdown" id="profile-dropdown">
+              <a href="pages/profile.html"
+                ><i class="fa-solid fa-user"></i> Profile</a
+              >
+              <a
+                href="pages/admin_dashboard.html"
+                id="admin-link"
+                style="display: none"
+                ><i class="fa-solid fa-gauge"></i> Dashboard</a
+              >
+              <a href="pages/borrowed_books.html" id="user-link"
+                ><i class="fa-solid fa-book"></i> Borrowed Books</a
+              >
+              <button id="logout-btn" class="logout-link">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
-    
+
     <main>
       <section id="main-hero">
         <div class="hero-text">
           <h1>The World's Best Classic Books Ready For You to Read.</h1>
           <p class="hero-subtitle">
-           Explore thousands of timeless classics — from ancient philosophy 
-           to golden-age fiction. All in one place.
+            Explore thousands of timeless classics — from ancient philosophy to
+            golden-age fiction. All in one place.
           </p>
           <div class="hero-buttons">
             <a href="pages/signup.html"
@@ -78,8 +107,6 @@
             >
           </div>
         </div>
-
-        
       </section>
 
       <hr />
@@ -98,7 +125,7 @@
         </div>
       </section>
 
-    <hr>
+      <hr />
       <section id="featured-slider">
         <div class="slider-text">
           <h2>Featured Books</h2>
@@ -118,10 +145,9 @@
               <div class="book-info">
                 <h3 class="book-title">Around The World in 80 Days</h3>
                 <p class="book-author">Jules Verne</p>
-                <span class="book-price">$ 45.00</span>
-               </div>
+              </div>
             </a>
-            <a href="pages/book_details.html" class="book-slide ">
+            <a href="pages/book_details.html" class="book-slide">
               <img
                 src="assets/images/book2.jpg"
                 alt="The Happy Prince"
@@ -130,8 +156,7 @@
               <div class="book-info">
                 <h3 class="book-title">The Happy Prince</h3>
                 <p class="book-author">Oscar Tales</p>
-                <span class="book-price">$ 50.00</span>
-               </div>
+              </div>
             </a>
             <a href="pages/book_details.html" class="book-slide">
               <img
@@ -142,8 +167,7 @@
               <div class="book-info">
                 <h3 class="book-title">The Adventrure's Companica</h3>
                 <p class="book-author">Ireen Chau</p>
-                <span class="book-price">$ 43.50</span>
-               </div>
+              </div>
             </a>
             <a href="pages/book_details.html" class="book-slide">
               <img
@@ -154,8 +178,7 @@
               <div class="book-info">
                 <h3 class="book-title">Court of Envy</h3>
                 <p class="book-author">Jules Verne</p>
-                <span class="book-price">$ 37.00</span>
-               </div>
+              </div>
             </a>
             <a href="pages/book_details.html" class="book-slide">
               <img
@@ -166,8 +189,7 @@
               <div class="book-info">
                 <h3 class="book-title">Den of Liars</h3>
                 <p class="book-author">Jessica Olson</p>
-                <span class="book-price">$ 55.00</span>
-               </div>
+              </div>
             </a>
           </div>
 
@@ -195,8 +217,7 @@
               <div class="book-info">
                 <h3 class="book-title">The Merchant of Venice</h3>
                 <p class="book-author">Shakespeare</p>
-                <span class="book-price">$ 65.00</span>
-               </div>
+              </div>
             </a>
             <a href="pages/book_details.html" class="book-slide">
               <img
@@ -207,8 +228,7 @@
               <div class="book-info">
                 <h3 class="book-title">Orfeia</h3>
                 <p class="book-author">Joanne M. Harris</p>
-                <span class="book-price">$ 45.00</span>
-               </div>
+              </div>
             </a>
             <a href="pages/book_details.html" class="book-slide">
               <img
@@ -219,8 +239,7 @@
               <div class="book-info">
                 <h3 class="book-title">Ruthless</h3>
                 <p class="book-author">Lauren Roberts</p>
-                <span class="book-price">$ 55.00</span>
-               </div>
+              </div>
             </a>
             <a href="pages/book_details.html" class="book-slide">
               <img
@@ -231,8 +250,7 @@
               <div class="book-info">
                 <h3 class="book-title">Le Trône De Braises</h3>
                 <p class="book-author">Azrah H. Khayal</p>
-                <span class="book-price">$ 55.00</span>
-               </div>
+              </div>
             </a>
             <a href="pages/book_details.html" class="book-slide">
               <img
@@ -243,8 +261,7 @@
               <div class="book-info">
                 <h3 class="book-title">Freed From Gravity</h3>
                 <p class="book-author">Jenny Hickman</p>
-                <span class="book-price">$ 50.00</span>
-               </div>
+              </div>
             </a>
           </div>
 
@@ -252,9 +269,6 @@
         </div>
       </section>
     </main>
-
-
-
 
     <footer class="site-footer">
       <div class="footer-top">

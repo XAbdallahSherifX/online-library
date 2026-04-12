@@ -1,87 +1,37 @@
-﻿@media (max-width: 768px) {
-    body > div:first-of-type {
-        padding: 48px 16px 60px;
-    }
+﻿/* =========================================
+   BREAKPOINTS (MIN-WIDTH)
+   ========================================= */
 
-        body > div:first-of-type > h2 {
-            font-size: 1.70rem;
-            letter-spacing: 0.10em;
-        }
+@media (min-width: 576px) {
+  .support-main {
+    padding: 40px 5%;
+  }
 
-        body > div:first-of-type > h3:last-of-type {
-            font-size: 1.05rem;
-            padding: 24px 24px 14px;
-        }
+  .support-card {
+    padding: 40px 35px;
+  }
 
-        body > div:first-of-type > p:last-of-type {
-            padding: 8px 24px 24px;
-        }
+  .support-title {
+    font-size: 2rem;
+  }
+
+  .faq-item summary {
+    padding: 18px 20px;
+    font-size: 1rem;
+  }
+
+  .faq-content {
+    padding: 0 20px 20px;
+    font-size: 0.95rem;
+  }
 }
 
-@media (max-width: 540px) {
-    body > div:first-of-type {
-        padding: 36px 12px 52px;
-    }
+@media (min-width: 768px) {
+  .support-main {
+    padding: 60px 5%;
+  }
 
-        body > div:first-of-type > h2 {
-            font-size: 1.40rem;
-            letter-spacing: 0.08em;
-        }
-
-        body > div:first-of-type > p:first-of-type {
-            font-size: 0.90rem;
-            margin-bottom: 28px;
-        }
-
-        body > div:first-of-type > details > summary {
-            padding: 16px 18px;
-            font-size: 0.92rem;
-        }
-
-        body > div:first-of-type > details > p {
-            padding: 0 18px 18px;
-            font-size: 0.87rem;
-        }
-
-        body > div:first-of-type > h3:last-of-type {
-            font-size: 0.96rem;
-            letter-spacing: 0.08em;
-            padding: 22px 20px 12px;
-        }
-
-        body > div:first-of-type > p:last-of-type {
-            padding: 6px 20px 22px;
-            font-size: 0.88rem;
-        }
-}
-
-@media (max-width: 390px) {
-    body > div:first-of-type > h2 {
-        font-size: 1.20rem;
-    }
-
-    body > div:first-of-type > details {
-        border-radius: 10px;
-        margin-bottom: 8px;
-    }
-
-        body > div:first-of-type > details > summary {
-            padding: 14px 16px;
-            font-size: 0.88rem;
-        }
-
-        body > div:first-of-type > details > p {
-            padding: 0 16px 16px;
-            font-size: 0.84rem;
-        }
-
-    body > div:first-of-type > h3:last-of-type {
-        padding: 20px 18px 10px;
-        border-radius: 10px 10px 0 0;
-    }
-
-    body > div:first-of-type > p:last-of-type {
-        padding: 6px 18px 20px;
-        border-radius: 0 0 10px 10px;
-    }
+  .support-card {
+    padding: 50px 45px;
+  }
 }

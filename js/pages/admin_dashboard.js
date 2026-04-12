@@ -1,103 +1,129 @@
+const currentUser = JSON.parse(localStorage.getItem("credentials"));
+if (!currentUser || currentUser.role !== "admin") {
+  window.location.href = "../index.html";
+}
+
 window.onload = () => {
-    const tableBody = document.querySelector("#inventory-body");
-    
-    let books = JSON.parse(localStorage.getItem("books")) || [];
+  const tableBody = document.querySelector("#inventory-body");
 
-    function updateStats(bookList) {
-        let total = 0;
-        let borrowed = 0;
-        
-        bookList.forEach(book => {
-            total += Number(book.Total_Copies || 0);
-            borrowed += Number(book.Borrowed || 0);
-        });
+  let books = JSON.parse(localStorage.getItem("books")) || [];
 
-        document.getElementById("Total-Books").innerText = total;
-        document.getElementById("borrowed-books").innerText = borrowed;
-        document.getElementById("Available-Books").innerText = total - borrowed;
-    }
+  function updateStats(bookList) {
+    let total = 0;
+    let borrowed = 0;
+    let users = JSON.parse(localStorage.getItem("users")).filter(
+      (u) => u.role === "user",
+    ).length;
+    bookList.forEach((book) => {
+      total += Number(book.Total_Copies || 0);
+      borrowed += Number(book.Borrowed || 0);
+    });
 
-    function renderTable(bookList) {
-        tableBody.innerHTML = ""; 
-        bookList.forEach(book => {
-            tableBody.appendChild(create_row(book));
-        });
-    }
+    document.getElementById("Total-Books").innerText = total;
+    document.getElementById("borrowed-books").innerText = borrowed;
+    document.getElementById("Available-Books").innerText = total - borrowed;
+    document.getElementById("New-Members").innerHTML = users;
+  }
 
-    renderTable(books);
-    updateStats(books);
+  function renderTable(bookList) {
+    tableBody.innerHTML = "";
+    bookList.forEach((book) => {
+      tableBody.appendChild(create_row(book));
+    });
+  }
 
-    let search = document.getElementById("search");
-    search.oninput = (e) => {
-        let value = e.target.value.toLowerCase();
-        
-        let filteredBooks = books.filter(book => 
-        
-            book.Title.toLowerCase().includes(value) || 
-            book.ISBN.toString().includes(value) || 
-            book.Author.toLowerCase().includes(value)
-        );
+  renderTable(books);
+  updateStats(books);
 
-        renderTable(filteredBooks);
+  let search = document.getElementById("search");
+  search.oninput = (e) => {
+    let value = e.target.value.toLowerCase();
+
+    let filteredBooks = books.filter(
+      (book) =>
+        book.Title.toLowerCase().includes(value) ||
+        book.ISBN.toString().includes(value) ||
+        book.Author.toLowerCase().includes(value),
+    );
+
+    renderTable(filteredBooks);
+  };
+
+  function create_row(Book) {
+    let row = document.createElement("div");
+    row.className = "table-row";
+
+    let ISBN = document.createElement("div");
+    ISBN.className = "table-cell";
+    ISBN.setAttribute("data-label", "ISBN");
+    ISBN.innerText = Book.ISBN;
+
+    let title = document.createElement("div");
+    title.className = "table-cell";
+    title.setAttribute("data-label", "Book Title");
+    title.innerText = Book.Title;
+
+    let author = document.createElement("div");
+    author.className = "table-cell";
+    author.setAttribute("data-label", "Author");
+    author.innerText = Book.Author;
+
+    let status = document.createElement("div");
+    status.className = "table-cell";
+    status.setAttribute("data-label", "Status");
+    status.innerText = !Book.Is_Available ? "Unavailable" : "Available";
+
+    let action = document.createElement("div");
+    action.className = "table-cell action-cell";
+
+    let editIcon = document.createElement("i");
+    editIcon.className = "fa-solid fa-pen-to-square action-icon edit-btn";
+    editIcon.title = "Edit Book";
+    editIcon.style.cursor = "pointer";
+    editIcon.onclick = () => {
+      window.location.href = `bookform.html?edit=${Book.ISBN}`;
     };
 
-    function create_row(Book) {
-        let row = document.createElement("div");
-        row.className = "table-row";
+    let trashIcon = document.createElement("i");
+    trashIcon.className = "fa-solid fa-trash action-icon";
+    trashIcon.style.color = "var(--color-status-error-text, rgb(222, 13, 13))";
+    trashIcon.style.cursor = "pointer";
+    trashIcon.style.marginLeft = "15px";
+    trashIcon.onclick = function () {
+      if (Book.Borrowed > 0) {
+        alert("this book is borrowed by customers");
+        return;
+      }
+      if (confirm(`Delete "${Book.Title}"?`)) {
+        let currentUser = JSON.parse(localStorage.getItem("credentials"));
+        let users = JSON.parse(localStorage.getItem("users"));
+        let adminIndex = users.findIndex(
+          (u) =>
+            u.username === currentUser.username ||
+            u.email === currentUser.email,
+        );
+        if (users[adminIndex]) {
+          let bookIndex = users[adminIndex].addedBooks.findIndex(
+            (b) => b.ISBN == Book.ISBN,
+          );
+          users[adminIndex].addedBooks.splice(bookIndex, 1);
+          localStorage.setItem("users", JSON.stringify(users));
+        }
+        let updatedBooks = books.filter((b) => b.ISBN !== Book.ISBN);
+        localStorage.setItem("books", JSON.stringify(updatedBooks));
+        location.reload();
+      }
+    };
 
-        let ISBN = document.createElement("div");
-        ISBN.className = "table-cell";
-        ISBN.setAttribute("data-label", "ISBN");
-        ISBN.innerText = Book.ISBN;
+    action.appendChild(editIcon);
+    action.appendChild(trashIcon);
 
-        let title = document.createElement("div");
-        title.className = "table-cell";
-        title.setAttribute("data-label", "Book Title");
-        title.innerText = Book.Title; 
+    row.appendChild(ISBN);
+    row.appendChild(title);
+    row.appendChild(author);
+    row.appendChild(status);
+    row.appendChild(action);
 
-        let author = document.createElement("div");
-        author.className = "table-cell";
-        author.setAttribute("data-label", "Author");
-        author.innerText = Book.Author;
-
-        let status = document.createElement("div");
-        status.className = "table-cell";
-        status.setAttribute("data-label", "Status");
-        status.innerText = (!Book.Is_Available) ? "Unavailable" : "Available";
-        
-        let action = document.createElement("div");
-        action.className = "table-cell action-cell";
-
-        let editIcon = document.createElement("i");
-        editIcon.className = "fa-solid fa-pen-to-square action-icon edit-btn";
-        editIcon.title = "Edit Book";
-        editIcon.style.cursor = "pointer";
-        editIcon.onclick = () => {
-            window.location.href = `bookform.html?edit=${Book.ISBN}`;
-        };
-
-        let trashIcon = document.createElement("i");
-        trashIcon.className = "fa-solid fa-trash action-icon";
-        trashIcon.style.color = "var(--color-status-error-text, rgb(222, 13, 13))";
-        trashIcon.style.cursor = "pointer";
-        trashIcon.style.marginLeft = "15px";
-        trashIcon.onclick = function () {
-            if (confirm(`Delete "${Book.Title}"?`)) { 
-                let updatedBooks = books.filter(b => b.ISBN !== Book.ISBN);
-                localStorage.setItem("books", JSON.stringify(updatedBooks));
-                location.reload();
-            }
-        };
-
-        action.appendChild(editIcon);
-        action.appendChild(trashIcon);
-
-        row.appendChild(ISBN);
-        row.appendChild(title);
-        row.appendChild(author);
-        row.appendChild(status);
-        row.appendChild(action);
-
-        return row;
-    }
-}
+    return row;
+  }
+};

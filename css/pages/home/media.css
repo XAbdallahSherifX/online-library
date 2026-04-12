@@ -1,8 +1,4 @@
-/* =========================================
-    MEDIA QUERIES (SCALING UP TYPOGRAPHY/SPACING)
-    ========================================= */
 
-/* Small Tablets */
 @media (min-width: 576px) {
   #main-hero {
     padding: 30px 6%;
@@ -68,14 +64,12 @@
     margin-bottom: 20px;
   }
 
-  /* Footer spacing from original */
   .footer-container {
     grid-template-columns: 1fr;
     gap: 35px;
   }
 }
 
-/* Large Tablets / Small Desktops */
 @media (min-width: 768px) {
   #main-hero {
     padding: 45px 8%;
@@ -137,7 +131,6 @@
   }
 }
 
-/* Standard Desktops */
 @media (min-width: 992px) {
   #main-hero {
     padding: 600px 10%;
@@ -204,7 +197,6 @@
   }
 }
 
-/* Large Monitors */
 @media (min-width: 1200px) {
   #main-hero {
     padding: 70px 12%;
@@ -214,7 +206,6 @@
   }
 }
 
-/* Ultrawide Monitors */
 @media (min-width: 1400px) {
   #main-hero {
     padding: 80px 15%;

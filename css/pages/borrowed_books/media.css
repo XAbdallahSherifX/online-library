@@ -1,14 +1,29 @@
-@media all and (min-width: 576px) {
-}
-
 @media all and (min-width: 768px) {
-}
+  .borrowed-card {
+    flex-direction: row;
+    align-items: stretch;
+  }
 
-@media all and (min-width: 992px) {
-}
+  .card-image-container {
+    width: 200px; /* Fixed width for the image column */
+    height: auto;
+    border-bottom: none;
+    border-right: 1px solid var(--color-border-default);
+  }
 
-@media all and (min-width: 1200px) {
-}
+  .card-content {
+    padding: 2rem;
+  }
 
-@media all and (min-width: 1400px) {
+  .card-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .btn-return {
+    margin-top: 0;
+    margin-left: auto; /* Push to the right */
+    align-self: flex-start;
+  }
 }
