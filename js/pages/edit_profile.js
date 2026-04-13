@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (emailInput) emailInput.value = currentUser.email || "";
     if (phoneInput) phoneInput.value = currentUser.phone || "";
     if (addressInput) addressInput.value = currentUser.address || "";
-
+let finalImagePath = currentUser.profilePic || "../assets/images/portrait_placeholder.png";
     // 2. Handle form submission to update profile
     const editForm = document.querySelector('form');
     if (editForm) {
@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             currentUser.email = emailInput.value.trim();
             currentUser.phone = phoneInput.value.trim();
             currentUser.address = addressInput.value.trim();
+            currentUser.profilePic = finalImagePath;
 
             // Save updated credentials back to localStorage
             localStorage.setItem("credentials", JSON.stringify(currentUser));
@@ -42,28 +43,26 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = "profile.html";
         });
     }
-    //  Live Image Preview Feature
+   // --- Upload from Assets Feature ---
     const profilePicInput = document.getElementById('profile_pic');
     const profileImgPreview = document.querySelector('.edit-profile-container img');
 
+    // 1. show current profile picture on page load
+    if (profileImgPreview && currentUser.profilePic) {
+        profileImgPreview.src = currentUser.profilePic;
+        finalImagePath = currentUser.profilePic; // تحديث المسار النهائي
+    }
+
+    // 2. change picture event listener when user selects a new file
     if (profilePicInput && profileImgPreview) {
         profilePicInput.addEventListener('change', function(event) {
             const file = event.target.files[0];
             if (file) {
-                // Only proceed if the selected file is an image
-                if (file.type.startsWith('image/')) {
-                    const reader = new FileReader();
-                    reader.onload = function(e) {
-                       // set the preview image source to the uploaded file's data URL
-                        profileImgPreview.src = e.target.result;
-                    }
-                    reader.readAsDataURL(file);
-                } else {
-                    alert('Please select a valid image file.');
-                    profilePicInput.value = ''; 
-                }
+                // بنركب المسار يدوي: مسار الفولدر + اسم الصورة
+                
+                finalImagePath = "../assets/Avatars/" + file.name;
+                profileImgPreview.src = finalImagePath;
             }
         });
     }
-
 });

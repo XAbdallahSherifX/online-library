@@ -11,11 +11,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Get profile elements
     const nameElement = document.getElementById("profile-name");
     const emailElement = document.getElementById("profile-email");
+    const profileImageElement = document.querySelector('.profile-pic');
 
     // Set profile info
     if (nameElement && emailElement) {
         nameElement.textContent = `Name: ${currentUser.username}`;
         emailElement.textContent = `Email: ${currentUser.email}`;
+    }
+    if (profileImageElement && currentUser.profilePic) {
+        profileImageElement.src = currentUser.profilePic;
     }
     // === New Additions for Phone and Address ===
     const phoneElement = document.getElementById("profile-phone");
