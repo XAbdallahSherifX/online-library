@@ -56,6 +56,20 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("summary-isbn").textContent = `ISBN: ${book.ISBN}`;
   document.getElementById("target-isbn").value = book.ISBN;
 
+// === fill input fields with user data ===
+  const phoneInputField = document.getElementById("phone");
+  const addressInputField = document.getElementById("address");
+
+  //if user has phone/address in their credentials, pre-fill the form fields with that data
+  if (phoneInputField && currentUser.phone) {
+    phoneInputField.value = currentUser.phone;
+  }
+  if (addressInputField && currentUser.address) {
+    addressInputField.value = currentUser.address;
+  }
+  // ===============================================
+
+  layout.style.display = "flex";
   layout.style.display = "flex";
 
   form.addEventListener("submit", (e) => {

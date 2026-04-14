@@ -100,7 +100,8 @@ form.addEventListener("submit", function (e) {
       role: validUser.role,
       phone: validUser.phone,
       address: validUser.address,
-      memberSince: validUser.memberSince
+      memberSince: validUser.memberSince,
+      profilePic: validUser.profilePic
     };
 
     // 2. Save token to local storage
