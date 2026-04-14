@@ -70,7 +70,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // ===============================================
 
   layout.style.display = "flex";
-  layout.style.display = "flex";
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();

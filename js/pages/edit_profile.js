@@ -50,7 +50,7 @@ let finalImagePath = currentUser.profilePic || "../assets/images/portrait_placeh
     // 1. show current profile picture on page load
     if (profileImgPreview && currentUser.profilePic) {
         profileImgPreview.src = currentUser.profilePic;
-        finalImagePath = currentUser.profilePic; // تحديث المسار النهائي
+        finalImagePath = currentUser.profilePic; // initialize finalImagePath with current profile picture
     }
 
     // 2. change picture event listener when user selects a new file
@@ -58,7 +58,7 @@ let finalImagePath = currentUser.profilePic || "../assets/images/portrait_placeh
         profilePicInput.addEventListener('change', function(event) {
             const file = event.target.files[0];
             if (file) {
-                // بنركب المسار يدوي: مسار الفولدر + اسم الصورة
+                // Assuming the file is uploaded to the "assets/Avatars" directory and named exactly as the uploaded file
                 
                 finalImagePath = "../assets/Avatars/" + file.name;
                 profileImgPreview.src = finalImagePath;
