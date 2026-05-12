@@ -1,0 +1,27 @@
+﻿/* =========================================
+   BREAKPOINTS (MIN-WIDTH)
+   ========================================= */
+
+@media (min-width: 576px) {
+  .login-main {
+    padding: 40px 5%;
+  }
+
+  .login-card {
+    padding: 40px 35px;
+  }
+
+  .login-title {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .login-main {
+    padding: 60px 5%;
+  }
+
+  .login-card {
+    padding: 50px 45px;
+  }
+}

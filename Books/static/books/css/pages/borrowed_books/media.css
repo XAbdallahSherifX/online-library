@@ -1,0 +1,29 @@
+@media all and (min-width: 768px) {
+  .borrowed-card {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .card-image-container {
+    width: 200px; /* Fixed width for the image column */
+    height: auto;
+    border-bottom: none;
+    border-right: 1px solid var(--color-border-default);
+  }
+
+  .card-content {
+    padding: 2rem;
+  }
+
+  .card-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .btn-return {
+    margin-top: 0;
+    margin-left: auto; /* Push to the right */
+    align-self: flex-start;
+  }
+}

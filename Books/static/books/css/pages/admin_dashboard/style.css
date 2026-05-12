@@ -1,0 +1,219 @@
+@import url("../../base/variables.css");
+@import url("../../base/reset.css");
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-primary);
+}
+
+#Admin-Dashboard {
+  margin: 100px auto 60px;
+  padding: 0 1.5rem;
+  max-width: 1100px;
+  min-height: 60vh;
+}
+
+.title-font { 
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-text-primary);
+  margin-top: 2rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-border-default);
+}
+
+label[for="search"] {
+  display: block;
+  font-weight: bold;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+#search {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 10px;
+  border: 1px solid var(--color-border-default);
+  background-color: var(--color-form-input-bg);
+  color: var(--color-form-input-text);
+  border-radius: 4px; 
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+#search:focus {
+  outline: none;
+  border-color: var(--color-border-focus);
+}
+
+.Add-btn {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--color-action-primary);
+  color: var(--color-text-inverse);
+  border: none;
+  border-radius: 40px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background-color 0.2s ease;
+}
+
+.Add-btn:hover {
+  background-color: var(--color-action-primary-hover);
+}
+
+#Admin-Dashboard a {
+  text-decoration: none;
+}
+
+
+.stats-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-box {
+  background-color: var(--color-table-row-bg);
+  border: 1px solid var(--color-table-border);
+  padding: 1rem;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.stat-label {
+  font-weight: bold;
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-action-primary);
+}
+
+
+.table-container {
+  width: 100%;
+}
+
+.table-header {
+  display: none;
+}
+
+.table-row {
+  background-color: var(--color-table-row-bg);
+  border: 1px solid var(--color-table-border);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.table-row:hover {
+  background-color: var(--color-table-row-hover);
+}
+
+.table-cell {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid var(--color-table-border);
+}
+
+.table-cell:last-child {
+  border-bottom: none;
+}
+
+.table-cell::before {
+  content: attr(data-label);
+  font-weight: bold;
+  color: var(--color-text-secondary);
+}
+
+.action-cell {
+  justify-content: flex-end;
+}
+
+.action-cell::before {
+  margin-right: auto;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  label[for="search"] {
+    display: inline-block;
+    margin-right: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  #search {
+    display: inline-block;
+    width: 300px;
+    margin-right: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .Add-btn {
+    display: inline-block;
+    width: auto;
+    padding: 0.8rem 2rem;
+  }
+
+
+  .stats-container {
+    grid-template-columns: repeat(4, 1fr); 
+  }
+
+
+  .table-header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1.5fr 1fr 1fr;
+    background-color: var(--color-table-header-bg);
+    border: 1px solid var(--color-table-border);
+    border-bottom: none;
+    font-weight: bold;
+    color: var(--color-text-primary);
+  }
+
+  .table-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1.5fr 1fr 1fr;
+    margin-bottom: 0;
+    padding: 0;
+    border-radius: 0;
+    border-bottom: none;
+  }
+
+  .table-body .table-row:last-child {
+    border-bottom: 1px solid var(--color-table-border);
+  }
+
+  .table-cell {
+    display: block; 
+    text-align: center;
+    padding: 1rem 1.2rem;
+    border-bottom: none;
+    align-self: center; 
+  }
+
+ 
+  .table-cell::before {
+    display: none; 
+  }
+
+  .action-cell {
+    display: block;
+  }
+}

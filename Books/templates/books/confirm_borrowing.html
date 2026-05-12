@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/components/footer/style.css" />
+    <link rel="stylesheet" href="../css/components/footer/media.css" />
+    <link rel="stylesheet" href="../css/components/navbar/style.css" />
+    <link rel="stylesheet" href="../css/components/navbar/media.css" />
+    <link rel="stylesheet" href="../css/pages/confirm_borrowing/style.css" />
+    <link rel="stylesheet" href="../css/pages/confirm_borrowing/media.css" />
+    <title>GILDORA - Confirm Borrowing</title>
+  </head>
+  <body class="page-borrow">
+    <nav class="navbar">
+      <div>
+        <h2 class="navbar-logo">
+          <i class="fa-solid fa-book-open fa-2xl"></i>
+          <a class="logo-link" href="../index.html">GILDORA</a>
+        </h2>
+        <button class="mobile-toggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="nav-menu-container">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./books.html">Books</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./support.html">Support</a>
+            </li>
+          </ul>
+          <ul class="auth-nav" id="auth-buttons">
+            <li>
+              <a class="auth-link link-login" href="./login.html">Login</a>
+            </li>
+            <li>
+              <a class="auth-link link-signup" href="./signup.html">Sign Up</a>
+            </li>
+          </ul>
+          <div class="user-nav" id="user-menu" style="display: none">
+            <button class="profile-trigger" id="profile-btn">
+              <i class="fa-solid fa-user"></i
+              ><span id="nav-username">Profile</span
+              ><i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="profile-dropdown" id="profile-dropdown">
+              <a href="profile.html"
+                ><i class="fa-solid fa-user"></i> Profile</a
+              >
+              <a
+                href="admin_dashboard.html"
+                id="admin-link"
+                style="display: none"
+                ><i class="fa-solid fa-gauge"></i> Dashboard</a
+              >
+              <a href="borrowed_books.html" id="user-link"
+                ><i class="fa-solid fa-book"></i> Borrowed Books</a
+              >
+              <button id="logout-btn" class="logout-link">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="borrow-main-container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> / <a href="books.html">Books</a> /
+        <span>Confirm Borrowing</span>
+      </div>
+
+      <div class="borrow-layout" id="borrow-layout" style="display: none">
+        <div class="book-summary">
+          <h3>You are borrowing:</h3>
+          <div class="summary-card">
+            <img id="summary-img" src="" alt="Book Cover" class="summary-img" />
+            <div class="summary-details">
+              <h4 id="summary-title">Loading...</h4>
+              <p id="summary-author" class="summary-author"></p>
+              <div class="summary-meta">
+                <span id="summary-isbn"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="borrow-form-container">
+          <h2>Delivery Details</h2>
+          <p class="form-subtitle">
+            Please provide your details to confirm the borrowing process.
+          </p>
+
+          <form id="confirm-borrow-form" class="borrow-form">
+            <input type="hidden" id="target-isbn" />
+
+            <div class="form-group">
+              <label for="city">City</label>
+              <input
+                type="text"
+                id="city"
+                name="city"
+                placeholder="e.g., Cairo, Giza"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="address">Full Address</label>
+              <input
+                type="text"
+                id="address"
+                name="address"
+                placeholder="Street name, Building number, Apartment"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+20 100 000 0000"
+                required
+              />
+            </div>
+
+            <div class="form-actions">
+              <a href="books.html" class="btn-cancel">Cancel</a>
+              <button type="submit" class="btn-submit">Confirm & Borrow</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div id="error-msg" class="no-results" style="display: none">
+        <i class="fa-solid fa-triangle-exclamation fa-3x"></i>
+        <h3 id="error-title">Book Unavailable</h3>
+        <p id="error-desc">
+          We couldn't process this request. The book may have been fully
+          borrowed or the link is invalid.
+        </p>
+        <a
+          href="books.html"
+          class="btn-cancel"
+          style="display: inline-block; margin-top: 1rem; text-decoration: none"
+          >Return to Catalog</a
+        >
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h2><i class="fa-solid fa-book-open"></i> GILDORA</h2>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CU Library. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../js/components/navbar.js"></script>
+    <script src="../js/pages/confirm_borrowing.js"></script>
+  </body>
+</html>

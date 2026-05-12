@@ -1,0 +1,31 @@
+@media all and (min-width: 768px) {
+  .borrow-layout {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+  }
+
+  .book-summary {
+    width: 35%;
+    position: sticky;
+    top: 2rem;
+  }
+
+  .borrow-form-container {
+    width: 65%;
+  }
+
+  .summary-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .summary-img {
+    width: 120px;
+    height: 180px;
+  }
+
+  .summary-meta {
+    align-self: center;
+  }
+}

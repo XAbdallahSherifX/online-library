@@ -1,0 +1,25 @@
+﻿
+
+@media (min-width: 576px) {
+  .contact-main {
+    padding: 40px 5%;
+  }
+
+  .contact-card {
+    padding: 40px 35px;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact-main {
+    padding: 60px 5%;
+  }
+
+  .contact-card {
+    padding: 50px 45px;
+  }
+}

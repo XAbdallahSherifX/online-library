@@ -1,0 +1,27 @@
+﻿/* =========================================
+   BREAKPOINTS (MIN-WIDTH)
+   ========================================= */
+
+@media (min-width: 576px) {
+  .signup-main {
+    padding: 40px 5%;
+  }
+
+  .signup-card {
+    padding: 35px 30px;
+  }
+
+  .signup-title {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .signup-main {
+    padding: 60px 5%;
+  }
+
+  .signup-card {
+    padding: 40px 40px;
+  }
+}
