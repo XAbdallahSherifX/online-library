@@ -1,94 +1,16 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../css/components/footer/style.css" />
-    <link rel="stylesheet" href="../css/components/footer/media.css" />
-    <link rel="stylesheet" href="../css/components/navbar/style.css" />
-    <link rel="stylesheet" href="../css/components/navbar/media.css" />
-    <link rel="stylesheet" href="../css/pages/borrowed_books/style.css" />
-    <link rel="stylesheet" href="../css/pages/borrowed_books/media.css" />
-    <title>GILDORA - My Borrowed Books</title>
-  </head>
-  <body class="page-borrowed">
-    <nav class="navbar">
-      <div>
-        <h2 class="navbar-logo">
-          <i class="fa-solid fa-book-open fa-2xl"></i>
-          <a class="logo-link" href="../index.html">GILDORA</a>
-        </h2>
-        <button class="mobile-toggle" aria-label="Toggle navigation">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-        <div class="nav-menu-container">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./books.html">Books</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./contact.html">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./support.html">Support</a>
-            </li>
-          </ul>
-          <ul class="auth-nav" id="auth-buttons">
-            <li>
-              <a class="auth-link link-login" href="./login.html">Login</a>
-            </li>
-            <li>
-              <a class="auth-link link-signup" href="./signup.html">Sign Up</a>
-            </li>
-          </ul>
-          <div class="user-nav" id="user-menu" style="display: none">
-            <button class="profile-trigger" id="profile-btn">
-              <i class="fa-solid fa-user"></i
-              ><span id="nav-username">Profile</span
-              ><i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <div class="profile-dropdown" id="profile-dropdown">
-              <a href="profile.html"
-                ><i class="fa-solid fa-user"></i> Profile</a
-              >
-              <a
-                href="admin_dashboard.html"
-                id="admin-link"
-                style="display: none"
-                ><i class="fa-solid fa-gauge"></i> Dashboard</a
-              >
-              <a href="borrowed_books.html" id="user-link"
-                ><i class="fa-solid fa-book"></i> Borrowed Books</a
-              >
-              <button id="logout-btn" class="logout-link">
-                <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
+{% extends 'base.html' %}
+{% load static %}
 
-    <main class="borrowed-main-container">
+{% block title %}My Borrowed Books{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'books/css/pages/borrowed_books/style.css' %}" />
+<link rel="stylesheet" href="{% static 'books/css/pages/borrowed_books/media.css' %}" />
+{% endblock %}
+
+{% block main_class %}borrowed-main-container{% endblock %}
+
+{% block content %}
       <div class="dashboard-header">
         <h1 class="page-title">My Borrowed Books</h1>
         <p class="page-subtitle">
@@ -98,31 +20,45 @@
 
       <hr class="section-divider" />
 
-      <div class="borrowed-grid" id="borrowed-grid"></div>
+{% if active_borrows %}
+      <div class="borrowed-grid" style="display: flex; flex-direction: column; gap: 15px; max-width: 600px; margin: 0 auto;">
+        {% for record in active_borrows %}
+        <div class="summary-card" style="display: flex; align-items: center; border: 1px solid #ddd; padding: 15px; border-radius: 8px; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+          
+          {% if record.book.cover_image %}
+            <img src="{{ record.book.cover_image.url }}" alt="{{ record.book.title }}" style="width: 80px; height: 120px; object-fit: cover; border-radius: 4px; margin-right: 20px;">
+          {% else %}
+            <img src="{% static 'assets/images/portrait_placeholder.png' %}" alt="Default Cover" style="width: 80px; height: 120px; object-fit: cover; border-radius: 4px; margin-right: 20px;">
+          {% endif %}
+          
+          <div class="summary-details" style="flex: 1; text-align: left;">
+            <h3 style="margin: 0 0 5px 0; font-size: 1.2rem; color: #333;">{{ record.book.title }}</h3>
+            <p class="author" style="margin: 0 0 10px 0; color: #666; font-size: 0.95rem;">by {{ record.book.author }}</p>
+            <div class="borrow-meta" style="font-size: 0.85rem; color: #888; margin-bottom: 12px;">
+              <span><i class="fa-solid fa-calendar"></i> Borrowed: {{ record.borrowed_at|date:"d M Y" }}</span>
+            </div>
+            
+            <form action="{% url 'books:return_book' record.id %}" method="POST" style="margin: 0;">
+              {% csrf_token %}
+              <button type="submit" class="btn-primary" style="padding: 8px 16px; font-size: 0.9rem; border-radius: 4px; cursor: pointer; border: none;">Return Book</button>
+            </form>
+          </div>
 
-      <div id="empty-state" class="empty-state" style="display: none">
+        </div>
+        {% endfor %}
+      </div>
+      {% else %}
+      <div id="empty-state" class="empty-state">
         <i class="fa-solid fa-book-open-reader fa-4x"></i>
         <h2>No Books Borrowed Yet</h2>
         <p>
           Your reading list is currently empty. Explore our catalog to find your
           next great read.
         </p>
-        <a href="books.html" class="btn-primary">Browse Catalog</a>
+        <a href="{% url 'books:list' %}" class="btn-primary" style="display: inline-block; margin-top: 1rem; text-decoration: none;">Browse Catalog</a>
       </div>
-    </main>
+      {% endif %}
+{% endblock %}
 
-    <footer class="site-footer">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <h2><i class="fa-solid fa-book-open"></i> GILDORA</h2>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 CU Library. All rights reserved.</p>
-      </div>
-    </footer>
-
-    <script src="../js/components/navbar.js"></script>
-    <script src="../js/pages/borrowed_books.js"></script>
-  </body>
-</html>
+{% block extra_js %}
+    {% endblock %}

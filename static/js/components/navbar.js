@@ -9,62 +9,23 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   }
 
-  // Auth & Dropdown Logic
-  const credentials = JSON.parse(localStorage.getItem("credentials"));
-  const authNav = document.getElementById("auth-buttons");
-  const userNav = document.getElementById("user-menu");
+  // Profile Dropdown Logic (Now independent of LocalStorage)
   const profileBtn = document.getElementById("profile-btn");
   const dropdown = document.getElementById("profile-dropdown");
-  const logoutBtn = document.getElementById("logout-btn");
-  const navUsername = document.getElementById("nav-username");
 
-  if (credentials && userNav && authNav) {
-    // Show logged-in UI
-    authNav.style.display = "none";
-    userNav.style.display = "flex";
-    navUsername.textContent = credentials.username;
-
-    // Fix Paths: Check if current page is inside 'pages/' folder
-    const isInPagesFolder = window.location.pathname.includes("/pages/");
-    const pathPrefix = isInPagesFolder ? "" : "pages/";
-
-    // Get the dynamic links
-    const adminLink = document.getElementById("admin-link");
-    const profileLink = dropdown.querySelector('a[href*="profile.html"]');
-    const borrowedBooksLink = dropdown.querySelector(
-      'a[href*="borrowed_books.html"]',
-    );
-
-    // Update link destinations dynamically
-    if (profileLink) profileLink.href = `${pathPrefix}profile.html`;
-    if (borrowedBooksLink)
-      borrowedBooksLink.href = `${pathPrefix}borrowed_books.html`;
-    if (adminLink) adminLink.href = `${pathPrefix}admin_dashboard.html`;
-
-    // Role-based visibility
-    if (credentials.role === "admin") {
-      // Admins see Dashboard, but NOT Borrowed Books
-      if (adminLink) adminLink.style.display = "flex";
-      if (borrowedBooksLink) borrowedBooksLink.style.display = "none";
-    } else {
-      // Normal users see Borrowed Books, but NOT Dashboard
-      if (adminLink) adminLink.style.display = "none";
-      if (borrowedBooksLink) borrowedBooksLink.style.display = "flex";
-    }
-
-    // Dropdown Toggle
+  // These elements will only exist if the user is logged in (via Django's template)
+  if (profileBtn && dropdown) {
+    // Toggle dropdown when clicking the profile button
     profileBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
+      e.stopPropagation(); // Prevents the window click event from firing immediately
       dropdown.classList.toggle("show");
     });
 
-    // Close on outside click
-    window.addEventListener("click", () => dropdown.classList.remove("show"));
-
-    // Logout logic
-    logoutBtn.addEventListener("click", () => {
-      localStorage.removeItem("credentials");
-      window.location.href = isInPagesFolder ? "../index.html" : "index.html";
+    // Close dropdown when clicking anywhere else on the page
+    window.addEventListener("click", () => {
+      if (dropdown.classList.contains("show")) {
+        dropdown.classList.remove("show");
+      }
     });
   }
 });

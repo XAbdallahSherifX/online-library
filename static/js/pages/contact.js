@@ -5,9 +5,7 @@ const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
 const subjectInput = document.getElementById("subject");
 const msgInput = document.getElementById("message");
-const submitMsg = document.getElementById("submit-message");
 
-// Helper to create error messages below inputs
 function createErrorSpan(input) {
   const span = document.createElement("span");
   span.className = "error-msg";
@@ -20,24 +18,16 @@ const emailError = createErrorSpan(emailInput);
 const subjectError = createErrorSpan(subjectInput);
 const msgError = createErrorSpan(msgInput);
 
-// Clear submit message when user edits form
-function clearSubmitMsg() {
-  submitMsg.textContent = "";
-  submitMsg.className = "submit-msg"; // Reset classes
-}
-
 function showError(input, errorEl, message) {
   input.style.borderColor = "var(--color-form-error)";
   input.style.boxShadow = "0 0 0 3px rgba(128, 0, 32, 0.1)";
   errorEl.textContent = message;
-  clearSubmitMsg();
 }
 
 function showSuccess(input, errorEl) {
   input.style.borderColor = "var(--color-form-success)";
   input.style.boxShadow = "none";
   errorEl.textContent = "";
-  clearSubmitMsg();
 }
 
 function validateName() {
@@ -114,7 +104,6 @@ function validateMessage() {
   return true;
 }
 
-// Event Listeners for real-time validation
 nameInput.addEventListener("blur", validateName);
 emailInput.addEventListener("blur", validateEmail);
 subjectInput.addEventListener("blur", validateSubject);
@@ -133,42 +122,21 @@ msgInput.addEventListener("input", () => {
   if (msgInput.value.length > 0) validateMessage();
 });
 
-// Handle form submission
 form.addEventListener("submit", function (e) {
-  e.preventDefault();
-
   const isNameValid = validateName();
   const isEmailValid = validateEmail();
   const isSubjectValid = validateSubject();
   const isMessageValid = validateMessage();
 
   if (!isNameValid || !isEmailValid || !isSubjectValid || !isMessageValid) {
+    e.preventDefault(); // Stop submission if validation fails
     return;
   }
 
+  // If valid, disable the button so the user doesn't double-click
+  // while Django is processing the request
   const btn = form.querySelector(".btn-submit");
-  const originalText = btn.textContent;
-
-  // UI Loading State
   btn.textContent = "Sending...";
-  btn.disabled = true;
-
-  // Simulate a brief network delay, then show success
-  setTimeout(() => {
-    btn.textContent = originalText;
-    btn.disabled = false;
-
-    // Reset the form values
-    form.reset();
-
-    // Reset the green borders back to default
-    nameInput.style.borderColor = "var(--color-border-default)";
-    emailInput.style.borderColor = "var(--color-border-default)";
-    subjectInput.style.borderColor = "var(--color-border-default)";
-    msgInput.style.borderColor = "var(--color-border-default)";
-
-    // Show success message (using the CSS classes from our style.css)
-    submitMsg.textContent = "Message sent successfully! We'll be in touch.";
-    submitMsg.className = "submit-msg success";
-  }, 1000);
+  btn.style.opacity = "0.7";
+  btn.style.pointerEvents = "none";
 });
