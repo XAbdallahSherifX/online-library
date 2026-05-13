@@ -1,14 +1,15 @@
-{% extends 'base.html' %} {% load static %} {% block title %}{{ book.title }} -
-Details{% endblock %} {% block extra_css %}
-<link
-  rel="stylesheet"
-  href="{% static 'books/css/pages/book_details/style.css' %}"
-/>
-<link
-  rel="stylesheet"
-  href="{% static 'books/css/pages/book_details/media.css' %}"
-/>
-{% endblock %} {% block main_class %}details-main-container page-book-details{%endblock %} 
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ book.title }} - Details{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'books/css/pages/book_details/style.css' %}" />
+<link rel="stylesheet" href="{% static 'books/css/pages/book_details/media.css' %}" />
+{% endblock %}
+
+{% block main_class %}details-main-container page-book-details{% endblock %}
+
 {% block content %}
 <div class="breadcrumb">
   <a href="{% url 'home' %}">Home</a> /
@@ -20,17 +21,9 @@ Details{% endblock %} {% block extra_css %}
   <div class="book-details-card">
     <div class="details-image-wrapper">
       {% if book.cover_image %}
-      <img
-        src="{{ book.cover_image.url }}"
-        alt="{{ book.title }} Cover"
-        class="details-cover"
-      />
+      <img src="{{ book.cover_image.url }}" alt="{{ book.title }} Cover" class="details-cover" />
       {% else %}
-      <img
-        src="{% static 'assets/images/portrait_placeholder.png' %}"
-        alt="{{ book.title }} Cover"
-        class="details-cover"
-      />
+      <img src="{% static 'assets/images/portrait_placeholder.png' %}" alt="{{ book.title }} Cover" class="details-cover" />
       {% endif %}
     </div>
 
@@ -46,10 +39,7 @@ Details{% endblock %} {% block extra_css %}
         {% else %}
         <span class="badge status-unavailable">Currently Unavailable</span>
         {% endif %}
-        <span class="badge badge-category"
-          ><i class="fa-solid fa-layer-group"></i> {{
-          book.get_category_display|default:book.category }}</span
-        >
+        <span class="badge badge-category"><i class="fa-solid fa-layer-group"></i> {{ book.get_category_display|default:book.category }}</span>
       </div>
 
       <div class="metadata-grid">
@@ -59,15 +49,11 @@ Details{% endblock %} {% block extra_css %}
         </div>
         <div class="meta-item">
           <span class="meta-label">Publisher</span>
-          <span class="meta-value"
-            >{{ book.publisher|default:"Unknown Publisher" }}</span
-          >
+          <span class="meta-value">{{ book.publisher|default:"Unknown Publisher" }}</span>
         </div>
         <div class="meta-item">
           <span class="meta-label">Year</span>
-          <span class="meta-value"
-            >{{ book.publication_year|default:"N/A" }}</span
-          >
+          <span class="meta-value">{{ book.publication_year|default:"N/A" }}</span>
         </div>
         <div class="meta-item">
           <span class="meta-label">Language</span>
@@ -75,9 +61,7 @@ Details{% endblock %} {% block extra_css %}
         </div>
         <div class="meta-item">
           <span class="meta-label">Edition</span>
-          <span class="meta-value"
-            >{{ book.edition|default:"1st Edition" }}</span
-          >
+          <span class="meta-value">{{ book.edition|default:"1st Edition" }}</span>
         </div>
         <div class="meta-item">
           <span class="meta-label">Call Number</span>
@@ -85,9 +69,7 @@ Details{% endblock %} {% block extra_css %}
         </div>
         <div class="meta-item">
           <span class="meta-label">Available Copies</span>
-          <span class="meta-value"
-            >{{ book.available_copies|default:"0" }}</span
-          >
+          <span class="meta-value">{{ book.available_copies|default:"0" }}</span>
         </div>
         <div class="meta-item">
           <span class="meta-label">Times Borrowed</span>
@@ -97,27 +79,18 @@ Details{% endblock %} {% block extra_css %}
 
       <div class="details-description">
         <h3>Description</h3>
-        <p>
-          {{ book.description|default:"No description provided for this book."
-          }}
-        </p>
+        <p>{{ book.description|default:"No description provided for this book." }}</p>
       </div>
 
       <div class="action-buttons">
         {% if book.is_available %}
-        <a
-          href="{% url 'books:confirm_borrow' book.id %}"
-          class="btn-primary"
-          style="text-decoration: none; text-align: center; flex: 1"
-        >
+        <a href="{% url 'books:confirm_borrow' book.id %}" class="btn-primary" style="text-decoration: none; text-align: center; flex: 1">
           Borrow This Book
         </a>
         {% else %}
         <button class="btn-primary" disabled>Not Available</button>
         {% endif %}
-        <a href="{% url 'books:list' %}" class="btn-secondary"
-          >Back to Catalog</a
-        >
+        <a href="{% url 'books:list' %}" class="btn-secondary">Back to Catalog</a>
       </div>
     </div>
   </div>
