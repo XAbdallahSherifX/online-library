@@ -29,7 +29,7 @@
 
         <div>
           <label for="fullName"><strong>Full Name:</strong></label><br />
-          <input name="fullName" type="text" id="fullName" value="{{ user.full_name }}" size="30" />
+          <input name="fullName" type="text" id="fullName" value="{{ user.full_name|default:user.username }}" size="30" />
         </div>
         <br />
 
