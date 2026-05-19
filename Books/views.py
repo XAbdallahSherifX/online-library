@@ -147,11 +147,6 @@ def edit_book_view(request, id):
     book = get_object_or_404(Book, id=id)
     if request.method == 'POST':
         isbn = request.POST.get('ISBN')
-
-        if Book.objects.filter(isbn=isbn).exclude(id=book.id).exists():
-            messages.error(request, f"A book with ISBN '{isbn}' already exists.")
-            return render(request, 'books/book_form.html', {'book': book, 'mode': 'Edit'})
-
         book.title = request.POST.get('Title')
         book.author = request.POST.get('Author')
         book.isbn = isbn
