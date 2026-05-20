@@ -1,5 +1,14 @@
 venv/
+<<<<<<< HEAD
 __pycache__/
 *.pyc
 db.sqlite3
 media/
+=======
+*.pyc
+__pycache__/
+db.sqlite3
+.env
+media/
+*.sqlite3
+>>>>>>> b07b34c (fixing some dashboard bugs)

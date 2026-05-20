@@ -15,7 +15,7 @@ def admin_check(user):
 
 
 def book_list(request):
-    books = Book.objects.all()
+    books = Book.objects.all().distinct()
     return render(request, 'books/books.html', {'books': books})
 
 
@@ -80,7 +80,7 @@ def admin_dashboard_view(request):
 
     query = request.GET.get('search', '')
     if query:
-        books = Book.objects.filter(title__icontains=query) | Book.objects.filter(isbn__icontains=query)
+        books = (Book.objects.filter(title__icontains=query) | Book.objects.filter(isbn__icontains=query)).distinct()
     else:
         books = Book.objects.all()
 
